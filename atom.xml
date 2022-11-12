@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://newmilkiceonwall.github.io</id>
+    <title>墙上的新牛奶冰</title>
+    <updated>2022-11-12T05:58:11.339Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://newmilkiceonwall.github.io"/>
+    <link rel="self" href="https://newmilkiceonwall.github.io/atom.xml"/>
+    <subtitle>流量为王时代下，独立自我的小站。</subtitle>
+    <logo>https://newmilkiceonwall.github.io/images/avatar.png</logo>
+    <icon>https://newmilkiceonwall.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, 墙上的新牛奶冰</rights>
+    <entry>
+        <title type="html"><![CDATA[真的很感谢2021年的自己]]></title>
+        <id>https://newmilkiceonwall.github.io/post/zhen-de-hen-gan-xie-2021-nian-de-zi-ji/</id>
+        <link href="https://newmilkiceonwall.github.io/post/zhen-de-hen-gan-xie-2021-nian-de-zi-ji/">
+        </link>
+        <updated>2022-09-18T14:02:34.000Z</updated>
+        <content type="html"><![CDATA[<p>2021年，从3月开始刷题找实习，不记得是4月还是5月人生第一次找工作的面试，是面的腾讯，面试官很友好，从思路逻辑上，一直在引导我回答他的问题，还叫我不用紧张。无奈，那个时候技术一般，又带着无法克服的紧张，最后面试官感谢我投递腾讯公司并参加面试，我也感谢他组织这次面试。</p>
+<p>刷题、看面经直到暑假，去了中国银行四川省分行实习，入职第二天，建行打电话来叫我去他们那边实习（接电话当时中行HR也在，大无语），拒绝掉。为了避免后续再出现这种尴尬场面，遂cancal了ICBC的后续面试。不过后来浦发银行开奖还是打电话通知了，这次有经验，出去楼梯间接电话。在中行本来是去信息科技部门，后来给我拉到人力资源部去写工具、当甲方，偶尔也干干杂活。中行人力资源部用工团队的每个老师、前辈对我都很好，小团队氛围也很不错，我入职、离职的时候主管还请大家吃了饭（主管，最后没跟你签offer实在是对不起）。更多关于在中行的故事，我想写在另一篇里。</p>
+<p>十月份再往后，拿到了中行省分行管培、农行成都研发部、腾讯CSIG的offer，虾皮流程很长，很后面才安排，到HR面的时候，已经有前面的三个offer了就拒绝了，当时也真的疲惫不想再面下去了。还有一个更重要的原因是拿到了重大的计科学硕offer，当时正在腾讯的offer上为“读研or工作”纠结，后面不想在陷入有更多的高薪offer的dilemma中了（我的读者，因为见闻、认知不同，可能虾皮、腾讯对你来说不算高薪）。</p>
+<p>写这些，是因为想到自己在那个时候抱着一种“<strong>绝对不能走错一步</strong>”的心态在做每一件事情。很感谢那个时候的自己。虽然不签字很可惜，拿到offer可以世俗地说明“这个孩子优秀、不错”，但是也要想到能保研去到一所不赖的985继续读自己喜欢的计算机，在无关家庭、事业等等因素，单从“读书、求知”来说其实也是一个不错的选择。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VirtualBox虚拟机 仅主机模式×NAT配网——主机客机互通，客机器正常上网]]></title>
+        <id>https://newmilkiceonwall.github.io/post/virtualbox-xu-ni-ji-jin-zhu-ji-mo-shi-xnat-pei-wang/</id>
+        <link href="https://newmilkiceonwall.github.io/post/virtualbox-xu-ni-ji-jin-zhu-ji-mo-shi-xnat-pei-wang/">
+        </link>
+        <updated>2022-09-07T06:18:50.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="0-写在前面">0 写在前面</h1>
+<p>起因是这样的——由于发现完美对战平台会影响VBox的运行，卸载完美之后，用回了阔别几个月的VBox。需要组一个Ubuntu的服务器，用于练习，但是默认的NAT模式，主机直通虚拟机上的应用需要在VBox配置端口映射，一个一个映射太繁琐了！就想能不能组一个类似局域网的模式，同时客机能够通过NAT正常上网。网上有很多客机单网卡的实现，<a href="https://blog.csdn.net/itlanyue/article/details/105178015">这一篇是基于Vmware的</a>，但是这种方案需要配置window网络共享，有没有一种不用配置共享的方案？</p>
+<h1 id="1-双网卡配置">1 双网卡配置</h1>
+<p><img src="https://newmilkiceonwall.github.io/post-images/1662533607403.svg" alt="双网卡配置演示" loading="lazy">这里需要使用VBox的HostOnly网卡，如果没有这个网卡适配器，可以在<code>VBox主页面——管理——主机网络管理器</code>中新建，window系统可能需要管理员权限。就在<code>主机网络管理器</code>中将这张网卡的IPv4地址设置为<code>192.168.56.2/24</code>。考虑到未来可能有其他设备或虚拟机接入，打开DHCP服务器为<code>192.168.56.X</code>网段自动分配IP，更具不同人的实际情况，这个操作可能不是必须的。</p>
+<p>随后，在需要配置的虚拟机<code>设置页——网络</code>，启用网卡1和网卡2，分别选择NAT和仅主机网络，并为仅主机网络选择刚刚配置好的<code>192.168.56.X</code>网段HostOnly网卡。</p>
+<h1 id="2-ubuntu通过netplan配网固定ip">2 Ubuntu通过netplan配网固定IP</h1>
+<p>其实到此，如果你的虚拟机操作系统默认为网卡打开DHCP，虚拟机就应该能够获取到<code>192.168.56.X</code>的IP地址，通过这个IP地址，主机和客机可以完成互联互通。但是我的Ubuntu并未想当然地完成这的自动配置。同时，作为一个长期使用的、通过服务器的虚拟机，DHCP可能导致的IP变换，也不是一件好事。使用接下来，通过netplan把虚拟机IP固定为<code>192.168.56.3/24</code>。虚拟机开机，打开这个文件：</p>
+<pre><code class="language-bash">sudo nano /etc/netplan/00-installer-config.yaml  # 当然你也可以使用vim，记得提管理员权限
+</code></pre>
+<p>我的配置如下：</p>
+<pre><code># This is the network config written by 'subiquity'
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: true
+    enp0s8:
+      dhcp4: false
+      addresses: [192.168.56.3/24]
+  version: 2
+</code></pre>
+<p>其中<code>enp0s3</code>为NAT网卡，<code>enp0s8</code>为HostOnly网卡。即便你也使用VBox，实际情况下，网卡的名字也可能不一样，通过<code>ifconfig -a</code>可以查询到网卡名，随后如上配置即可。最后，在shell中运行<code>sudo netplan apply</code>即可使新配置生效（这样配置，即使是重启，也是有效的）。通过主机Ping客机：</p>
+<pre><code>正在 Ping 192.168.56.3 具有 32 字节的数据:
+来自 192.168.56.3 的回复: 字节=32 时间&lt;1ms TTL=64
+来自 192.168.56.3 的回复: 字节=32 时间&lt;1ms TTL=64
+来自 192.168.56.3 的回复: 字节=32 时间&lt;1ms TTL=64
+来自 192.168.56.3 的回复: 字节=32 时间&lt;1ms TTL=64
+
+192.168.56.3 的 Ping 统计信息:
+    数据包: 已发送 = 4，已接收 = 4，丢失 = 0 (0% 丢失)，
+往返行程的估计时间(以毫秒为单位):
+    最短 = 0ms，最长 = 0ms，平均 = 0ms
+</code></pre>
+<p>ping通，说明配置生效。客机也能通过NAT连接外网，curl测试即可，此处不赘述。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《Beginning Game Development with Godot Learn to Create and Publish Your First 2D Platform Game》读后感]]></title>
+        <id>https://newmilkiceonwall.github.io/post/lesslessbeginning-game-development-with-godot-learn-to-create-and-publish-your-first-2d-platform-gamegreatergreater-du-hou-gan/</id>
+        <link href="https://newmilkiceonwall.github.io/post/lesslessbeginning-game-development-with-godot-learn-to-create-and-publish-your-first-2d-platform-gamegreatergreater-du-hou-gan/">
+        </link>
+        <updated>2022-08-19T08:13:25.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="0-写在前面">0 写在前面</h1>
+<p>这本是书是关于Godot游戏开发的，书中描述了使用Godot开发一个简单2D平台游戏demo的全流程——从素材导入、代码编码、二进制导出甚至简单地发行自己的游戏都有讲到。<br>
+手把手教学，描述非常细腻，极大程度避免了新人出现“环境不对”、“找不到配置项”等琐碎耗时的杂问题。“细腻”，也注定了在有限篇幅内，其内容的有限，但对传统2D平台游戏开发的基础内容都有所描述——场景搭建（tilemap）、基础移动、发射“子弹”击杀敌人以及穿插其中讲解了一些编码逻辑。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="0-写在前面">0 写在前面</h1>
+<p>这本是书是关于Godot游戏开发的，书中描述了使用Godot开发一个简单2D平台游戏demo的全流程——从素材导入、代码编码、二进制导出甚至简单地发行自己的游戏都有讲到。<br>
+手把手教学，描述非常细腻，极大程度避免了新人出现“环境不对”、“找不到配置项”等琐碎耗时的杂问题。“细腻”，也注定了在有限篇幅内，其内容的有限，但对传统2D平台游戏开发的基础内容都有所描述——场景搭建（tilemap）、基础移动、发射“子弹”击杀敌人以及穿插其中讲解了一些编码逻辑。</p>
+<!-- more -->
+<h1 id="1-错误与不足">1 错误与不足</h1>
+<p>为了简单，书中不乏一些“低质量”代码，比如玩家血量，为了好实现，一开始是记录在怪物对象上的，乍一看会让人匪夷所思，不过在后续章节修复了这个问题。同时也存在一些失误，在介绍全局变量那里，引导读者把分数和血量记录在全局变量，以便切换关卡的时候记录这些值，但是在玩家血量掉到0死亡之后这些值不会重置，导致血量一直都是0，再次开始的时候，游戏会直接结束。</p>
+<h1 id="2-关于导出模板下载慢的解决方案">2 关于导出模板下载慢的解决方案</h1>
+<p>我使用的Godot3.4.4，自动下载导出模板是非常慢的。这里推荐去Godot的<a href="https://github.com/godotengine/godot/releases">Github仓库</a>直接下载安装，选择对应版本的<code>Godot_v&lt;你的Godot版本号&gt;-stable_export_templates.tpz</code>下载，然后在Godot中的“编辑器”——“导出模板管理器”——“选择从文件安装”，选择下载的文件安装即可。</p>
+<h1 id="3-随想">3 随想</h1>
+<p>关于Godot的学习，由于有其他事务，短时间内应该不会再继续看新书了。最近加入了矢量工坊的开源游戏群，里面的程序（几乎）全是外行转码或者初高中小朋友，这里姑且不论好坏。管中窥豹，也可以看到国内独立游戏团队的参差水平和艰难处境。最后，学Godot只是个人爱好，我也完成过Unity的2D平台游戏demo开发，但我并不看好国内的游戏市场。君量力而行，禽择良木而栖。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[通过telnet取得移动光猫HS8546V5超级密码]]></title>
+        <id>https://newmilkiceonwall.github.io/post/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma/</id>
+        <link href="https://newmilkiceonwall.github.io/post/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma/">
+        </link>
+        <updated>2022-08-10T11:39:41.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="需要的工具">需要的工具</h1>
+<ul>
+<li>
+<p><a href="https://pan.baidu.com/s/170toeJhYVTu7CDk2C92SKQ">ONT维修使能工具</a> 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去掉横杠）</p>
+</li>
+<li>
+<p><a href="https://pan.baidu.com/s/170toeJhYVTu7CDk2C92SKQ">华为配置加解密工具</a> 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN（去掉横杠）</p>
+</li>
+<li>
+<p>任意一种telnet客户端 <a href="https://www.xshell.com/zh/xshell/">XSHELL</a></p>
+</li>
+<li>
+<p>一截普通网线（用于直接连接光猫）</p>
+</li>
+<li>
+<p>一个FTP服务器（可选） <a href="https://www.tftp-server.com/">TFTP服务器</a></p>
+</li>
+</ul>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="需要的工具">需要的工具</h1>
+<ul>
+<li>
+<p><a href="https://pan.baidu.com/s/170toeJhYVTu7CDk2C92SKQ">ONT维修使能工具</a> 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去掉横杠）</p>
+</li>
+<li>
+<p><a href="https://pan.baidu.com/s/170toeJhYVTu7CDk2C92SKQ">华为配置加解密工具</a> 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN（去掉横杠）</p>
+</li>
+<li>
+<p>任意一种telnet客户端 <a href="https://www.xshell.com/zh/xshell/">XSHELL</a></p>
+</li>
+<li>
+<p>一截普通网线（用于直接连接光猫）</p>
+</li>
+<li>
+<p>一个FTP服务器（可选） <a href="https://www.tftp-server.com/">TFTP服务器</a></p>
+</li>
+</ul>
+<!-- more -->
+<h1 id="1-telnet使能">1 telnet使能</h1>
+<p>首先，用网线连接电脑和光猫，保证电脑分配到一个可访问光猫的IP地址。打开ONT维修使能工具（ONT V5.exe），选择“V5使能”。在“网卡配置”一栏选择连接光猫的网卡（如果你有多张网卡的话请注意甄别）。点击右下角的“启动”，等待左下角“当前成功总数”变为1，同时你可以看到光猫指示灯全亮，点击“停止”，并关闭ONT维修使能工具，接下来将不再需要它。</p>
+<h1 id="2-telnet接入光猫">2 telnet接入光猫</h1>
+<p>打开Xshell，新建空白标签页。输入以下telnet命令:</p>
+<pre><code class="language-bash">telnet 192.168.1.1 # 根据你的具体情况，这个IP地址可能不同
+</code></pre>
+<p>随后需要输入账户和密码，这个账户通常是 <strong>root</strong> ，在我这里密码为 <strong>adminHW</strong>，当然你可能会需要尝试以下<strong>其他密码</strong>：</p>
+<ul>
+<li>Hw8@CMCC</li>
+<li>Hw8@cMcc</li>
+<li>useradmin</li>
+<li>admin</li>
+<li>hg2x0<br>
+如果这里的密码都不能成功登录，你可能需要自己在网上搜索更新的密码。</li>
+</ul>
+<h1 id="3-启动shell">3 启动Shell</h1>
+<p>在成功连接的telnel中，输入下面多条命令将启动shell并到达配置文件的存储目录:</p>
+<pre><code class="language-bash">su
+</code></pre>
+<p>你应该看到“success!”字样在屏幕出现，左侧的提示符页变为</p>
+<pre><code class="language-bash">SU_WAP&gt;
+</code></pre>
+<p>随后输入：</p>
+<pre><code class="language-bash">shell
+</code></pre>
+<p>你将看到如下的BusyBox启动的相关提示：</p>
+<pre><code class="language-bash">BusyBox v1.30.1 () built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+profile close core dump
+</code></pre>
+<p>同时左侧的提示符页变为：</p>
+<pre><code class="language-bash">WAP(Dopra Linux) # 
+</code></pre>
+<p>这时候cd到需要的目录中：</p>
+<pre><code class="language-bash">cd /mnt/jffs2
+</code></pre>
+<p>你可以通过 <em>ls</em> 命令来查看该目录下的一些文件，保存有超级密码的配置文件名为 <strong>hw_ctree.xml</strong> ，这是一份加密的配置文件。</p>
+<h1 id="4-解密配置文件">4 解密配置文件</h1>
+<p>为了保证安全，首先需要将配置文件复制一份。提示：如果你遇到如下找不到命令情况：</p>
+<pre><code class="language-bash">/bin/sh: aescrypt2: not found
+/bin/sh: cp: not found
+</code></pre>
+<p>可以通过退出shell，重新启动shell的方式来解决。在成功之前，你可能需要多次尝试。</p>
+<pre><code class="language-bash">exit
+shell
+cd /mnt/jffs2
+</code></pre>
+<p>现在，复制配置文件：</p>
+<pre><code class="language-bash">cp hw_ctree.xml myconf.xml.gz # 待会会解密出一个压缩格式文件,所以直接在这里命名为.gz
+</code></pre>
+<p>然后使用aescrypt2解密这个后缀为.gz的xml文件:</p>
+<pre><code class="language-bash">aescrypt2 1 myconf.xml.gz tmp
+# aescrypt2 &lt;mode&gt; &lt;input file&gt; &lt;outputfilename&gt;
+# 值得注意的是，aescrypt2似乎会无视 &lt;outputfilename&gt; 参数，输出在原来的文件名上，这个实例中就是myconf.xml.gz
+</code></pre>
+<p>接下来解压这个文件：</p>
+<pre><code class="language-bash">gzip -d myconf.xml.gz
+</code></pre>
+<p>将得到一个名为 <strong>myconf.xml</strong> 的文件，接下来cat出加密的Password字符串：</p>
+<pre><code class="language-bash">cat myconf.xml|grep CMCCAdmin
+</code></pre>
+<p>在输出中找到类似下方内容的字符串，他们通常位于输出的第一行，应该很容易找到：</p>
+<pre><code>UserName=&quot;CMCCAdmin&quot; Password=&quot;$2@uIc/AkarL8Iwo)FLER@lHy_Y&amp;ltXdfs%orQ9g4yw4$&quot;
+</code></pre>
+<p>双引号内的字符串就是加密后的密码，复制他们。打开华为配置加解密工具(huawei.exe), 粘贴刚刚复制的字符串到“密文解密”一栏，点击“$2解密”,即可得到超级密码。<strong>注意</strong>：在某些地区，你可能需要在解密出的这个字符串前面加上 <strong>CMCCAdmin#</strong> 或 <strong>CMCCAdmin</strong> 才能组成正确的超级密码。如果解密出的字符串为 <strong>1234#1234</strong> ，那么除了这个字符串本身就是超级密码以外，还有以下两种可能：</p>
+<blockquote>
+<p>CMCCAdmin#1234#1234<br>
+CMCCAdmin1234#1234</p>
+</blockquote>
+<h1 id="5-写在后面">5 写在后面</h1>
+<p>如果你有一个支持匿名的FTP服务器，你也可以将解密后的myconf.xml传输到电脑上进一步研究:</p>
+<pre><code class="language-bash">tftp -p -l myconf.xml -r myconf.xml &lt;FTP服务器地址&gt;  
+</code></pre>
+<p>如果你的光猫<em><strong>在公共场所提供互联网服务</strong></em>，在不采取其他措施的情况下，为了你的网络安全，请一定记得通过你刚刚取得超级密码登陆光猫，<strong>在 “安全”——“广域网访问设置”——“ONT访问控制配置” 中关闭通过Telnet访问设备。</strong></p>
+<h1 id="6-参考">6 参考</h1>
+<blockquote>
+<ul>
+<li><a href="https://www.right.com.cn/FORUM/thread-4070210-1-1.html">华为光猫HS8546V5获取超级密码\改华为界面</a></li>
+<li><a href="https://www.cnblogs.com/myzerg/p/3622134.html">华为 HG8245C 光猫 修改无线用户数限制+hw_ctree.xml 文件解密</a></li>
+</ul>
+</blockquote>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[新账户，新博客，新文章]]></title>
+        <id>https://newmilkiceonwall.github.io/post/xin-zhang-hu-xin-bo-ke-xin-wen-zhang/</id>
+        <link href="https://newmilkiceonwall.github.io/post/xin-zhang-hu-xin-bo-ke-xin-wen-zhang/">
+        </link>
+        <updated>2022-08-09T17:17:25.000Z</updated>
+        <summary type="html"><![CDATA[<p>我建立了一个新的Github账户，开启了蓄谋已久的博客，这是第一篇文章，万事开头难。现在，我已经开始写作啦！</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>我建立了一个新的Github账户，开启了蓄谋已久的博客，这是第一篇文章，万事开头难。现在，我已经开始写作啦！</p>
+<!-- more -->
+<p>作为第一篇文章，我想谈一谈正在使用的写作工具。</p>
+<p>我使用<a href="https://gridea.dev/">Gridea</a>写作，它没有黑暗模式，这其实很糟糕——我喜欢在夜间写作。作者也并<a href="https://github.com/getgridea/gridea/issues/759">没有意图添加黑暗模式</a>，这个功能应该不会在短时间内被实现。Gridea是基于<a href="https://www.electronjs.org/">Electron</a>写就的，以MIT协议发布，如果你有意愿为它实现黑暗模式，这是项目的<a href="https://github.com/getgridea/gridea">Github</a>。值得一提的是，作者在issue中直言到<a href="https://github.com/getgridea/gridea/issues/865">“更新可能不会太频繁了”</a>，转而投入精力到付费版本中去了。所以在未来如果无人接手新需求，我可能不得不自己实现黑暗模式。</p>
+<p>再谈一谈另一个方面，安全。Gridea是通过Github Personal access tokens来同步文章到Github Pages的，需要授权repo下的全部权限给Gridea。我认为这不是一个好主意，这赋予了Gridea过多的权限——Gridea有权通过Token管理用户所有代码仓库，而事实上我们只需要它专注于<code>XXXX（你的用户名）.github.io</code>仓库。这个问题的优先级，高于“黑暗模式”。最简略、安全的授权方式应该是——Gridea只取得对应仓库的私钥（Deploy Key），每次同步，通过私钥向仓库推送文件即可。</p>
+]]></content>
+    </entry>
+</feed>
