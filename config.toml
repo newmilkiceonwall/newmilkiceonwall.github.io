@@ -60,5 +60,5 @@ pygmentscodefencesguesssyntax = true
 [[menu.main]]
   name = "关于"
   weight = 2
-  url = "about/"
+  url = "about/about"
 
