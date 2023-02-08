@@ -228,7 +228,7 @@ ONT维修使能工具 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去�
 
       <div class="post-content">
         
-          <img src="/images/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma.png" alt="Featured image"/>
+          <img src="/images/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma.jpg" alt="Featured image"/>
         
         <h1 id="需要的工具">
   需要的工具
@@ -273,13 +273,21 @@ ONT维修使能工具 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去�
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>telnet 192.168.1.1 <span style="font-style:italic"># 根据你的具体情况，这个IP地址可能不同</span>
 </span></span></code></pre></div><p>随后需要输入账户和密码，这个账户通常是 <strong>root</strong> ，在我这里密码为 <strong>adminHW</strong>，当然你可能会需要尝试以下<strong>其他密码</strong>：</p>
 <ul>
-<li>Hw8@CMCC</li>
-<li>Hw8@cMcc</li>
-<li>useradmin</li>
-<li>admin</li>
-<li>hg2x0
-如果这里的密码都不能成功登录，你可能需要自己在网上搜索更新的密码。</li>
-</ul>
+<li>
+<p>Hw8@CMCC</p>
+</li>
+<li>
+<p>Hw8@cMcc</p>
+</li>
+<li>
+<p>useradmin</p>
+</li>
+<li>
+<p>admin</p>
+</li>
+<li>
+<p>hg2x0
+如果这里的密码都不能成功登录，你可能需要自己在网上搜索更新的密码。</p>
 <h1 id="3-启动shell">
   3 启动Shell
   <a class="heading-link" href="#3-%e5%90%af%e5%8a%a8shell">
@@ -296,10 +304,12 @@ ONT维修使能工具 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去�
 </span></span></code></pre></div><p>你将看到如下的BusyBox启动的相关提示：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>BusyBox v1.30.1 () built-in shell (ash)
 </span></span><span style="display:flex;"><span>Enter <span style="font-style:italic">&#39;help&#39;</span> <span style="font-weight:bold">for</span> a list of built-in commands.
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>profile close core dump
-</span></span></code></pre></div><p>同时左侧的提示符页变为：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>WAP(Dopra Linux) <span style="font-style:italic"># </span>
+</span></span></code></pre></div></li>
+</ul>
+<p>profile close core dump</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>同时左侧的提示符页变为：
+</span></span><span style="display:flex;"><span>``` bash
+</span></span><span style="display:flex;"><span>WAP(Dopra Linux) # 
 </span></span></code></pre></div><p>这时候cd到需要的目录中：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /mnt/jffs2
 </span></span></code></pre></div><p>你可以通过 <em>ls</em> 命令来查看该目录下的一些文件，保存有超级密码的配置文件名为 <strong>hw_ctree.xml</strong> ，这是一份加密的配置文件。</p>
