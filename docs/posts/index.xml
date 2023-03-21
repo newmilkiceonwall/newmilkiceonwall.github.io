@@ -6,7 +6,28 @@
     <description>Recent content in Posts on 墙上的新牛奶冰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 17 Mar 2023 15:48:55 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Mar 2023 23:08:54 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重读数据结构教程（一）：线性表</title>
+      <link>https://newmilkiceonwall.github.io/posts/%E9%87%8D%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E7%A8%8B%E4%B8%80%E7%BA%BF%E6%80%A7%E8%A1%A8/</link>
+      <pubDate>Tue, 21 Mar 2023 23:08:54 +0800</pubDate>
+      
+      <guid>https://newmilkiceonwall.github.io/posts/%E9%87%8D%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E7%A8%8B%E4%B8%80%E7%BA%BF%E6%80%A7%E8%A1%A8/</guid>
+      <description>0 写在前面Link to heading阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&amp;quot;比较基础&amp;quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
+1 顺序表及其应用示例Link to heading此处不赘述顺序表概念，直接摘录了书中的例子。
+1.1 P39 例2. 4Link to heading有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
+1.1.1 解法1Link to heading在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
+1.1.2 解法2Link to heading为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
+2 线性表的链式存储结构Link to heading2.1 链表和顺序表的比较Link to heading顺序表是物理上相邻的，而链表不必如此。
+顺序表的插入、删除平均需要移动半个表元素，而链表不必。
+顺序表查找第i个元素耗时O（1），具有随机存取特性。而链表不具有这个特性。
+2.2 单链表tips和一些题Link to heading带头节点的好处：
+无论单链表是否空，都为其添加头节点，这帮助统一空表和非空表操作。
+首结点插入、删除操作与其他节点一致。
+在复制一个链表的时候，头插法会导致reverse()的效果，尾插法也就是正常原来排序的情况。
+2.2.1 单链表原地反转Link to headingInput: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;None OutPut: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;None 过程： 需要pre cur next三个指针 pre:None cur:1 next:2 actions: cur-&amp;gt;next = pre; pre=cur; cur=next; next=next-&amp;gt;next (如果是双链表转置，是不需要pre指针的，当然你也可以使用头插法来转制但是这种不是面试考点)</description>
+    </item>
+    
     <item>
       <title>Bash常用快捷键</title>
       <link>https://newmilkiceonwall.github.io/posts/bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
