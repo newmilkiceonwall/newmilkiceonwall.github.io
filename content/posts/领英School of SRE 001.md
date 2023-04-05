@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false 
 date = 2023-03-28T16:29:59+08:00
 title = "[阅读记录]Linkedin School of SRE Level 101 Fundamentals Series"
 description = "这是我学习SRE岗位基础知识所做的记录"

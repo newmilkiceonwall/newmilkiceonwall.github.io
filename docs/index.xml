@@ -6,7 +6,20 @@
     <description>Recent content on 墙上的新牛奶冰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 21 Mar 2023 23:08:54 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Mar 2023 16:29:59 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[阅读记录]Linkedin School of SRE Level 101 Fundamentals Series</title>
+      <link>https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/</link>
+      <pubDate>Tue, 28 Mar 2023 16:29:59 +0800</pubDate>
+      
+      <guid>https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/</guid>
+      <description>Linkedin School of SRE Level 101 Fundamentals SeriesLink to heading开始阅读时间 2023年3月28日
+完整教程（如果图片链接失效可以去这里看）
+Linux BasicsLink to headingIntroductionLink to headingThe Linux kernel is monolithic in nature.（内核是单独的，发行版是内核和其他GNU项目的集合） System calls are used to interact with the Linux kernel space.（系统调用被用来和内核交互）
+Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.（内容代码只能在内核模式执行，非内核代码只能在用户态执行）
+Device drivers are used to communicate with the hardware devices.（设备驱动用来与硬件交互）</description>
+    </item>
+    
     <item>
       <title>重读数据结构教程（一）：线性表</title>
       <link>https://newmilkiceonwall.github.io/posts/%E9%87%8D%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E7%A8%8B%E4%B8%80%E7%BA%BF%E6%80%A7%E8%A1%A8/</link>

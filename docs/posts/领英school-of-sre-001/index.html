@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+  [阅读记录]Linkedin School of SRE Level 101 Fundamentals Series · 墙上的新牛奶冰
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Newmilkiceonwall">
+<meta name="description" content="这是我学习SRE岗位基础知识所做的记录">
+<meta name="keywords" content="blog,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[阅读记录]Linkedin School of SRE Level 101 Fundamentals Series"/>
+<meta name="twitter:description" content="这是我学习SRE岗位基础知识所做的记录"/>
+
+<meta property="og:title" content="[阅读记录]Linkedin School of SRE Level 101 Fundamentals Series" />
+<meta property="og:description" content="这是我学习SRE岗位基础知识所做的记录" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-28T16:29:59+08:00" />
+<meta property="article:modified_time" content="2023-03-28T16:29:59+08:00" />
+
+
+
+
+<link rel="canonical" href="https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.36f76aaf39a14ecf5c3a3c6250dcaf06c238b3d8365d17d646f95cb1874e852b.css" integrity="sha256-NvdqrzmhTs9cOjxiUNyvBsI4s9g2XRfWRvlcsYdOhSs=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.593028e7f7ac55c003b79c230d1cd411bb4ca53b31556c3abb7f027170e646e9.css" integrity="sha256-WTAo5/esVcADt5wjDRzUEbtMpTsxVWw6u38CcXDmRuk=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/png" href="/img/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0">
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      墙上的新牛奶冰
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">博客</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/about">关于</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/">
+              [阅读记录]Linkedin School of SRE Level 101 Fundamentals Series
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-03-28T16:29:59&#43;08:00">
+                三月 28, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">技术笔记</a></div>
+
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="linkedin-school-of-sre-level-101-fundamentals-series">
+  Linkedin School of SRE Level 101 Fundamentals Series
+  <a class="heading-link" href="#linkedin-school-of-sre-level-101-fundamentals-series">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>开始阅读时间 2023年3月28日</p>
+<p><a href="https://linkedin.github.io/school-of-sre/">完整教程</a>（如果图片链接失效可以去这里看）</p>
+<h2 id="linux-basics">
+  Linux Basics
+  <a class="heading-link" href="#linux-basics">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="introduction">
+  Introduction
+  <a class="heading-link" href="#introduction">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><img src="https://linkedin.github.io/school-of-sre/level101/linux_basics/images/linux/commands/image25.png" alt=""></p>
+<ul>
+<li>The Linux kernel is monolithic in nature.（内核是单独的，发行版是内核和其他GNU项目的集合）</li>
+</ul>
+<ul>
+<li>
+<p>System calls are used to interact with the Linux kernel space.（系统调用被用来和内核交互）</p>
+</li>
+<li>
+<p>Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.（内容代码只能在内核模式执行，非内核代码只能在用户态执行）</p>
+</li>
+<li>
+<p>Device drivers are used to communicate with the hardware devices.（设备驱动用来与硬件交互）</p>
+</li>
+</ul>
+<h3 id="command-line-basics">
+  Command Line Basics
+  <a class="heading-link" href="#command-line-basics">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="file-system-organization">
+  File System Organization
+  <a class="heading-link" href="#file-system-organization">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>课程简要介绍了什么是命令，并给出了Linux系统文件的树状结构图。</p>
+<p><img src="https://linkedin.github.io/school-of-sre/level101/linux_basics/images/linux/commands/image17.png" alt=""></p>
+<p>bin | 最常用的命令的可执行程序都在bin目录下。</p>
+<p>dev | 与系统设备相关的文件在这个目录下</p>
+<p>etc | 包含的所有的系统配置文件</p>
+<p>home | 包含与用户有关的文件和目录</p>
+<p>lib | 库文件</p>
+<p>mnt | 已挂载（mounted; 有关信息可以参见mount命令）设备会在这里</p>
+<p>proc | 包含与系统上运行的进程有关的文件</p>
+<p>root | 包含与根用户有关的文件和目录。</p>
+<p>sbin | 包含用于系统管理的程序。</p>
+<p>tmp | 用于存储系统中的临时文件</p>
+<p>usr | 该目录用于存储系统中的应用程序（application）</p>
+<h4 id="文件系统导航命令">
+  文件系统导航命令
+  <a class="heading-link" href="#%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f%e5%af%bc%e8%88%aa%e5%91%bd%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>关于命令行的内容可以在<a href="https://replit.com/">replit</a>在线实践</p>
+<ul>
+<li>
+<p>ls</p>
+</li>
+<li>
+<p>pwd (print work directory)</p>
+</li>
+<li>
+<p>cd (change directory)</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -F <span style="font-style:italic"># 这会为目录加上斜杠（/），帮助区分文件和目录，在黑白终端下这有明显帮助。</span>
+</span></span></code></pre></div><h4 id="用于操作文件的命令">
+  用于操作文件的命令
+  <a class="heading-link" href="#%e7%94%a8%e4%ba%8e%e6%93%8d%e4%bd%9c%e6%96%87%e4%bb%b6%e7%9a%84%e5%91%bd%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>
+<p>touch</p>
+</li>
+<li>
+<p>mkdir</p>
+</li>
+<li>
+<p>cp</p>
+</li>
+<li>
+<p>mv</p>
+</li>
+<li>
+<p>rm</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -r &lt;some_directory&gt; <span style="font-style:italic"># 这可以删除某个目录以及其中的文件</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp &lt;source_path&gt; &lt;destination_path&gt; <span style="font-style:italic"># 主要后面是&lt;destination_path&gt;，不需要再填入文件名了。</span>
+</span></span><span style="display:flex;"><span>                                    # 如果你为它填入名字，文件将在新位置重命名。
+</span></span></code></pre></div><p>也可以复制整个文件夹内的内容:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp -r &lt;source_directory&gt; &lt;destination_directory&gt;#如果&lt;destination_directory&gt;存在
+</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">#文件夹结构将会是这样的</span>
+</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">#&lt;destination_directory&gt;/&lt;source_directory&gt;</span>
+</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">#否则会根据提供目标目录的名字直接新建一个目录</span>
+</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">#并将原目录下的全部内容复制过去</span>
+</span></span></code></pre></div><p>mv命令移动文件夹时，不需要<code>-r</code>参数。</p>
+<h4 id="查看文件内容的命令">
+  查看文件内容的命令
+  <a class="heading-link" href="#%e6%9f%a5%e7%9c%8b%e6%96%87%e4%bb%b6%e5%86%85%e5%ae%b9%e7%9a%84%e5%91%bd%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>
+<p>cat</p>
+</li>
+<li>
+<p>head</p>
+</li>
+<li>
+<p>tail（<code>-f</code>参数可以实时跟踪文件尾部更新）</p>
+</li>
+<li>
+<p>more</p>
+</li>
+<li>
+<p>less （更加高级）</p>
+</li>
+</ul>
+<h4 id="文本处理命令">
+  文本处理命令
+  <a class="heading-link" href="#%e6%96%87%e6%9c%ac%e5%a4%84%e7%90%86%e5%91%bd%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>
+<p>grep</p>
+</li>
+<li>
+<p>sed(<code>-i</code>参数以修改源文件)<a href="https://www.runoob.com/linux/linux-comm-sed.html">sed 命令|菜鸟教程</a></p>
+</li>
+<li>
+<p>sort(通常并不会影响源文件，需要你重定向结果到一份新文件里面)</p>
+</li>
+</ul>
+<h4 id="io重定向">
+  I/O重定向
+  <a class="heading-link" href="#io%e9%87%8d%e5%ae%9a%e5%90%91">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>主要讲了<code>&gt;</code>,<code>|</code></p>
+<p>三个总是打开的描述符stdin、stdout、stderr</p>
+<p>结合管道符号和uniq你可以打印出唯一内容（去重）</p>
+<h3 id="linux-server-administration">
+  Linux Server Administration
+  <a class="heading-link" href="#linux-server-administration">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="用户组管理">
+  用户/组管理
+  <a class="heading-link" href="#%e7%94%a8%e6%88%b7%e7%bb%84%e7%ae%a1%e7%90%86">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h5 id="id命令">
+  id命令
+  <a class="heading-link" href="#id%e5%91%bd%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p><code>id</code>命令：可以显示当前用户所关联的uid、gid和所属的groups</p>
+<p><code>whoami</code>:查看当前登陆用户</p>
+<h5 id="与用户组相关的文件">
+  与用户、组相关的文件
+  <a class="heading-link" href="#%e4%b8%8e%e7%94%a8%e6%88%b7%e7%bb%84%e7%9b%b8%e5%85%b3%e7%9a%84%e6%96%87%e4%bb%b6">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<ul>
+<li>
+<p>/etc/passwd Stores the user name, the uid, the gid, the home directory, the login shell etc</p>
+</li>
+<li>
+<p>/etc/shadow Stores the password associated with the users <a href="https://tldp.org/LDP/lame/LAME/linux-admin-made-easy/shadow-file-formats.html">shadow file format</a></p>
+</li>
+<li>
+<p>/etc/group Stores information about different groups on the system</p>
+<p><a href="https://tldp.org/HOWTO/User-Authentication-HOWTO/x71.html">User-Authentication-HOWTO</a></p>
+</li>
+</ul>
+<h4 id="用户管理的重要命令">
+  用户管理的重要命令
+  <a class="heading-link" href="#%e7%94%a8%e6%88%b7%e7%ae%a1%e7%90%86%e7%9a%84%e9%87%8d%e8%a6%81%e5%91%bd%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>
+<p><code>useradd</code> - 新建用户（<code>-s</code>参数可以更改默认shell）</p>
+</li>
+<li>
+<p><code>passwd</code> - 添加或修改用户的密码</p>
+</li>
+<li>
+<p><code>usermod</code> - 修改用户的属性</p>
+</li>
+<li>
+<p><code>userdel</code> - 删除用户</p>
+</li>
+</ul>
+<h4 id="重要的组管理命令">
+  重要的组管理命令
+  <a class="heading-link" href="#%e9%87%8d%e8%a6%81%e7%9a%84%e7%bb%84%e7%ae%a1%e7%90%86%e5%91%bd%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>
+<p>groupadd &lt;group_name&gt; Creates a new group</p>
+</li>
+<li>
+<p>groupmod &lt;group_name&gt; Modifies attributes of a group</p>
+</li>
+<li>
+<p>groupdel &lt;group_name&gt; Deletes a group</p>
+</li>
+<li>
+<p>gpasswd &lt;group_name&gt; Modifies password for group</p>
+</li>
+</ul>
+<p>添加用户到组：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>usermod -a G &lt;group_name&gt; &lt;username&gt;
+</span></span><span style="display:flex;"><span>tail /etc/group <span style="font-style:italic"># 查看效果</span>
+</span></span></code></pre></div><h4 id="成为超级管理员">
+  成为超级管理员
+  <a class="heading-link" href="#%e6%88%90%e4%b8%ba%e8%b6%85%e7%ba%a7%e7%ae%a1%e7%90%86%e5%91%98">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p><code>su</code>命令可以用于切换用户，这需要输入切入用户的密码。如果切入root就需要root的密码（在Ubuntu系或者其他现代Linux中可以参考<code>sudo</code>暂时来取得root权限执行命令）。</p>
+<p>在Redhat中默认没有sudo，需要通过<code>yum</code>安装：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yum install sudo
+</span></span></code></pre></div><p>文件<code>/etc/sudoers</code>决定了哪些用户，哪些组能够使用<code>sudo</code>命令。向用户提供root访问权限的一种简单方法是将他们添加到一个组中，该组具有运行所有命令的权限。“wheel”是<strong>redhat Linux</strong>中具有此类特权的一个组。用<code>usermod</code>来实现这个功能：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>usermod -a -G wheel &lt;username&gt; <span style="font-style:italic"># 可能只在Redhat能这么做</span>
+</span></span></code></pre></div><h4 id="文件权限">
+  文件权限
+  <a class="heading-link" href="#%e6%96%87%e4%bb%b6%e6%9d%83%e9%99%90">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>下面两张图很好地说明了<code>ls</code>命令列出的信息格式</p>
+<p><img src="https://linkedin.github.io/school-of-sre/level101/linux_basics/images/linux/admin/image31.jpg" alt=""></p>
+<p><img src="https://linkedin.github.io/school-of-sre/level101/linux_basics/images/linux/admin/image57.png" alt=""></p>
+<p>权限管理指示（如上图中2，3，4所指）是由三位二进制组成的，分别表示读写执行权限，所以最大为7。</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>rwx</th>
+<th>Binary</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read, write and execute</td>
+<td>rwx</td>
+<td>111</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Read and write</td>
+<td>rw-</td>
+<td>110</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Read and execute</td>
+<td>r-x</td>
+<td>101</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Read only</td>
+<td>r&ndash;</td>
+<td>100</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Write and execute</td>
+<td>-wx</td>
+<td>011</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Write only</td>
+<td>-w-</td>
+<td>010</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Execute only</td>
+<td>&ndash;x</td>
+<td>001</td>
+<td>1</td>
+</tr>
+<tr>
+<td>None</td>
+<td>&mdash;</td>
+<td>000</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h5 id="chmod">
+  chmod
+  <a class="heading-link" href="#chmod">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>改变文件的读写执行权限</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod 664 test_file <span style="font-style:italic"># 是的拥有者和拥有者所属的组可以读写test_file</span>
+</span></span></code></pre></div><h5 id="chown">
+  chown
+  <a class="heading-link" href="#chown">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>用来改变文件的所有者</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chown &lt;new_owner&gt; &lt;file_name&gt;
+</span></span></code></pre></div><h5 id="chgrp">
+  chgrp
+  <a class="heading-link" href="#chgrp">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>改变文件/目录所属组</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chgrp &lt;new_group&gt; &lt;file_name&gt;
+</span></span></code></pre></div><h4 id="ssh命令">
+  SSH命令
+  <a class="heading-link" href="#ssh%e5%91%bd%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p><code>openssh-clients</code>包中的<code>ssh-copy-id</code>命令可以让你上传公钥到服务器主机:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-copy-id baozidai@192.168.56.3 <span style="font-style:italic">#随后服务器会要求输入密码</span>
+</span></span></code></pre></div><p>ssh远程运行命令：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh &lt;user&gt;@&lt;hostname|hostip&gt; &lt;command&gt;
+</span></span></code></pre></div><p>传输文件</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp &lt;source&gt; &lt;destination&gt;
+</span></span><span style="display:flex;"><span>scp test_file baozidai@192.168.56.3:/home/baozidai
+</span></span></code></pre></div><h4 id="包管理">
+  包管理
+  <a class="heading-link" href="#%e5%8c%85%e7%ae%a1%e7%90%86">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>在Redhat上是<code>YUM</code>(Fedora现在使用更新的<code>DNF</code>),Debian系上是<code>apt</code>或者<code>apt-get</code>。</p>
+<h4 id="进程管理">
+  进程管理
+  <a class="heading-link" href="#%e8%bf%9b%e7%a8%8b%e7%ae%a1%e7%90%86">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h5 id="ps">
+  ps
+  <a class="heading-link" href="#ps">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>如果出现了&quot;ps command not found&quot;错误，你需要安装<code>procps</code>包（大雾）</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ps -aux <span style="font-style:italic"># 这会为你列出系统上现在所有进程</span>
+</span></span></code></pre></div><p><a href="https://unix.stackexchange.com/questions/106847/what-does-aux-mean-in-ps-aux">如果你想知道aux的意思</a></p>
+<h5 id="top">
+  top
+  <a class="heading-link" href="#top">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p>参考以下两个链接:</p>
+<p><a href="https://phoenixnap.com/kb/top-command-in-linux">How to Use the top Command in Linux (phoenixnap.com)</a></p>
+<p><a href="https://www.cnblogs.com/ftl1012/p/top.html">Linux top命令详解 - 小a玖拾柒 - 博客园 (cnblogs.com)</a></p>
+<p>推荐使用<code>htop</code></p>
+<h4 id="内存管理">
+  内存管理
+  <a class="heading-link" href="#%e5%86%85%e5%ad%98%e7%ae%a1%e7%90%86">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h5 id="free">
+  free
+  <a class="heading-link" href="#free">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>free -h <span style="font-style:italic"># 显示人类友好系统内存信息</span>
+</span></span></code></pre></div><h5 id="vmstat">
+  vmstat
+  <a class="heading-link" href="#vmstat">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p><code>vmstat</code>命令可以用来显示内存使用情况以及关于io和cpu使用情况的额外信息。</p>
+<h4 id="硬盘空间">
+  硬盘空间
+  <a class="heading-link" href="#%e7%a1%ac%e7%9b%98%e7%a9%ba%e9%97%b4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h5 id="dfdisk-free">
+  df(disk free)
+  <a class="heading-link" href="#dfdisk-free">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p><code>df</code>命令用来显示每个挂载的文件系统的空闲空间和可用空间。</p>
+<h5 id="dudisk-usage">
+  du(disk usage)
+  <a class="heading-link" href="#dudisk-usage">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h5>
+<p><code>du</code>命令用于显示系统中文件和目录的磁盘使用情况。</p>
+<h4 id="守护进程">
+  守护进程
+  <a class="heading-link" href="#%e5%ae%88%e6%8a%a4%e8%bf%9b%e7%a8%8b">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h4 id="systemd">
+  Systemd
+  <a class="heading-link" href="#systemd">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h4 id="logs">
+  Logs
+  <a class="heading-link" href="#logs">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<h4 id="heading">
+  
+  <a class="heading-link" href="#heading">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2022 -
+    
+    2023
+     Newmilkiceonwall 
+    ·
+    
+     <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
