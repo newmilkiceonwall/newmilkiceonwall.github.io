@@ -98,6 +98,7 @@ ONT维修使能工具 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去�
 
 
 
+
 <link rel="canonical" href="https://newmilkiceonwall.github.io/posts/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma/">
 
 
@@ -138,7 +139,7 @@ ONT维修使能工具 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去�
 
 
 
-<meta name="generator" content="Hugo 0.110.0">
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 
@@ -270,8 +271,8 @@ ONT维修使能工具 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去�
   </a>
 </h1>
 <p>打开Xshell，新建空白标签页。输入以下telnet命令:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>telnet 192.168.1.1 <span style="font-style:italic"># 根据你的具体情况，这个IP地址可能不同</span>
-</span></span></code></pre></div><p>随后需要输入账户和密码，这个账户通常是 <strong>root</strong> ，在我这里密码为 <strong>adminHW</strong>，当然你可能会需要尝试以下<strong>其他密码</strong>：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">telnet 192.168.1.1 <span style="font-style:italic"># 根据你的具体情况，这个IP地址可能不同</span>
+</code></pre></div><p>随后需要输入账户和密码，这个账户通常是 <strong>root</strong> ，在我这里密码为 <strong>adminHW</strong>，当然你可能会需要尝试以下<strong>其他密码</strong>：</p>
 <ul>
 <li>
 <p>Hw8@CMCC</p>
@@ -296,23 +297,23 @@ ONT维修使能工具 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去�
   </a>
 </h1>
 <p>在成功连接的telnel中，输入下面多条命令将启动shell并到达配置文件的存储目录:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su
-</span></span></code></pre></div><p>你应该看到“success!”字样在屏幕出现，左侧的提示符页变为</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SU_WAP&gt;
-</span></span></code></pre></div><p>随后输入：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>shell
-</span></span></code></pre></div><p>你将看到如下的BusyBox启动的相关提示：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>BusyBox v1.30.1 () built-in shell (ash)
-</span></span><span style="display:flex;"><span>Enter <span style="font-style:italic">&#39;help&#39;</span> <span style="font-weight:bold">for</span> a list of built-in commands.
-</span></span></code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">su
+</code></pre></div><p>你应该看到“success!”字样在屏幕出现，左侧的提示符页变为</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">SU_WAP&gt;
+</code></pre></div><p>随后输入：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">shell
+</code></pre></div><p>你将看到如下的BusyBox启动的相关提示：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">BusyBox v1.30.1 () built-in shell (ash)
+Enter <span style="font-style:italic">&#39;help&#39;</span> <span style="font-weight:bold">for</span> a list of built-in commands.
+</code></pre></div></li>
 </ul>
 <p>profile close core dump</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>同时左侧的提示符页变为：
-</span></span><span style="display:flex;"><span>``` bash
-</span></span><span style="display:flex;"><span>WAP(Dopra Linux) # 
-</span></span></code></pre></div><p>这时候cd到需要的目录中：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /mnt/jffs2
-</span></span></code></pre></div><p>你可以通过 <em>ls</em> 命令来查看该目录下的一些文件，保存有超级密码的配置文件名为 <strong>hw_ctree.xml</strong> ，这是一份加密的配置文件。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">同时左侧的提示符页变为：
+``` bash
+WAP(Dopra Linux) # 
+</code></pre></div><p>这时候cd到需要的目录中：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd /mnt/jffs2
+</code></pre></div><p>你可以通过 <em>ls</em> 命令来查看该目录下的一些文件，保存有超级密码的配置文件名为 <strong>hw_ctree.xml</strong> ，这是一份加密的配置文件。</p>
 <h1 id="4-解密配置文件">
   4 解密配置文件
   <a class="heading-link" href="#4-%e8%a7%a3%e5%af%86%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6">
@@ -321,25 +322,25 @@ ONT维修使能工具 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去�
   </a>
 </h1>
 <p>为了保证安全，首先需要将配置文件复制一份。提示：如果你遇到如下找不到命令情况：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/bin/sh: aescrypt2: not found
-</span></span><span style="display:flex;"><span>/bin/sh: cp: not found
-</span></span></code></pre></div><p>可以通过退出shell，重新启动shell的方式来解决。在成功之前，你可能需要多次尝试。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exit
-</span></span><span style="display:flex;"><span>shell
-</span></span><span style="display:flex;"><span>cd /mnt/jffs2
-</span></span></code></pre></div><p>现在，复制配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp hw_ctree.xml myconf.xml.gz <span style="font-style:italic"># 待会会解密出一个压缩格式文件,所以直接在这里命名为.gz</span>
-</span></span></code></pre></div><p>然后使用aescrypt2解密这个后缀为.gz的xml文件:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aescrypt2 1 myconf.xml.gz tmp
-</span></span><span style="display:flex;"><span><span style="font-style:italic"># aescrypt2 &lt;mode&gt; &lt;input file&gt; &lt;outputfilename&gt;</span>
-</span></span><span style="display:flex;"><span><span style="font-style:italic"># 值得注意的是，aescrypt2似乎会无视 &lt;outputfilename&gt; 参数，输出在原来的文件名上，这个实例中就是myconf.xml.gz</span>
-</span></span></code></pre></div><p>接下来解压这个文件：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gzip -d myconf.xml.gz
-</span></span></code></pre></div><p>将得到一个名为 <strong>myconf.xml</strong> 的文件，接下来cat出加密的Password字符串：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat myconf.xml|grep CMCCAdmin
-</span></span></code></pre></div><p>在输出中找到类似下方内容的字符串，他们通常位于输出的第一行，应该很容易找到：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>UserName=&#34;CMCCAdmin&#34; Password=&#34;$2@uIc/AkarL8Iwo)FLER@lHy_Y&amp;ltXdfs%orQ9g4yw4$&#34;
-</span></span></code></pre></div><p>双引号内的字符串就是加密后的密码，复制他们。打开华为配置加解密工具(huawei.exe), 粘贴刚刚复制的字符串到“密文解密”一栏，点击“$2解密”,即可得到超级密码。<strong>注意</strong>：在某些地区，你可能需要在解密出的这个字符串前面加上 <strong>CMCCAdmin#</strong> 或 <strong>CMCCAdmin</strong> 才能组成正确的超级密码。如果解密出的字符串为 <strong>1234#1234</strong> ，那么除了这个字符串本身就是超级密码以外，还有以下两种可能：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/sh: aescrypt2: not found
+/bin/sh: cp: not found
+</code></pre></div><p>可以通过退出shell，重新启动shell的方式来解决。在成功之前，你可能需要多次尝试。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">exit
+shell
+cd /mnt/jffs2
+</code></pre></div><p>现在，复制配置文件：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp hw_ctree.xml myconf.xml.gz <span style="font-style:italic"># 待会会解密出一个压缩格式文件,所以直接在这里命名为.gz</span>
+</code></pre></div><p>然后使用aescrypt2解密这个后缀为.gz的xml文件:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aescrypt2 1 myconf.xml.gz tmp
+<span style="font-style:italic"># aescrypt2 &lt;mode&gt; &lt;input file&gt; &lt;outputfilename&gt;</span>
+<span style="font-style:italic"># 值得注意的是，aescrypt2似乎会无视 &lt;outputfilename&gt; 参数，输出在原来的文件名上，这个实例中就是myconf.xml.gz</span>
+</code></pre></div><p>接下来解压这个文件：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gzip -d myconf.xml.gz
+</code></pre></div><p>将得到一个名为 <strong>myconf.xml</strong> 的文件，接下来cat出加密的Password字符串：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat myconf.xml|grep CMCCAdmin
+</code></pre></div><p>在输出中找到类似下方内容的字符串，他们通常位于输出的第一行，应该很容易找到：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">UserName=&#34;CMCCAdmin&#34; Password=&#34;$2@uIc/AkarL8Iwo)FLER@lHy_Y&amp;ltXdfs%orQ9g4yw4$&#34;
+</code></pre></div><p>双引号内的字符串就是加密后的密码，复制他们。打开华为配置加解密工具(huawei.exe), 粘贴刚刚复制的字符串到“密文解密”一栏，点击“$2解密”,即可得到超级密码。<strong>注意</strong>：在某些地区，你可能需要在解密出的这个字符串前面加上 <strong>CMCCAdmin#</strong> 或 <strong>CMCCAdmin</strong> 才能组成正确的超级密码。如果解密出的字符串为 <strong>1234#1234</strong> ，那么除了这个字符串本身就是超级密码以外，还有以下两种可能：</p>
 <blockquote>
 <p>CMCCAdmin#1234#1234
 CMCCAdmin1234#1234</p>
@@ -352,8 +353,8 @@ CMCCAdmin1234#1234</p>
   </a>
 </h1>
 <p>如果你有一个支持匿名的FTP服务器，你也可以将解密后的myconf.xml传输到电脑上进一步研究:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tftp -p -l myconf.xml -r myconf.xml &lt;FTP服务器地址&gt;  
-</span></span></code></pre></div><p>如果你的光猫<em><strong>在公共场所提供互联网服务</strong></em>，在不采取其他措施的情况下，为了你的网络安全，请一定记得通过你刚刚取得超级密码登陆光猫，<strong>在 “安全”——“广域网访问设置”——“ONT访问控制配置” 中关闭通过Telnet访问设备。</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tftp -p -l myconf.xml -r myconf.xml &lt;FTP服务器地址&gt;  
+</code></pre></div><p>如果你的光猫<em><strong>在公共场所提供互联网服务</strong></em>，在不采取其他措施的情况下，为了你的网络安全，请一定记得通过你刚刚取得超级密码登陆光猫，<strong>在 “安全”——“广域网访问设置”——“ONT访问控制配置” 中关闭通过Telnet访问设备。</strong></p>
 <h1 id="6-参考">
   6 参考
   <a class="heading-link" href="#6-%e5%8f%82%e8%80%83">
@@ -407,7 +408,7 @@ CMCCAdmin1234#1234</p>
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
   
 
   

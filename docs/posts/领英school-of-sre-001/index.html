@@ -29,6 +29,7 @@
 
 
 
+
 <link rel="canonical" href="https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/">
 
 
@@ -69,7 +70,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.110.0">
+<meta name="generator" content="Hugo 0.92.2" />
 
 
 
@@ -241,8 +242,8 @@
 <p>cd (change directory)</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -F <span style="font-style:italic"># 这会为目录加上斜杠（/），帮助区分文件和目录，在黑白终端下这有明显帮助。</span>
-</span></span></code></pre></div><h4 id="用于操作文件的命令">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls -F <span style="font-style:italic"># 这会为目录加上斜杠（/），帮助区分文件和目录，在黑白终端下这有明显帮助。</span>
+</code></pre></div><h4 id="用于操作文件的命令">
   用于操作文件的命令
   <a class="heading-link" href="#%e7%94%a8%e4%ba%8e%e6%93%8d%e4%bd%9c%e6%96%87%e4%bb%b6%e7%9a%84%e5%91%bd%e4%bb%a4">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -266,16 +267,16 @@
 <p>rm</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -r &lt;some_directory&gt; <span style="font-style:italic"># 这可以删除某个目录以及其中的文件</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp &lt;source_path&gt; &lt;destination_path&gt; <span style="font-style:italic"># 主要后面是&lt;destination_path&gt;，不需要再填入文件名了。</span>
-</span></span><span style="display:flex;"><span>                                    # 如果你为它填入名字，文件将在新位置重命名。
-</span></span></code></pre></div><p>也可以复制整个文件夹内的内容:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp -r &lt;source_directory&gt; &lt;destination_directory&gt;#如果&lt;destination_directory&gt;存在
-</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">#文件夹结构将会是这样的</span>
-</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">#&lt;destination_directory&gt;/&lt;source_directory&gt;</span>
-</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">#否则会根据提供目标目录的名字直接新建一个目录</span>
-</span></span><span style="display:flex;"><span>                                                <span style="font-style:italic">#并将原目录下的全部内容复制过去</span>
-</span></span></code></pre></div><p>mv命令移动文件夹时，不需要<code>-r</code>参数。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rm -r &lt;some_directory&gt; <span style="font-style:italic"># 这可以删除某个目录以及其中的文件</span>
+</code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp &lt;source_path&gt; &lt;destination_path&gt; <span style="font-style:italic"># 主要后面是&lt;destination_path&gt;，不需要再填入文件名了。</span>
+                                    <span style="font-style:italic"># 如果你为它填入名字，文件将在新位置重命名。</span>
+</code></pre></div><p>也可以复制整个文件夹内的内容:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cp -r &lt;source_directory&gt; &lt;destination_directory&gt;#如果&lt;destination_directory&gt;存在
+                                                <span style="font-style:italic">#文件夹结构将会是这样的</span>
+                                                <span style="font-style:italic">#&lt;destination_directory&gt;/&lt;source_directory&gt;</span>
+                                                <span style="font-style:italic">#否则会根据提供目标目录的名字直接新建一个目录</span>
+                                                <span style="font-style:italic">#并将原目录下的全部内容复制过去</span>
+</code></pre></div><p>mv命令移动文件夹时，不需要<code>-r</code>参数。</p>
 <h4 id="查看文件内容的命令">
   查看文件内容的命令
   <a class="heading-link" href="#%e6%9f%a5%e7%9c%8b%e6%96%87%e4%bb%b6%e5%86%85%e5%ae%b9%e7%9a%84%e5%91%bd%e4%bb%a4">
@@ -413,9 +414,9 @@
 </li>
 </ul>
 <p>添加用户到组：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>usermod -a G &lt;group_name&gt; &lt;username&gt;
-</span></span><span style="display:flex;"><span>tail /etc/group <span style="font-style:italic"># 查看效果</span>
-</span></span></code></pre></div><h4 id="成为超级管理员">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -a G &lt;group_name&gt; &lt;username&gt;
+tail /etc/group <span style="font-style:italic"># 查看效果</span>
+</code></pre></div><h4 id="成为超级管理员">
   成为超级管理员
   <a class="heading-link" href="#%e6%88%90%e4%b8%ba%e8%b6%85%e7%ba%a7%e7%ae%a1%e7%90%86%e5%91%98">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -424,10 +425,10 @@
 </h4>
 <p><code>su</code>命令可以用于切换用户，这需要输入切入用户的密码。如果切入root就需要root的密码（在Ubuntu系或者其他现代Linux中可以参考<code>sudo</code>暂时来取得root权限执行命令）。</p>
 <p>在Redhat中默认没有sudo，需要通过<code>yum</code>安装：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yum install sudo
-</span></span></code></pre></div><p>文件<code>/etc/sudoers</code>决定了哪些用户，哪些组能够使用<code>sudo</code>命令。向用户提供root访问权限的一种简单方法是将他们添加到一个组中，该组具有运行所有命令的权限。“wheel”是<strong>redhat Linux</strong>中具有此类特权的一个组。用<code>usermod</code>来实现这个功能：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>usermod -a -G wheel &lt;username&gt; <span style="font-style:italic"># 可能只在Redhat能这么做</span>
-</span></span></code></pre></div><h4 id="文件权限">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yum install sudo
+</code></pre></div><p>文件<code>/etc/sudoers</code>决定了哪些用户，哪些组能够使用<code>sudo</code>命令。向用户提供root访问权限的一种简单方法是将他们添加到一个组中，该组具有运行所有命令的权限。“wheel”是<strong>redhat Linux</strong>中具有此类特权的一个组。用<code>usermod</code>来实现这个功能：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">usermod -a -G wheel &lt;username&gt; <span style="font-style:italic"># 可能只在Redhat能这么做</span>
+</code></pre></div><h4 id="文件权限">
   文件权限
   <a class="heading-link" href="#%e6%96%87%e4%bb%b6%e6%9d%83%e9%99%90">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -506,8 +507,8 @@
   </a>
 </h5>
 <p>改变文件的读写执行权限</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod 664 test_file <span style="font-style:italic"># 是的拥有者和拥有者所属的组可以读写test_file</span>
-</span></span></code></pre></div><h5 id="chown">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod 664 test_file <span style="font-style:italic"># 是的拥有者和拥有者所属的组可以读写test_file</span>
+</code></pre></div><h5 id="chown">
   chown
   <a class="heading-link" href="#chown">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -515,8 +516,8 @@
   </a>
 </h5>
 <p>用来改变文件的所有者</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chown &lt;new_owner&gt; &lt;file_name&gt;
-</span></span></code></pre></div><h5 id="chgrp">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chown &lt;new_owner&gt; &lt;file_name&gt;
+</code></pre></div><h5 id="chgrp">
   chgrp
   <a class="heading-link" href="#chgrp">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -524,8 +525,8 @@
   </a>
 </h5>
 <p>改变文件/目录所属组</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chgrp &lt;new_group&gt; &lt;file_name&gt;
-</span></span></code></pre></div><h4 id="ssh命令">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chgrp &lt;new_group&gt; &lt;file_name&gt;
+</code></pre></div><h4 id="ssh命令">
   SSH命令
   <a class="heading-link" href="#ssh%e5%91%bd%e4%bb%a4">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -533,13 +534,13 @@
   </a>
 </h4>
 <p><code>openssh-clients</code>包中的<code>ssh-copy-id</code>命令可以让你上传公钥到服务器主机:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-copy-id baozidai@192.168.56.3 <span style="font-style:italic">#随后服务器会要求输入密码</span>
-</span></span></code></pre></div><p>ssh远程运行命令：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh &lt;user&gt;@&lt;hostname|hostip&gt; &lt;command&gt;
-</span></span></code></pre></div><p>传输文件</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp &lt;source&gt; &lt;destination&gt;
-</span></span><span style="display:flex;"><span>scp test_file baozidai@192.168.56.3:/home/baozidai
-</span></span></code></pre></div><h4 id="包管理">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-copy-id baozidai@192.168.56.3 <span style="font-style:italic">#随后服务器会要求输入密码</span>
+</code></pre></div><p>ssh远程运行命令：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh &lt;user&gt;@&lt;hostname|hostip&gt; &lt;command&gt;
+</code></pre></div><p>传输文件</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">scp &lt;source&gt; &lt;destination&gt;
+scp test_file baozidai@192.168.56.3:/home/baozidai
+</code></pre></div><h4 id="包管理">
   包管理
   <a class="heading-link" href="#%e5%8c%85%e7%ae%a1%e7%90%86">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -562,8 +563,8 @@
   </a>
 </h5>
 <p>如果出现了&quot;ps command not found&quot;错误，你需要安装<code>procps</code>包（大雾）</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ps -aux <span style="font-style:italic"># 这会为你列出系统上现在所有进程</span>
-</span></span></code></pre></div><p><a href="https://unix.stackexchange.com/questions/106847/what-does-aux-mean-in-ps-aux">如果你想知道aux的意思</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ps -aux <span style="font-style:italic"># 这会为你列出系统上现在所有进程</span>
+</code></pre></div><p><a href="https://unix.stackexchange.com/questions/106847/what-does-aux-mean-in-ps-aux">如果你想知道aux的意思</a></p>
 <h5 id="top">
   top
   <a class="heading-link" href="#top">
@@ -589,8 +590,8 @@
     <span class="sr-only">Link to heading</span>
   </a>
 </h5>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>free -h <span style="font-style:italic"># 显示人类友好系统内存信息</span>
-</span></span></code></pre></div><h5 id="vmstat">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">free -h <span style="font-style:italic"># 显示人类友好系统内存信息</span>
+</code></pre></div><h5 id="vmstat">
   vmstat
   <a class="heading-link" href="#vmstat">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -690,7 +691,7 @@
 
   
   
-  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
   
 
   
