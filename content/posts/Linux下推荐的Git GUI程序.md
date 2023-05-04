@@ -11,7 +11,7 @@ externalLink = ""
 series = []
 +++
 - Smartgit
-    - 非商用/源项目免费
+    - 非商用/开源项目免费
     - 最接近sourcetree的样式
     - 支持git工作流
     - 支持中文
@@ -32,4 +32,3 @@ series = []
 - [Gitteyup](https://murmele.github.io/Gittyup/)
     - 界面一般 现代化 不太容易看懂布局
     - Flatpak安装
-    
