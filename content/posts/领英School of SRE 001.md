@@ -178,7 +178,7 @@ mv命令移动文件夹时，不需要`-r`参数。
 添加用户到组：
 
 ```bash
-usermod -a G <group_name> <username>
+usermod -a -G <group_name> <username>
 tail /etc/group # 查看效果
 ```
 
