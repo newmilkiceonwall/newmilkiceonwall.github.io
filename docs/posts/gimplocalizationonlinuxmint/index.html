@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+  LinuxMint下的GIMP本地化 · 墙上的新牛奶冰
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Newmilkiceonwall">
+<meta name="description" content="转载一种在Ubuntu系下中文化GIMP的方法">
+<meta name="keywords" content="blog,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LinuxMint下的GIMP本地化"/>
+<meta name="twitter:description" content="转载一种在Ubuntu系下中文化GIMP的方法"/>
+
+<meta property="og:title" content="LinuxMint下的GIMP本地化" />
+<meta property="og:description" content="转载一种在Ubuntu系下中文化GIMP的方法" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-11T13:26:12+08:00" />
+<meta property="article:modified_time" content="2023-05-11T13:26:12+08:00" />
+
+
+
+
+
+<link rel="canonical" href="https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.36f76aaf39a14ecf5c3a3c6250dcaf06c238b3d8365d17d646f95cb1874e852b.css" integrity="sha256-NvdqrzmhTs9cOjxiUNyvBsI4s9g2XRfWRvlcsYdOhSs=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.593028e7f7ac55c003b79c230d1cd411bb4ca53b31556c3abb7f027170e646e9.css" integrity="sha256-WTAo5/esVcADt5wjDRzUEbtMpTsxVWw6u38CcXDmRuk=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/png" href="/img/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<meta name="generator" content="Hugo 0.92.2" />
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      墙上的新牛奶冰
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">博客</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/about">关于</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/">
+              LinuxMint下的GIMP本地化
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-05-11T13:26:12&#43;08:00">
+                五月 11, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>转载自<a href="https://notes.wadeism.net/post/ubuntu-install-gimp-chinese/">wade-chiang</a></p>
+<hr>
+<h1 id="关键指令">
+  关键指令：
+  <a class="heading-link" href="#%e5%85%b3%e9%94%ae%e6%8c%87%e4%bb%a4">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install language-pack-gnome-zh-hans <span style="font-style:italic"># 这同时也会安装language-pack-gnome-zh-hans-base</span>
+</code></pre></div><p>GIMP的本地化语言包在这里里面，这个方案也适用于Ubuntu。</p>
+<h1 id="其他发现">
+  其他发现
+  <a class="heading-link" href="#%e5%85%b6%e4%bb%96%e5%8f%91%e7%8e%b0">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>在安装完这个语言包之后，控制台的git commit注释也变成中文了(如下)。这个语言包或许为很多期待的程序做了翻译适配。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">
+<span style="font-weight:bold"># 请为您的变更输入提交说明。以 &#39;#&#39; 开始的行将被忽略，而一个空的提交
+</span><span style="font-weight:bold"># 说明将会终止提交。
+</span><span style="font-weight:bold">#
+</span><span style="font-weight:bold"># 位于分支 main
+</span><span style="font-weight:bold"># 您的分支与上游分支 &#39;origin/main&#39; 一致。
+</span><span style="font-weight:bold">#
+</span><span style="font-weight:bold"># 要提交的变更：
+</span><span style="font-weight:bold">#       新文件：   content/posts/GIMPLocalizationOnLinuxMint.md
+</span><span style="font-weight:bold">#       修改：     docs/index.xml
+</span><span style="font-weight:bold">#       新文件：   docs/posts/gimplocalizationonlinuxmint/index.html
+</span><span style="font-weight:bold">#       修改：     docs/posts/index.html
+</span><span style="font-weight:bold">#       修改：     docs/posts/index.xml
+</span><span style="font-weight:bold">#       修改：     docs/sitemap.xml
+</span><span style="font-weight:bold"></span>#
+
+</code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2022 -
+    
+    2023
+     Newmilkiceonwall 
+    ·
+    
+     <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
