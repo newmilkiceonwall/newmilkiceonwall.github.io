@@ -21,7 +21,7 @@ sudo apt-get install language-pack-gnome-zh-hans # 这同时也会安装language
 GIMP的本地化语言包在这里里面，这个方案也适用于Ubuntu。
 
 # 其他发现
-在安装完这个语言包之后，控制台的git commit注释也变成中文了(如下)。这个语言包或许为很多期待的程序做了翻译适配。
+在安装完这个语言包之后，控制台的git commit注释也变成中文了(如下)。这个语言包为其他很多程序做了翻译适配（我发现有语言变化的程序有git、nano）。
 ``` markdown
 
 # 请为您的变更输入提交说明。以 '#' 开始的行将被忽略，而一个空的提交
