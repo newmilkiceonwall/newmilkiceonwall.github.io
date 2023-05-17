@@ -15,5 +15,8 @@
     {{ if (and .Site.Params.commit .GitInfo) }}
       [<a href="{{ .Site.Params.commit }}/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>]
     {{ end }}
+    <div style="">
+    <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="text-decoration: none;color: inherit;cursor: pointer;">本网站由<img src="{{.Site.BaseURL}}img/upyun.png" alt="又拍云图标" style="height: 1.8em;vertical-align:middle;border:none">提供CDN加速/云存储服务</a>
+    </div>
   </section>
 </footer>
