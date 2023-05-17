@@ -2,7 +2,7 @@ baseURL = 'https://newmilkiceonwall.github.io/'
 title = "墙上的新牛奶冰"
 theme = "coder"
 languagecode = "zh"
-defaultcontentlanguage = "zh"
+defaultcontentlanguage = "zh-cn"
 
 paginate = 20
 
@@ -62,3 +62,43 @@ pygmentscodefencesguesssyntax = true
   weight = 2
   url = "about/about"
 
+defaultContentLanguage = 'zh-cn'
+[languages]
+  [languages.zh-cn]
+    title = '墙上的新牛奶冰'
+    weight = 1
+    [languages.zh-cn.params]
+      author = '墙上的新牛奶冰'
+      info = "流量为王时代下，独立自我的小站。"
+      description = "墙上的新牛奶冰的个人小站。"
+    [[languages.zh-cn.menu.main]]
+      name = "博客"
+      weight = 1
+      url  = "posts/"
+    [[languages.zh-cn.menu.main]]
+      name = "关于"
+      weight = 2
+      url = "about/about"
+    [[languages.zh-cn.menu.main]]
+      name = "EN"
+      weight = 3   
+      url = "en"
+  [languages.en]
+    title = 'Newmilkiceonwall'
+    weight = 2
+    [languages.en.params]
+      author = 'Newmilkiceonwall'
+      info = "An independent and self reliant small blog."
+      description = "Newmilkiceonwall's personal blog."
+    [[languages.en.menu.main]]
+      name = "Blog"
+      weight = 1
+      url  = "posts/"
+    [[languages.en.menu.main]]
+      name = "About"
+      weight = 2
+      url = "about/about"
+    [[languages.en.menu.main]]
+      name = "中文"
+      weight = 3
+      url = ".."
