@@ -1,75 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/</loc>
-    <lastmod>2023-05-11T13:26:12+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/</loc>
-    <lastmod>2023-05-11T13:26:12+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/</loc>
-    <lastmod>2023-05-11T13:26:12+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/linux%E4%B8%8B%E6%8E%A8%E8%8D%90%E7%9A%84git-gui%E7%A8%8B%E5%BA%8F/</loc>
-    <lastmod>2023-04-28T00:50:50+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/</loc>
-    <lastmod>2023-03-28T16:29:59+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/categories/</loc>
-    <lastmod>2023-03-28T16:29:59+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-03-28T16:29:59+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/%E9%87%8D%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E7%A8%8B%E4%B8%80%E7%BA%BF%E6%80%A7%E8%A1%A8/</loc>
-    <lastmod>2023-03-21T23:08:54+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2023-03-17T15:48:55+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/tags/</loc>
-    <lastmod>2023-03-17T15:48:55+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/tags/%E6%9D%82%E8%AE%B0/</loc>
-    <lastmod>2023-03-17T15:48:55+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/j1900_openwrt%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95%E4%B8%80/</loc>
-    <lastmod>2023-03-08T13:48:00+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-03-08T13:48:00+08:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/mei-cong-jin-tian-de-xiang-pian-zhong-kan-jian-cong-qian-na-ge-shao-nian/</loc>
-    <lastmod>2022-11-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/tags/%E5%9B%9E%E5%BF%86%E4%B8%8E%E6%84%9F%E6%83%B3/</loc>
-    <lastmod>2022-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/zhen-de-hen-gan-xie-2021-nian-de-zi-ji/</loc>
-    <lastmod>2022-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/virtualbox-xu-ni-ji-jin-zhu-ji-mo-shi-xnat-pei-wang/</loc>
-    <lastmod>2022-09-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/lesslessbeginning-game-development-with-godot-learn-to-create-and-publish-your-first-2d-platform-gamegreatergreater-du-hou-gan/</loc>
-    <lastmod>2022-08-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/about/</loc>
-    <lastmod>2022-08-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/about/about/</loc>
-    <lastmod>2022-08-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/xin-zhang-hu-xin-bo-ke-xin-wen-zhang/</loc>
-    <lastmod>2022-08-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/posts/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma/</loc>
-    <lastmod>2022-08-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/authors/</loc>
-  </url><url>
-    <loc>https://newmilkiceonwall.github.io/series/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://newmilkiceonwall.github.io/zh-cn/sitemap.xml</loc>
+    
+      <lastmod>2023-05-11T13:26:12+08:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://newmilkiceonwall.github.io/en/sitemap.xml</loc>
+    
+      <lastmod>2022-08-10T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>

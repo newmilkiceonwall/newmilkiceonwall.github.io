@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-cn">
   <head>
     <title>
   重读数据结构教程（一）：线性表 · 墙上的新牛奶冰
@@ -11,35 +11,44 @@
 
 
 
-<meta name="author" content="Newmilkiceonwall">
-<meta name="description" content="0 写在前面  Link to heading   阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&quot;比较基础&quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
-1 顺序表及其应用示例  Link to heading   此处不赘述顺序表概念，直接摘录了书中的例子。
-1.1 P39 例2. 4  Link to heading    有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
- 1.1.1 解法1  Link to heading   在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
-1.1.2 解法2  Link to heading   为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
-2 线性表的链式存储结构  Link to heading   2.1 链表和顺序表的比较  Link to heading     顺序表是物理上相邻的，而链表不必如此。">
+<meta name="author" content="墙上的新牛奶冰">
+<meta name="description" content="0 写在前面  链接到标题   阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&quot;比较基础&quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
+1 顺序表及其应用示例  链接到标题   此处不赘述顺序表概念，直接摘录了书中的例子。
+1.1 P39 例2. 4  链接到标题    有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
+ 1.1.1 解法1  链接到标题   在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
+1.1.2 解法2  链接到标题   为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
+2 线性表的链式存储结构  链接到标题   2.1 链表和顺序表的比较  链接到标题     顺序表是物理上相邻的，而链表不必如此。
+  顺序表的插入、删除平均需要移动半个表元素，而链表不必。
+  顺序表查找第i个元素耗时O（1），具有随机存取特性。而链表不具有这个特性。
+2.2 单链表tips和一些题  链接到标题   带头节点的好处：">
 <meta name="keywords" content="blog,personal">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="重读数据结构教程（一）：线性表"/>
-<meta name="twitter:description" content="0 写在前面  Link to heading   阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&quot;比较基础&quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
-1 顺序表及其应用示例  Link to heading   此处不赘述顺序表概念，直接摘录了书中的例子。
-1.1 P39 例2. 4  Link to heading    有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
- 1.1.1 解法1  Link to heading   在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
-1.1.2 解法2  Link to heading   为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
-2 线性表的链式存储结构  Link to heading   2.1 链表和顺序表的比较  Link to heading     顺序表是物理上相邻的，而链表不必如此。"/>
+<meta name="twitter:description" content="0 写在前面  链接到标题   阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&quot;比较基础&quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
+1 顺序表及其应用示例  链接到标题   此处不赘述顺序表概念，直接摘录了书中的例子。
+1.1 P39 例2. 4  链接到标题    有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
+ 1.1.1 解法1  链接到标题   在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
+1.1.2 解法2  链接到标题   为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
+2 线性表的链式存储结构  链接到标题   2.1 链表和顺序表的比较  链接到标题     顺序表是物理上相邻的，而链表不必如此。
+  顺序表的插入、删除平均需要移动半个表元素，而链表不必。
+  顺序表查找第i个元素耗时O（1），具有随机存取特性。而链表不具有这个特性。
+2.2 单链表tips和一些题  链接到标题   带头节点的好处："/>
 
 <meta property="og:title" content="重读数据结构教程（一）：线性表" />
-<meta property="og:description" content="0 写在前面  Link to heading   阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&quot;比较基础&quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
-1 顺序表及其应用示例  Link to heading   此处不赘述顺序表概念，直接摘录了书中的例子。
-1.1 P39 例2. 4  Link to heading    有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
- 1.1.1 解法1  Link to heading   在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
-1.1.2 解法2  Link to heading   为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
-2 线性表的链式存储结构  Link to heading   2.1 链表和顺序表的比较  Link to heading     顺序表是物理上相邻的，而链表不必如此。" />
+<meta property="og:description" content="0 写在前面  链接到标题   阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&quot;比较基础&quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
+1 顺序表及其应用示例  链接到标题   此处不赘述顺序表概念，直接摘录了书中的例子。
+1.1 P39 例2. 4  链接到标题    有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
+ 1.1.1 解法1  链接到标题   在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
+1.1.2 解法2  链接到标题   为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
+2 线性表的链式存储结构  链接到标题   2.1 链表和顺序表的比较  链接到标题     顺序表是物理上相邻的，而链表不必如此。
+  顺序表的插入、删除平均需要移动半个表元素，而链表不必。
+  顺序表查找第i个元素耗时O（1），具有随机存取特性。而链表不具有这个特性。
+2.2 单链表tips和一些题  链接到标题   带头节点的好处：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://newmilkiceonwall.github.io/posts/%E9%87%8D%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E7%A8%8B%E4%B8%80%E7%BA%BF%E6%80%A7%E8%A1%A8/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-21T23:08:54+08:00" />
-<meta property="article:modified_time" content="2023-03-21T23:08:54+08:00" />
+<meta property="article:modified_time" content="2023-03-21T23:08:54+08:00" /><meta property="og:site_name" content="墙上的新牛奶冰" />
 
 
 
@@ -129,7 +138,29 @@
               <a class="navigation-link" href="/about/about">关于</a>
             </li>
           
+            <li class="navigation-item">
+              <a class="navigation-link" href="/en">EN</a>
+            </li>
+          
         
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/en/"></a>
+              </li>
+            
+          
         
       </ul>
     
@@ -154,12 +185,12 @@
             <span class="posted-on">
               <i class="fa fa-calendar" aria-hidden="true"></i>
               <time datetime="2023-03-21T23:08:54&#43;08:00">
-                三月 21, 2023
+                March 21, 2023
               </time>
             </span>
             <span class="reading-time">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
-              
+              阅读时间：1 分钟
             </span>
           </div>
           
@@ -173,8 +204,8 @@
         <h1 id="0-写在前面">
   0 写在前面
   <a class="heading-link" href="#0-%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h1>
 <p>阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。
@@ -182,16 +213,16 @@
 <h1 id="1-顺序表及其应用示例">
   1 顺序表及其应用示例
   <a class="heading-link" href="#1-%e9%a1%ba%e5%ba%8f%e8%a1%a8%e5%8f%8a%e5%85%b6%e5%ba%94%e7%94%a8%e7%a4%ba%e4%be%8b">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h1>
 <p>此处不赘述顺序表概念，直接摘录了书中的例子。</p>
 <h2 id="11-p39-例2-4">
   1.1 P39 例2. 4
   <a class="heading-link" href="#11-p39-%e4%be%8b2-4">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h2>
 <blockquote>
@@ -201,31 +232,31 @@
 <h3 id="111-解法1">
   1.1.1 解法1
   <a class="heading-link" href="#111-%e8%a7%a3%e6%b3%951">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h3>
 <p>在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L <em>R指针相遇，然后交换</em>L指针的值和L[0]的值——也就是基准值。</p>
 <h3 id="112-解法2">
   1.1.2 解法2
   <a class="heading-link" href="#112-%e8%a7%a3%e6%b3%952">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h3>
 <p>为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。</p>
 <h1 id="2-线性表的链式存储结构">
   2 线性表的链式存储结构
   <a class="heading-link" href="#2-%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e9%93%be%e5%bc%8f%e5%ad%98%e5%82%a8%e7%bb%93%e6%9e%84">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h1>
 <h2 id="21-链表和顺序表的比较">
   2.1 链表和顺序表的比较
   <a class="heading-link" href="#21-%e9%93%be%e8%a1%a8%e5%92%8c%e9%a1%ba%e5%ba%8f%e8%a1%a8%e7%9a%84%e6%af%94%e8%be%83">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h2>
 <ol>
@@ -240,8 +271,8 @@
 <h2 id="22-单链表tips和一些题">
   2.2 单链表tips和一些题
   <a class="heading-link" href="#22-%e5%8d%95%e9%93%be%e8%a1%a8tips%e5%92%8c%e4%b8%80%e4%ba%9b%e9%a2%98">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h2>
 <p>带头节点的好处：</p>
@@ -257,8 +288,8 @@
 <h3 id="221-单链表原地反转">
   2.2.1 单链表原地反转
   <a class="heading-link" href="#221-%e5%8d%95%e9%93%be%e8%a1%a8%e5%8e%9f%e5%9c%b0%e5%8f%8d%e8%bd%ac">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h3>
 <p>Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;None
@@ -269,8 +300,8 @@ pre:None cur:1 next:2 actions: cur-&gt;next = pre; pre=cur; cur=next; next=next-
 <h3 id="222-单链表是否有环">
   2.2.2 单链表是否有环
   <a class="heading-link" href="#222-%e5%8d%95%e9%93%be%e8%a1%a8%e6%98%af%e5%90%a6%e6%9c%89%e7%8e%af">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h3>
 <ol>
@@ -281,8 +312,8 @@ pre:None cur:1 next:2 actions: cur-&gt;next = pre; pre=cur; cur=next; next=next-
 <h2 id="23-双链表">
   2.3 双链表
   <a class="heading-link" href="#23-%e5%8f%8c%e9%93%be%e8%a1%a8">
-    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
   </a>
 </h2>
 <p>就是有pre指针的单链表</p>
@@ -313,10 +344,10 @@ pre:None cur:1 next:2 actions: cur-&gt;next = pre; pre=cur; cur=next; next=next-
       2022 -
     
     2023
-     Newmilkiceonwall 
+     墙上的新牛奶冰 
     ·
     
-     <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
     
     <div style="">
     <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="text-decoration: none;color: inherit;cursor: pointer;">本网站由<img src="https://newmilkiceonwall.github.io/img/upyun.png" alt="又拍云图标" style="height: 1.8em;vertical-align:middle;border:none">提供CDN加速/云存储服务</a>

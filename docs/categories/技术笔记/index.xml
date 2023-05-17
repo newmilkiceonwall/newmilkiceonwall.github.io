@@ -13,10 +13,11 @@
       <pubDate>Tue, 28 Mar 2023 16:29:59 +0800</pubDate>
       
       <guid>https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/</guid>
-      <description>Linkedin School of SRE Level 101 Fundamentals Series  Link to heading   开始阅读时间 2023年3月28日
+      <description>Linkedin School of SRE Level 101 Fundamentals Series  链接到标题   开始阅读时间 2023年3月28日
 完整教程（如果图片链接失效可以去这里看）
-Linux Basics  Link to heading   Introduction  Link to heading    The Linux kernel is monolithic in nature.（内核是单独的，发行版是内核和其他GNU项目的集合）    System calls are used to interact with the Linux kernel space.（系统调用被用来和内核交互）
-  Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.</description>
+Linux Basics  链接到标题   Introduction  链接到标题    The Linux kernel is monolithic in nature.（内核是单独的，发行版是内核和其他GNU项目的集合）    System calls are used to interact with the Linux kernel space.（系统调用被用来和内核交互）
+  Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.（内容代码只能在内核模式执行，非内核代码只能在用户态执行）
+  Device drivers are used to communicate with the hardware devices.</description>
     </item>
     
   </channel>

@@ -14,8 +14,8 @@
       
       <guid>https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/</guid>
       <description>转载自wade-chiang
- 关键指令：  Link to heading   sudo apt-get install language-pack-gnome-zh-hans # 这同时也会安装language-pack-gnome-zh-hans-base GIMP的本地化语言包在这里里面，这个方案也适用于Ubuntu。
-其他发现  Link to heading   在安装完这个语言包之后，控制台的git commit注释也变成中文了(如下)。这个语言包为其他很多程序做了翻译适配（我发现有语言变化的程序有git、nano）。
+ 关键指令：  链接到标题   sudo apt-get install language-pack-gnome-zh-hans # 这同时也会安装language-pack-gnome-zh-hans-base GIMP的本地化语言包在这里里面，这个方案也适用于Ubuntu。
+其他发现  链接到标题   在安装完这个语言包之后，控制台的git commit注释也变成中文了(如下)。这个语言包为其他很多程序做了翻译适配（我发现有语言变化的程序有git、nano）。
 # 请为您的变更输入提交说明。以 &amp;#39;#&amp;#39; 开始的行将被忽略，而一个空的提交 # 说明将会终止提交。 # # 位于分支 main # 您的分支与上游分支 &amp;#39;origin/main&amp;#39; 一致。 # # 要提交的变更： # 新文件： content/posts/GIMPLocalizationOnLinuxMint.md # 修改： docs/index.xml # 新文件： docs/posts/gimplocalizationonlinuxmint/index.html # 修改： docs/posts/index.html # 修改： docs/posts/index.xml # 修改： docs/sitemap.xml # </description>
     </item>
     
@@ -34,10 +34,11 @@
       <pubDate>Tue, 28 Mar 2023 16:29:59 +0800</pubDate>
       
       <guid>https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/</guid>
-      <description>Linkedin School of SRE Level 101 Fundamentals Series  Link to heading   开始阅读时间 2023年3月28日
+      <description>Linkedin School of SRE Level 101 Fundamentals Series  链接到标题   开始阅读时间 2023年3月28日
 完整教程（如果图片链接失效可以去这里看）
-Linux Basics  Link to heading   Introduction  Link to heading    The Linux kernel is monolithic in nature.（内核是单独的，发行版是内核和其他GNU项目的集合）    System calls are used to interact with the Linux kernel space.（系统调用被用来和内核交互）
-  Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.</description>
+Linux Basics  链接到标题   Introduction  链接到标题    The Linux kernel is monolithic in nature.（内核是单独的，发行版是内核和其他GNU项目的集合）    System calls are used to interact with the Linux kernel space.（系统调用被用来和内核交互）
+  Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.（内容代码只能在内核模式执行，非内核代码只能在用户态执行）
+  Device drivers are used to communicate with the hardware devices.</description>
     </item>
     
     <item>
@@ -46,12 +47,15 @@ Linux Basics  Link to heading   Introduction  Link to heading    The Linux kerne
       <pubDate>Tue, 21 Mar 2023 23:08:54 +0800</pubDate>
       
       <guid>https://newmilkiceonwall.github.io/posts/%E9%87%8D%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E7%A8%8B%E4%B8%80%E7%BA%BF%E6%80%A7%E8%A1%A8/</guid>
-      <description>0 写在前面  Link to heading   阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&amp;quot;比较基础&amp;quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
-1 顺序表及其应用示例  Link to heading   此处不赘述顺序表概念，直接摘录了书中的例子。
-1.1 P39 例2. 4  Link to heading    有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
- 1.1.1 解法1  Link to heading   在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
-1.1.2 解法2  Link to heading   为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
-2 线性表的链式存储结构  Link to heading   2.1 链表和顺序表的比较  Link to heading     顺序表是物理上相邻的，而链表不必如此。</description>
+      <description>0 写在前面  链接到标题   阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&amp;quot;比较基础&amp;quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
+1 顺序表及其应用示例  链接到标题   此处不赘述顺序表概念，直接摘录了书中的例子。
+1.1 P39 例2. 4  链接到标题    有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
+ 1.1.1 解法1  链接到标题   在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
+1.1.2 解法2  链接到标题   为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
+2 线性表的链式存储结构  链接到标题   2.1 链表和顺序表的比较  链接到标题     顺序表是物理上相邻的，而链表不必如此。
+  顺序表的插入、删除平均需要移动半个表元素，而链表不必。
+  顺序表查找第i个元素耗时O（1），具有随机存取特性。而链表不具有这个特性。
+2.2 单链表tips和一些题  链接到标题   带头节点的好处：</description>
     </item>
     
     <item>
@@ -61,7 +65,7 @@ Linux Basics  Link to heading   Introduction  Link to heading    The Linux kerne
       
       <guid>https://newmilkiceonwall.github.io/posts/bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
       <description>源贴
- Bash常用快捷键  Link to heading   ctrl键组合  Link to heading   ctrl+a:光标移到行首。
+ Bash常用快捷键  链接到标题   ctrl键组合  链接到标题   ctrl+a:光标移到行首。
 ctrl+b:光标左移一个字母
 ctrl+c:杀死当前进程。
 ctrl+d:退出当前 Shell。
@@ -77,7 +81,7 @@ ctrl+y: 粘贴或者恢复上次的删除
 ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符
 ctrl+f: 光标右移
 ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复
-esc组合  Link to heading   esc+d: 删除光标后的一个词
+esc组合  链接到标题   esc+d: 删除光标后的一个词
 esc+f: 往右跳一个词
 esc+b: 往左跳一个词
 esc+t: 交换光标位置前的两个单词。</description>
@@ -89,16 +93,16 @@ esc+t: 交换光标位置前的两个单词。</description>
       <pubDate>Wed, 08 Mar 2023 13:48:00 +0800</pubDate>
       
       <guid>https://newmilkiceonwall.github.io/posts/j1900_openwrt%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95%E4%B8%80/</guid>
-      <description>J1900|OpenWrt安装配置笔记  Link to heading   这份笔记记录的信息可能不完全
+      <description>J1900|OpenWrt安装配置笔记  链接到标题   这份笔记记录的信息可能不完全
  我使用的固件是openwrt-22.03.3-x86-generic-generic-ext4-combined-efi
-如何启动  Link to heading     需要把主板的uefi引导关闭，保证能够从U盘或者其他外部介质启动。
+如何启动  链接到标题     需要把主板的uefi引导关闭，保证能够从U盘或者其他外部介质启动。
   使用了balenaEtcher来将openwrt的固件烧录到U盘中，Roadkil&#39;s Disk Image似乎也可以，但是效果不如BlaenaEtcher。当然，BlaenaEtcher不会使用全部的U盘空间。这篇文章可以实现扩容OpenWrt 存储空间扩容的两种方案 这个内容可以让你把根目录/挂载在U盘的其他地方。
-  关于如何通过网线调试并且上网  Link to heading   用一根网线连接
+  关于如何通过网线调试并且上网  链接到标题   用一根网线连接
 我的笔记本&amp;lt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;gt;1900主板
 然后在Windows控制面板——适配器——选择可以联网的适配器——右键——属性——共享——对“以太网”共享此连接。在openwrt里面把lan的网关设置为电脑有线适配器的ip地址，然后1900就可以通过电脑的网络上网了。这适用于J1900没有多余网口时候的调试。
-中文化和其他驱动  Link to heading   安装luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn（安装了之后看不出哪里汉化了）。我的无线USB网卡是W311U+，内置的是RT2870STA的驱动，在opkg里面搜到了这个驱动 kmod-rt2800-usb。安装驱动之后，如果有必要，使用
+中文化和其他驱动  链接到标题   安装luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn（安装了之后看不出哪里汉化了）。我的无线USB网卡是W311U+，内置的是RT2870STA的驱动，在opkg里面搜到了这个驱动 kmod-rt2800-usb。安装驱动之后，如果有必要，使用
 ifconfig wlan&amp;lt;x&amp;gt; up 把无线网卡启动起来。wifi config命令可以自动检测无线设备（前提是安装了恰当的驱动），并在/etc/config/wireless生成配置文件，需要在这个配置文件中将无线打开（默认是关闭的）
-关于DMZ主机  Link to heading   在防火墙下面添加如下规则cat /etc/config/firewall
+关于DMZ主机  链接到标题   在防火墙下面添加如下规则cat /etc/config/firewall
 config redirect &amp;#39;dmz&amp;#39; option name &amp;#39;dmz&amp;#39; option src &amp;#39;wan&amp;#39; option proto &amp;#39;tcp&amp;#39; option target &amp;#39;DNAT&amp;#39; option dest_ip &amp;#39;192.</description>
     </item>
     
@@ -129,13 +133,13 @@ config redirect &amp;#39;dmz&amp;#39; option name &amp;#39;dmz&amp;#39; option s
       <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://newmilkiceonwall.github.io/posts/virtualbox-xu-ni-ji-jin-zhu-ji-mo-shi-xnat-pei-wang/</guid>
-      <description>0 写在前面  Link to heading   起因是这样的——由于发现完美对战平台会影响VBox的运行，卸载完美之后，用回了阔别几个月的VBox。需要组一个Ubuntu的服务器，用于练习，但是默认的NAT模式，主机直通虚拟机上的应用需要在VBox配置端口映射，一个一个映射太繁琐了！就想能不能组一个类似局域网的模式，同时客机能够通过NAT正常上网。网上有很多客机单网卡的实现，这一篇是基于Vmware的，但是这种方案需要配置window网络共享，有没有一种不用配置共享的方案？
-1 双网卡配置  Link to heading   这里需要使用VBox的HostOnly网卡，如果没有这个网卡适配器，可以在VBox主页面——管理——主机网络管理器中新建，window系统可能需要管理员权限。就在主机网络管理器中将这张网卡的IPv4地址设置为192.168.56.2/24。考虑到未来可能有其他设备或虚拟机接入，打开DHCP服务器为192.168.56.X网段自动分配IP，更具不同人的实际情况，这个操作可能不是必须的。
+      <description>0 写在前面  链接到标题   起因是这样的——由于发现完美对战平台会影响VBox的运行，卸载完美之后，用回了阔别几个月的VBox。需要组一个Ubuntu的服务器，用于练习，但是默认的NAT模式，主机直通虚拟机上的应用需要在VBox配置端口映射，一个一个映射太繁琐了！就想能不能组一个类似局域网的模式，同时客机能够通过NAT正常上网。网上有很多客机单网卡的实现，这一篇是基于Vmware的，但是这种方案需要配置window网络共享，有没有一种不用配置共享的方案？
+1 双网卡配置  链接到标题   这里需要使用VBox的HostOnly网卡，如果没有这个网卡适配器，可以在VBox主页面——管理——主机网络管理器中新建，window系统可能需要管理员权限。就在主机网络管理器中将这张网卡的IPv4地址设置为192.168.56.2/24。考虑到未来可能有其他设备或虚拟机接入，打开DHCP服务器为192.168.56.X网段自动分配IP，更具不同人的实际情况，这个操作可能不是必须的。
 随后，在需要配置的虚拟机设置页——网络，启用网卡1和网卡2，分别选择NAT和仅主机网络，并为仅主机网络选择刚刚配置好的192.168.56.X网段HostOnly网卡。
-2 Ubuntu通过netplan配网固定IP  Link to heading   其实到此，如果你的虚拟机操作系统默认为网卡打开DHCP，虚拟机就应该能够获取到192.168.56.X的IP地址，通过这个IP地址，主机和客机可以完成互联互通。但是我的Ubuntu并未想当然地完成这的自动配置。同时，作为一个长期使用的、通过服务器的虚拟机，DHCP可能导致的IP变换，也不是一件好事。使用接下来，通过netplan把虚拟机IP固定为192.168.56.3/24。虚拟机开机，打开这个文件：
+2 Ubuntu通过netplan配网固定IP  链接到标题   其实到此，如果你的虚拟机操作系统默认为网卡打开DHCP，虚拟机就应该能够获取到192.168.56.X的IP地址，通过这个IP地址，主机和客机可以完成互联互通。但是我的Ubuntu并未想当然地完成这的自动配置。同时，作为一个长期使用的、通过服务器的虚拟机，DHCP可能导致的IP变换，也不是一件好事。使用接下来，通过netplan把虚拟机IP固定为192.168.56.3/24。虚拟机开机，打开这个文件：
 sudo nano /etc/netplan/00-installer-config.yaml # 当然你也可以使用vim，记得提管理员权限 我的配置如下：
 # This is the network config written by &amp;#39;subiquity&amp;#39; network: ethernets: enp0s3: dhcp4: true enp0s8: dhcp4: false addresses: [192.168.56.3/24] version: 2 其中enp0s3为NAT网卡，enp0s8为HostOnly网卡。即便你也使用VBox，实际情况下，网卡的名字也可能不一样，通过ifconfig -a可以查询到网卡名，随后如上配置即可。最后，在shell中运行sudo netplan apply即可使新配置生效（这样配置，即使是重启，也是有效的）。通过主机Ping客机：
-正在 Ping 192.168.56.3 具有 32 字节的数据: 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.</description>
+正在 Ping 192.168.56.3 具有 32 字节的数据: 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.</description>
     </item>
     
     <item>
@@ -147,8 +151,8 @@ sudo nano /etc/netplan/00-installer-config.yaml # 当然你也可以使用vim，
       <description>&lt;h1 id=&#34;0-写在前面&#34;&gt;
   0 写在前面
   &lt;a class=&#34;heading-link&#34; href=&#34;#0-%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2&#34;&gt;
-    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;
-    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;
+    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;链接到标题&#34;&gt;&lt;/i&gt;
+    &lt;span class=&#34;sr-only&#34;&gt;链接到标题&lt;/span&gt;
   &lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;这本是书是关于Godot游戏开发的，书中描述了使用Godot开发一个简单2D平台游戏demo的全流程——从素材导入、代码编码、二进制导出甚至简单地发行自己的游戏都有讲到。
@@ -162,12 +166,12 @@ sudo nano /etc/netplan/00-installer-config.yaml # 当然你也可以使用vim，
       
       <guid>https://newmilkiceonwall.github.io/about/about/</guid>
       <description>欢迎来到我的小站呀，很高兴遇见你！🤝
- 🏠 关于本站  Link to heading   这是我个人用来记录生活中的心得体会、学习的中笔记知识、实践中创意点子等内容的地方。
+ 🏠 关于本站  链接到标题   这是我个人用来记录生活中的心得体会、学习的中笔记知识、实践中创意点子等内容的地方。
  关于生活的酸甜，或许并不值得阅读、参考。 关于学习笔记——写给自己看。如果对你有帮助，那我可太高兴了！ 关于创意点子。时常有些奇思妙想和小众需求，受限于精力暂时无法实现或想法过于天马行空，我便会在这里做下记录，作为一种对思维的启发。如果你实现了某个需求或者相似功能，请联系我试用。  最后，这是一个静态博客，由Gridea驱动 自2023年1月24日由Hugo驱动（感谢Gridea2Hugo）。
-👨‍💻 博主是谁  Link to heading   没错，是我。一个在校研究生。在这个流量漫天飞的时代，在下不想被过度关注，我希望自己在赛博空间中，能够随时像回到家里肆意关上门，拉起窗帘那样具有可控的私密，所以无意在这里透露更多个人细节。
-⛹ 兴趣爱好  Link to heading   Python玩家，科研新手。
-📬 联系我呀  Link to heading   Email
-😜 关于此页  Link to heading   此页作为我的个人快照，是我脑子里“看法”的不完全映射。我对这个网址、这个页面、对我自己及其他方面的看法，这些看法可能会在看过一本书、听闻一个社会事件，或是读过一条知乎而发生改变。所以，这个页面也会不时发生变动。</description>
+👨‍💻 博主是谁  链接到标题   没错，是我。一个在校研究生。在这个流量漫天飞的时代，在下不想被过度关注，我希望自己在赛博空间中，能够随时像回到家里肆意关上门，拉起窗帘那样具有可控的私密，所以无意在这里透露更多个人细节。
+⛹ 兴趣爱好  链接到标题   Python玩家，科研新手。
+📬 联系我呀  链接到标题   Email
+😜 关于此页  链接到标题   此页作为我的个人快照，是我脑子里“看法”的不完全映射。我对这个网址、这个页面、对我自己及其他方面的看法，这些看法可能会在看过一本书、听闻一个社会事件，或是读过一条知乎而发生改变。所以，这个页面也会不时发生变动。</description>
     </item>
     
     <item>
@@ -188,8 +192,8 @@ sudo nano /etc/netplan/00-installer-config.yaml # 当然你也可以使用vim，
       <description>&lt;h1 id=&#34;需要的工具&#34;&gt;
   需要的工具
   &lt;a class=&#34;heading-link&#34; href=&#34;#%e9%9c%80%e8%a6%81%e7%9a%84%e5%b7%a5%e5%85%b7&#34;&gt;
-    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;
-    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;
+    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;链接到标题&#34;&gt;&lt;/i&gt;
+    &lt;span class=&#34;sr-only&#34;&gt;链接到标题&lt;/span&gt;
   &lt;/a&gt;
 &lt;/h1&gt;
 &lt;ul&gt;
