@@ -24,7 +24,7 @@ series = []
     - 只支持到Ubuntu18.04
 - [gitnuro](https://gitnuro.jetpackduba.com/) 
     - 界面好看 现代化
-    - 需要特定的比较高的jre版本
+    - 需要特定的比较高的jre版本(jre17)
     - 不支持中文
     - Flatpak安装很慢，简直是灾难。而且很占空间。
 - [Guitar](https://github.com/soramimi/Guitar) 界面一般
