@@ -11,4 +11,5 @@ externalLink = ""
 series = []
 +++
 
-[Qbot](https://github.com/UFund-Me/Qbot) #量化交易
+- [Qbot](https://github.com/UFund-Me/Qbot) #量化交易
+- [pelicann](https://github.com/getpelican/pelican) 一个Python编写的静态页面生成器 #Hugo #静态页面
