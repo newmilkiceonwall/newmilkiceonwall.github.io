@@ -6,7 +6,20 @@
     <description>Recent content in Posts on 墙上的新牛奶冰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 11 May 2023 13:26:12 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 22:48:20 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux下Zip解压乱码的解决方案以及原因解析</title>
+      <link>https://newmilkiceonwall.github.io/posts/linux%E4%B8%8Bzip%E8%A7%A3%E5%8E%8B%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BB%A5%E5%8F%8A%E5%8E%9F%E5%9B%A0%E8%A7%A3%E6%9E%90/</link>
+      <pubDate>Sun, 21 May 2023 22:48:20 +0800</pubDate>
+      
+      <guid>https://newmilkiceonwall.github.io/posts/linux%E4%B8%8Bzip%E8%A7%A3%E5%8E%8B%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BB%A5%E5%8F%8A%E5%8E%9F%E5%9B%A0%E8%A7%A3%E6%9E%90/</guid>
+      <description>解决方案  链接到标题   1  链接到标题   来自知乎
+unzip -O cp936 &amp;lt;文件名&amp;gt;.zip 2  链接到标题   Find Hao的回答-知乎
+unar file.zip 但是你可能需要自行安装unar，它可以自动检测(zip)文件的编码。
+为什么发生这种事  链接到标题    本质问题还是zip格式的缺陷，没有字段标志出文件名的编码格式。ZIP在压缩与解压缩的时候默认使用了系统的本地编码，如windows中文环境下为GBK，日文环境下是JIS，linux默认编码为UTF8等；那么在不同系统环境下，只要压缩与解压缩的编码不一致，就会出现乱码。知乎
+ 其他提示  链接到标题   convmv可以转化文件名的编码，可以unzip出来然后再convmv，但这看起来不够优雅。</description>
+    </item>
+    
     <item>
       <title>LinuxMint下的GIMP本地化</title>
       <link>https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/</link>
