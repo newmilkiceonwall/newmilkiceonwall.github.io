@@ -14,7 +14,6 @@ pygmentscodefencesguesssyntax = true
 
 [params]
   author = "Newmilkiceonwall"
-  info = "流量为王时代下，独立自我的小站。"
   description = "Newmilkiceonwall's personal website"
   keywords = "blog,personal"
   avatarurl = "/img/avatar.png"
@@ -69,7 +68,7 @@ defaultContentLanguage = 'zh-cn'
     weight = 1
     [languages.zh-cn.params]
       author = '墙上的新牛奶冰'
-      info = "流量为王时代下，独立自我的小站。"
+      info = "现在的我，啷个在想？"
       description = "墙上的新牛奶冰的个人小站。"
     [[languages.zh-cn.menu.main]]
       name = "博客"
