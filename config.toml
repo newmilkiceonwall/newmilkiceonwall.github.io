@@ -68,7 +68,7 @@ defaultContentLanguage = 'zh-cn'
     weight = 1
     [languages.zh-cn.params]
       author = '墙上的新牛奶冰'
-      info = "现在的我，啷个在想？"
+      info = "哪条路都不好走，啥子命我都不抗拒。"
       description = "墙上的新牛奶冰的个人小站。"
     [[languages.zh-cn.menu.main]]
       name = "博客"
