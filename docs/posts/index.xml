@@ -6,7 +6,23 @@
     <description>Recent content in Posts on 墙上的新牛奶冰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 21 May 2023 22:48:20 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Jul 2023 23:26:13 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何更新zoterostyle中的eskey等小事情杂记</title>
+      <link>https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0zoterostyle%E4%B8%AD%E7%9A%84eskey/</link>
+      <pubDate>Sun, 23 Jul 2023 23:26:13 +0800</pubDate>
+      
+      <guid>https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0zoterostyle%E4%B8%AD%E7%9A%84eskey/</guid>
+      <description>我把好一些琐碎问题的解决方案记录在这里。
+ 如何更新zoterostyle中的eskey  链接到标题   使用zotero的时候，插件zoterostyle中影响因子拉不下来。
+打开zotero， 编辑——首选项——高级——编辑器——搜索“easys”——用easyscholar的key更新这个字符串
+修改Cinnamon鼠标拖动窗口的快捷键  链接到标题   参考这篇文章
+在cinnamon的Linux下面使用如下命令修改
+gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &amp;#39;&amp;lt;Super&amp;gt;&amp;#39; Linux Mint 登陆页面启用小键盘  链接到标题   sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
+Linux Mint 分辨率调整  链接到标题   这篇博客有非常详细的描述
+Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true  </description>
+    </item>
+    
     <item>
       <title>Linux下Zip解压乱码的解决方案以及原因解析</title>
       <link>https://newmilkiceonwall.github.io/posts/linux%E4%B8%8Bzip%E8%A7%A3%E5%8E%8B%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BB%A5%E5%8F%8A%E5%8E%9F%E5%9B%A0%E8%A7%A3%E6%9E%90/</link>
