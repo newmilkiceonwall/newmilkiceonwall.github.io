@@ -20,7 +20,8 @@
 在cinnamon的Linux下面使用如下命令修改
 gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &amp;#39;&amp;lt;Super&amp;gt;&amp;#39; Linux Mint 登陆页面启用小键盘  链接到标题   sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
 Linux Mint 分辨率调整  链接到标题   这篇博客有非常详细的描述
-Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true  </description>
+Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true  小米手机第三方桌面隐藏三大键启用全面屏手势  链接到标题   来自 知乎
+ 唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！ 这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www.</description>
     </item>
     
     <item>

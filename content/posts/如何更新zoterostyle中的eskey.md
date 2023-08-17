@@ -40,3 +40,12 @@ sudo apt-get install numlockx
 ## Linux Mint 关机保存会话
 1. 安装dconf-editor
 2. 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true
+
+## 小米手机第三方桌面隐藏三大键启用全面屏手势
+来自 [知乎](https://zhuanlan.zhihu.com/p/411595406)
+1. 唤起小爱同学
+2. 说“更改全面屏手势”
+3. 改成全面屏手势即可，这里设置没有提示弹出！
+这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。
+使用[Fluid Navigation Gestures]()https://www.appsapk.com/fluid-navigation-gestures/)来提供全面屏手势。
+
