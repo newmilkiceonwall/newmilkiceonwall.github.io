@@ -11,7 +11,7 @@ externalLink = ""
 series = []
 +++
 
-我把好一些琐碎问题的解决方案记录在这里。
+我把一些琐碎问题的解决方案记录在这里。
 
 ---
 ## 如何更新zoterostyle中的eskey
@@ -46,6 +46,25 @@ sudo apt-get install numlockx
 1. 唤起小爱同学
 2. 说“更改全面屏手势”
 3. 改成全面屏手势即可，这里设置没有提示弹出！
+
 这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。
 使用[Fluid Navigation Gestures]()https://www.appsapk.com/fluid-navigation-gestures/)来提供全面屏手势。
 
+## 启用部分键盘在Linux Fx功能失效的问题
+参考 [https://myvnet.com/p/ixed-keychron-keyboards-fx-key-not-work-at-linux/](https://myvnet.com/p/ixed-keychron-keyboards-fx-key-not-work-at-linux/)
+
+我的键盘是acer okr213，这种方法依然奏效。
+
+这款键盘会被 `hid_apple` 驱动识别。
+驱动参数位于 `/sys/module/hid_apple/parameters`，修复Fx功能需要修改的是fnmode参数
+``` bash
+cat /sys/module/hid_apple/parameters/fnmode
+```
+ 我的默认配置是3,原博客中只给出了1、2的含义。
+> hid_apple 的 fnmode 为 3 表示该设备的功能键模式为 fnmode3。在苹果的键盘布局中，功能键位于键盘的左下角，通常用于控制屏幕亮度、音量和其他系统功能。fnmode3 表示在按下 fn 键的同时按下功能键将触发特定功能。具体功能取决于特定键盘和操作系统的配置。
+
+使用如下命令，修改会即时生效：
+``` bash
+echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
+```
+现在Fx就可以使用了。原博客引用了github gist的内容，其中有更多关于配置 `initramfs` 使得以上修改开机生效、Linux从睡眠中恢复自动重连蓝牙设备的内容。
