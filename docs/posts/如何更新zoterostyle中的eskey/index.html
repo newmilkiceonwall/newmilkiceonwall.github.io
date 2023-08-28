@@ -285,6 +285,25 @@ Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf
 <p>使用如下命令，修改会即时生效：</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
 </code></pre></div><p>现在Fx就可以使用了。原博客引用了github gist的内容，其中有更多关于配置 <code>initramfs</code> 使得以上修改开机生效、Linux从睡眠中恢复自动重连蓝牙设备的内容。</p>
+<h3 id="设置开启默认启用fx功能">
+  设置开启默认启用Fx功能
+  <a class="heading-link" href="#%e8%ae%be%e7%bd%ae%e5%bc%80%e5%90%af%e9%bb%98%e8%ae%a4%e5%90%af%e7%94%a8fx%e5%8a%9f%e8%83%bd">
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h3>
+<p>这里需要介绍到文件夹 <code>/etc/modprobe.d/</code></p>
+<blockquote>
+<p>modprobe.d 目录下的文件是用来配置和管理内核模块的。这些文件是一些配置脚本，它们使用 modprobe 命令来加载或卸载指定的内核模块。具体来说，modprobe.d 目录下的每个文件都可以定义一些规则，这些规则描述了如何处理特定内核模块的加载和卸载。例如，某些文件可能会指定在加载某个模块之前需要加载的其他模块，或者在卸载某个模块之后需要卸载的其他模块。这些文件的命名有一定的规则，通常以 .conf 结尾。例如，50-example.conf 文件会包含一些关于 example 模块的配置信息。在 modprobe.d 目录下，可以根据文件名的数字前缀来排序和执行这些文件。数字越小的文件会优先执行，因此可以用来指定一些优先级较高的配置。总之，modprobe.d 目录下的文件是用于管理和配置内核模块的工具，可以帮助用户灵活地控制和管理内核模块的加载和卸载。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="font-style:italic"># 把下面的 &lt;value&gt; 替换成上一步你测试好的值 (0, 1 or 2), 我的键盘需要配置为2</span>
+<span style="font-style:italic"># 例如: echo &#34;options hid_apple fnmode=2 | sudo tee /etc/modprobe.d/hid_apple.conf&#34;</span>
+<span style="font-style:italic"># this will erase any pre-existing contents from /etc/modprobe.d/hid_apple.conf</span>
+echo <span style="font-style:italic">&#34;options hid_apple fnmode=&lt;value&gt;&#34;</span> | sudo tee /etc/modprobe.d/hid_apple.conf
+<span style="font-style:italic"># 参数 &#34;-k all&#34; 并非必要, 但是它可以帮你一次更新所有内核的 initramfs</span>
+sudo update-initramfs -u -k all
+sudo systemctl reboot <span style="font-style:italic"># 可选</span>
+</code></pre></div><p>这样就完成了开机自动配置。</p>
 
       </div>
 

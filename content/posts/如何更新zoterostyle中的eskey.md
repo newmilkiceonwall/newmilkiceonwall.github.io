@@ -68,3 +68,17 @@ cat /sys/module/hid_apple/parameters/fnmode
 echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
 ```
 现在Fx就可以使用了。原博客引用了github gist的内容，其中有更多关于配置 `initramfs` 使得以上修改开机生效、Linux从睡眠中恢复自动重连蓝牙设备的内容。
+### 设置开启默认启用Fx功能
+这里需要介绍到文件夹 `/etc/modprobe.d/` 
+> modprobe.d 目录下的文件是用来配置和管理内核模块的。这些文件是一些配置脚本，它们使用 modprobe 命令来加载或卸载指定的内核模块。具体来说，modprobe.d 目录下的每个文件都可以定义一些规则，这些规则描述了如何处理特定内核模块的加载和卸载。例如，某些文件可能会指定在加载某个模块之前需要加载的其他模块，或者在卸载某个模块之后需要卸载的其他模块。这些文件的命名有一定的规则，通常以 .conf 结尾。例如，50-example.conf 文件会包含一些关于 example 模块的配置信息。在 modprobe.d 目录下，可以根据文件名的数字前缀来排序和执行这些文件。数字越小的文件会优先执行，因此可以用来指定一些优先级较高的配置。总之，modprobe.d 目录下的文件是用于管理和配置内核模块的工具，可以帮助用户灵活地控制和管理内核模块的加载和卸载。
+
+``` bash
+# 把下面的 <value> 替换成上一步你测试好的值 (0, 1 or 2), 我的键盘需要配置为2
+# 例如: echo "options hid_apple fnmode=2 | sudo tee /etc/modprobe.d/hid_apple.conf"
+# this will erase any pre-existing contents from /etc/modprobe.d/hid_apple.conf
+echo "options hid_apple fnmode=<value>" | sudo tee /etc/modprobe.d/hid_apple.conf
+# 参数 "-k all" 并非必要, 但是它可以帮你一次更新所有内核的 initramfs
+sudo update-initramfs -u -k all
+sudo systemctl reboot # 可选
+```
+这样就完成了开机自动配置。
