@@ -6,7 +6,29 @@
     <description>Recent content on 墙上的新牛奶冰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 23 Jul 2023 23:26:13 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 13:14:25 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lyx 取消页面中的自动时间戳</title>
+      <link>https://newmilkiceonwall.github.io/posts/lyx-%E5%8F%96%E6%B6%88%E6%A0%87%E5%87%86%E9%A1%B5%E9%9D%A2%E4%B8%AD%E7%9A%84%E8%87%AA%E5%8A%A8%E6%97%B6%E9%97%B4%E6%88%B3/</link>
+      <pubDate>Tue, 05 Sep 2023 13:14:25 +0800</pubDate>
+      
+      <guid>https://newmilkiceonwall.github.io/posts/lyx-%E5%8F%96%E6%B6%88%E6%A0%87%E5%87%86%E9%A1%B5%E9%9D%A2%E4%B8%AD%E7%9A%84%E8%87%AA%E5%8A%A8%E6%97%B6%E9%97%B4%E6%88%B3/</guid>
+      <description>问题  链接到标题   Lyx 建立标准文档，编辑后输出的 PDF 会有一个自动英文时间戳，有时候可能并不需要这个时间戳。
+解决方案  链接到标题   在 Lyx 中，选择“文档”——“首选项”——“LaTex导言区”输入 \date{} 即可 [1] 。再次导出文档，就没有时间戳了。
+参考  链接到标题   [1] Want to eliminate the automatic time stamp of pdflatex (or lyx?)</description>
+    </item>
+    
+    <item>
+      <title>Lyx 页面边距说明</title>
+      <link>https://newmilkiceonwall.github.io/posts/lyx%E9%A1%B5%E9%9D%A2%E8%BE%B9%E8%B7%9D%E8%AF%B4%E6%98%8E/</link>
+      <pubDate>Tue, 05 Sep 2023 10:56:52 +0800</pubDate>
+      
+      <guid>https://newmilkiceonwall.github.io/posts/lyx%E9%A1%B5%E9%9D%A2%E8%BE%B9%E8%B7%9D%E8%AF%B4%E6%98%8E/</guid>
+      <description>问题  链接到标题   Lyx 在中文环境下使用，默认配置输出的 PDF 文件左右边距很宽，上下边距有时候看起来也不太符合中文环境下的习惯，所以需要调整。
+解决方案  链接到标题   在“文档”——“首选项”——“页边距”中可以进行调整。值得注意的是，其中“内边距”对应的是左边距，而“外边距”对应的是右边距。对于双面文档（如书籍），内页边距是最靠近书脊的，即奇数页的左页边距和偶数页的右页边距 [1] 。
+参考  链接到标题   [1] Change page margins in LyX - StackExchange</description>
+    </item>
+    
     <item>
       <title>如何更新zoterostyle中的eskey等小事情杂记</title>
       <link>https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0zoterostyle%E4%B8%AD%E7%9A%84eskey/</link>

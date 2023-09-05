@@ -1,7 +1,7 @@
 +++ 
-draft = true
+draft = false
 date = 2023-09-05T10:56:52+08:00
-title = "Lyx页面边距说明"
+title = "Lyx 页面边距说明"
 description = "这里描述了有关使用Lyx边距调整的相关内容"
 slug = ""
 authors = []
