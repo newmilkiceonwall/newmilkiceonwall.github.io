@@ -238,7 +238,7 @@ sudo nano /etc/netplan/00-installer-config.yaml # 当然你也可以使用vim，
     <item>
       <title>通过telnet取得移动光猫HS8546V5超级密码</title>
       <link>https://newmilkiceonwall.github.io/posts/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma/</link>
-      <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://newmilkiceonwall.github.io/posts/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma/</guid>
       <description>&lt;h1 id=&#34;需要的工具&#34;&gt;
