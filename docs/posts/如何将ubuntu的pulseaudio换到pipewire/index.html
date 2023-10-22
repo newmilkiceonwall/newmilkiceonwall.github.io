@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>
+  如何将Ubuntu/Linux Mint的PulseAudio换到PipeWire · 墙上的新牛奶冰
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="墙上的新牛奶冰">
+<meta name="description" content="为什么这样做  链接到标题   我的配置：
+操作系统: Linux Mint 21.2 x86_64 蓝牙设备: Intel® Wireless-AC 9462 耳机: EDIFIER W860NB Pro 在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候声音会卡顿——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。
+解决方案  链接到标题   序言  链接到标题   根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
+Ubuntu/Linux Mint 解决方案  链接到标题   使用PipeWire替换PulseAudio  链接到标题   使用以下命令安装PipeWire。
+$ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream # 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。 $ sudo apt update $ sudo apt install pipewire pipewire-audio-client-libraries 根据[4]LinuxConfig,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— Bluetooth headset won’t connect after installing pipewire 。但是值得一提的是">
+<meta name="keywords" content="blog,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何将Ubuntu/Linux Mint的PulseAudio换到PipeWire"/>
+<meta name="twitter:description" content="为什么这样做  链接到标题   我的配置：
+操作系统: Linux Mint 21.2 x86_64 蓝牙设备: Intel® Wireless-AC 9462 耳机: EDIFIER W860NB Pro 在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候声音会卡顿——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。
+解决方案  链接到标题   序言  链接到标题   根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
+Ubuntu/Linux Mint 解决方案  链接到标题   使用PipeWire替换PulseAudio  链接到标题   使用以下命令安装PipeWire。
+$ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream # 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。 $ sudo apt update $ sudo apt install pipewire pipewire-audio-client-libraries 根据[4]LinuxConfig,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— Bluetooth headset won’t connect after installing pipewire 。但是值得一提的是"/>
+
+<meta property="og:title" content="如何将Ubuntu/Linux Mint的PulseAudio换到PipeWire" />
+<meta property="og:description" content="为什么这样做  链接到标题   我的配置：
+操作系统: Linux Mint 21.2 x86_64 蓝牙设备: Intel® Wireless-AC 9462 耳机: EDIFIER W860NB Pro 在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候声音会卡顿——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。
+解决方案  链接到标题   序言  链接到标题   根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
+Ubuntu/Linux Mint 解决方案  链接到标题   使用PipeWire替换PulseAudio  链接到标题   使用以下命令安装PipeWire。
+$ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream # 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。 $ sudo apt update $ sudo apt install pipewire pipewire-audio-client-libraries 根据[4]LinuxConfig,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— Bluetooth headset won’t connect after installing pipewire 。但是值得一提的是" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E5%B0%86ubuntu%E7%9A%84pulseaudio%E6%8D%A2%E5%88%B0pipewire/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-10-22T20:47:54+08:00" />
+<meta property="article:modified_time" content="2023-10-22T20:47:54+08:00" /><meta property="og:site_name" content="墙上的新牛奶冰" />
+
+
+
+
+
+<link rel="canonical" href="https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E5%B0%86ubuntu%E7%9A%84pulseaudio%E6%8D%A2%E5%88%B0pipewire/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.36f76aaf39a14ecf5c3a3c6250dcaf06c238b3d8365d17d646f95cb1874e852b.css" integrity="sha256-NvdqrzmhTs9cOjxiUNyvBsI4s9g2XRfWRvlcsYdOhSs=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.593028e7f7ac55c003b79c230d1cd411bb4ca53b31556c3abb7f027170e646e9.css" integrity="sha256-WTAo5/esVcADt5wjDRzUEbtMpTsxVWw6u38CcXDmRuk=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/png" href="/img/32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<meta name="generator" content="Hugo 0.92.2" />
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      墙上的新牛奶冰
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">博客</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/about">关于</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/en">EN</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/en/"></a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E5%B0%86ubuntu%E7%9A%84pulseaudio%E6%8D%A2%E5%88%B0pipewire/">
+              如何将Ubuntu/Linux Mint的PulseAudio换到PipeWire
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-10-22T20:47:54&#43;08:00">
+                October 22, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              阅读时间：1 分钟
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="为什么这样做">
+  为什么这样做
+  <a class="heading-link" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%bf%99%e6%a0%b7%e5%81%9a">
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h1>
+<p>我的配置：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">操作系统: Linux Mint 21.2 x86_64 
+蓝牙设备: Intel® Wireless-AC 9462
+耳机:     EDIFIER W860NB Pro
+</code></pre></div><p>在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候<strong>声音会卡顿</strong>——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。</p>
+<h1 id="解决方案">
+  解决方案
+  <a class="heading-link" href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h1>
+<h2 id="序言">
+  序言
+  <a class="heading-link" href="#%e5%ba%8f%e8%a8%80">
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h2>
+<p>根据 <a href="https://blog.csdn.net/hqsiswiliam/article/details/105574212">[1]CSDN</a>，这可能是由不恰当的音频编码导致的，切换到 <a href="https://pipewire.org/">PipeWire</a> 来启用LDAC编码或许可以解决这个问题。根据 <a href="https://linustechtips.com/topic/1336810-how-to-get-ldac-support-on-linux/">[2]Linux Tech Tips</a>，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考<a href="https://wiki.archlinux.org/title/PipeWire">[3]Arch文档</a>来切换到PipeWire。</p>
+<h2 id="ubuntulinux-mint-解决方案">
+  Ubuntu/Linux Mint 解决方案
+  <a class="heading-link" href="#ubuntulinux-mint-%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88">
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h2>
+<h3 id="使用pipewire替换pulseaudio">
+  使用PipeWire替换PulseAudio
+  <a class="heading-link" href="#%e4%bd%bf%e7%94%a8pipewire%e6%9b%bf%e6%8d%a2pulseaudio">
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h3>
+<p>使用以下命令安装PipeWire。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream <span style="font-style:italic"># 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。</span>
+$ sudo apt update
+$ sudo apt install pipewire pipewire-audio-client-libraries
+</code></pre></div><p>根据<a href="https://linuxconfig.org/how-to-install-pipewire-on-ubuntu-linux">[4]LinuxConfig</a>,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— <code>Bluetooth headset won’t connect after installing pipewire</code> 。但是值得一提的是</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.2-{bluetooth,dev,jack,modules} pipewire{,-{audio-client-libraries,pulse,media-session,bin,locales,tests}} <span style="font-style:italic"># 在我的实践中这也不是必须的，请根据你的实际情况安装。</span>
+</code></pre></div><p>随后，重载守护进程。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ systemctl --user daemon-reload
+</code></pre></div><p>接下来，禁用PulseAudio。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ systemctl --user --now disable pulseaudio.service pulseaudio.socket
+</code></pre></div><p>启用PipeWire。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ systemctl --user --now enable pipewire pipewire-pulse
+</code></pre></div><p>通过下列命令检查结果，你应该看到一行输出，类似于<code>服务器名：PulseAudio (on PipeWire 0.3.48)</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pactl info |grep <span style="font-style:italic">&#34;on PipeWire&#34;</span>
+</code></pre></div><p>此时连接你的蓝牙耳机，你应该可以在你的音频管理器中，在输出设置中你的蓝牙设备并可以选择不同的编码。大功告成。我的实际情况中，我使用的是 <code>Intel® Wireless-AC 9462</code> WIFI蓝牙无线网卡，耳机是 <code>EDIFIER W860NB Pro</code>，在 LDAC 编码下，同时连接蓝牙键盘和鼠标时，音频的卡顿消失了。</p>
+<h3 id="还原到pulseaudio">
+  还原到PulseAudio
+  <a class="heading-link" href="#%e8%bf%98%e5%8e%9f%e5%88%b0pulseaudio">
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt remove pipewire pipewire-audio-client-libraries
+$ sudo apt remove gstreamer1.0-pipewire libpipewire-0.3-{0,dev,modules} libspa-0.2-{bluetooth,dev,jack,modules} pipewire{,-{audio-client-libraries,pulse,media-session,bin,locales,tests}} <span style="font-style:italic"># 如果此前安装过则执行卸载</span>
+$ systemctl --user daemon-reload
+$ systemctl --user --now enable pulseaudio.service pulseaudio.socket <span style="font-style:italic"># 重启 PulseAudio</span>
+$ pactl info
+</code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2022 -
+    
+    2023
+     墙上的新牛奶冰 
+    ·
+    
+    技术支持 <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    <div style="">
+    <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="text-decoration: none;color: inherit;cursor: pointer;">本网站由<img src="https://newmilkiceonwall.github.io/img/upyun.png" alt="又拍云图标" style="height: 1.8em;vertical-align:middle;border:none">提供CDN加速/云存储服务</a>
+    </div>
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
