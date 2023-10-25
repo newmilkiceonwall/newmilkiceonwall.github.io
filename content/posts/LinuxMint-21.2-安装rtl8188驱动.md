@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2023-10-25T17:14:40+08:00
 title = "LinuxMint 21.2 如何安装 Realtek RTL8188GU USB 网卡驱动"
 description = ""
