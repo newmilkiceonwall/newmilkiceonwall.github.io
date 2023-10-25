@@ -244,7 +244,7 @@ $ sudo apt install pipewire pipewire-audio-client-libraries
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ systemctl --user --now enable pipewire pipewire-pulse
 </code></pre></div><p>通过下列命令检查结果，你应该看到一行输出，类似于<code>服务器名：PulseAudio (on PipeWire 0.3.48)</code></p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ pactl info |grep <span style="font-style:italic">&#34;on PipeWire&#34;</span>
-</code></pre></div><p>此时连接你的蓝牙耳机，你应该可以在你的音频管理器中，在输出设置中你的蓝牙设备并可以选择不同的编码。大功告成。我的实际情况中，我使用的是 <code>Intel® Wireless-AC 9462</code> WIFI蓝牙无线网卡，耳机是 <code>EDIFIER W860NB Pro</code>，在 LDAC 编码下，同时连接蓝牙键盘和鼠标时，音频的卡顿消失了。</p>
+</code></pre></div><p>此时连接蓝牙耳机，应该可以在你的音频管理器中，在输出设置中你的蓝牙设备并可以选择不同的编码。大功告成。我的实际情况中，我使用的是 <code>Intel® Wireless-AC 9462</code> WIFI蓝牙无线网卡，耳机是 <code>EDIFIER W860NB Pro</code>，在 LDAC 编码下，同时连接蓝牙键盘和鼠标时，音频的卡顿消失了。</p>
 <h3 id="还原到pulseaudio">
   还原到PulseAudio
   <a class="heading-link" href="#%e8%bf%98%e5%8e%9f%e5%88%b0pulseaudio">

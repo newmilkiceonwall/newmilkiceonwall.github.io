@@ -52,7 +52,7 @@ $ systemctl --user --now enable pipewire pipewire-pulse
 ```bash
 $ pactl info |grep "on PipeWire"
 ```
-此时连接你的蓝牙耳机，你应该可以在你的音频管理器中，在输出设置中你的蓝牙设备并可以选择不同的编码。大功告成。我的实际情况中，我使用的是 `Intel® Wireless-AC 9462` WIFI蓝牙无线网卡，耳机是 `EDIFIER W860NB Pro`，在 LDAC 编码下，同时连接蓝牙键盘和鼠标时，音频的卡顿消失了。
+此时连接蓝牙耳机，应该可以在你的音频管理器中，在输出设置中你的蓝牙设备并可以选择不同的编码。大功告成。我的实际情况中，我使用的是 `Intel® Wireless-AC 9462` WIFI蓝牙无线网卡，耳机是 `EDIFIER W860NB Pro`，在 LDAC 编码下，同时连接蓝牙键盘和鼠标时，音频的卡顿消失了。
 
 ### 还原到PulseAudio
 ```bash
