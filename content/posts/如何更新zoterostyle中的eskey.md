@@ -82,3 +82,31 @@ sudo update-initramfs -u -k all
 sudo systemctl reboot # 可选
 ```
 这样就完成了开机自动配置。
+
+## Vscode 配置 Flake8 单行长度 (下文格式暂未调整)
+
+
+
+使用vscode编写python还是挺舒服的,但是如果给vscode安装了语法校验插件,例如flake8,会常常提示一些非常苛刻的语法问题,其中最让人不能忍受的就是line to long.
+
+一行仅能容纳79个字符?显然不够用!强迫症患者对于代码中的语法错误提示是无法容忍的,所以必须要消灭它.
+
+在命令行中输入:flake8 --help,会显示一下帮助选项,其中一条是:
+
+--max-line-length=n   Maximum allowed line length for the entirety of this
+                      run. (Default: 79)
+
+看来flake8的每一行最大字符限制是可以设置的,但是只对单次运行有效
+
+打开vscode的Default Settings,搜搜flake8,会有这么一条
+
+"python.linting.flake8Args": [],
+
+原来vscode调用flake8的时候是可以加参数的,这样一来,我们在用户设置文件中加上一句,就可以让vscode调用flake8的时候每次都加上--max-line-length参数了,例如
+
+"python.linting.flake8Args": ["--max-line-length=248"]
+
+这样就可以自定义每行最大字符限制了
+
+
+[原文](https://www.cnblogs.com/tangxin-blog/p/6065017.html)

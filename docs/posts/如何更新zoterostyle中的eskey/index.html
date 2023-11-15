@@ -304,6 +304,25 @@ echo <span style="font-style:italic">&#34;options hid_apple fnmode=&lt;value&gt;
 sudo update-initramfs -u -k all
 sudo systemctl reboot <span style="font-style:italic"># 可选</span>
 </code></pre></div><p>这样就完成了开机自动配置。</p>
+<h2 id="vscode-配置-flake8-单行长度-下文格式暂未调整">
+  Vscode 配置 Flake8 单行长度 (下文格式暂未调整)
+  <a class="heading-link" href="#vscode-%e9%85%8d%e7%bd%ae-flake8-%e5%8d%95%e8%a1%8c%e9%95%bf%e5%ba%a6-%e4%b8%8b%e6%96%87%e6%a0%bc%e5%bc%8f%e6%9a%82%e6%9c%aa%e8%b0%83%e6%95%b4">
+    <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
+    <span class="sr-only">链接到标题</span>
+  </a>
+</h2>
+<p>使用vscode编写python还是挺舒服的,但是如果给vscode安装了语法校验插件,例如flake8,会常常提示一些非常苛刻的语法问题,其中最让人不能忍受的就是line to long.</p>
+<p>一行仅能容纳79个字符?显然不够用!强迫症患者对于代码中的语法错误提示是无法容忍的,所以必须要消灭它.</p>
+<p>在命令行中输入:flake8 &ndash;help,会显示一下帮助选项,其中一条是:</p>
+<p>&ndash;max-line-length=n   Maximum allowed line length for the entirety of this
+run. (Default: 79)</p>
+<p>看来flake8的每一行最大字符限制是可以设置的,但是只对单次运行有效</p>
+<p>打开vscode的Default Settings,搜搜flake8,会有这么一条</p>
+<p>&ldquo;python.linting.flake8Args&rdquo;: [],</p>
+<p>原来vscode调用flake8的时候是可以加参数的,这样一来,我们在用户设置文件中加上一句,就可以让vscode调用flake8的时候每次都加上&ndash;max-line-length参数了,例如</p>
+<p>&ldquo;python.linting.flake8Args&rdquo;: [&quot;&ndash;max-line-length=248&quot;]</p>
+<p>这样就可以自定义每行最大字符限制了</p>
+<p><a href="https://www.cnblogs.com/tangxin-blog/p/6065017.html">原文</a></p>
 
       </div>
 
