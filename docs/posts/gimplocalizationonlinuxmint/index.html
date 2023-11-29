@@ -24,7 +24,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-11T13:26:12+08:00" />
-<meta property="article:modified_time" content="2023-05-11T13:26:12+08:00" /><meta property="og:site_name" content="墙上的新牛奶冰" />
+<meta property="article:modified_time" content="2023-05-11T13:26:12+08:00" />
 
 
 
@@ -70,7 +70,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.120.4">
 
 
 
@@ -186,8 +186,8 @@
     <span class="sr-only">链接到标题</span>
   </a>
 </h1>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install language-pack-gnome-zh-hans <span style="font-style:italic"># 这同时也会安装language-pack-gnome-zh-hans-base</span>
-</code></pre></div><p>GIMP的本地化语言包在这里里面，这个方案也适用于Ubuntu。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install language-pack-gnome-zh-hans <span style="font-style:italic"># 这同时也会安装language-pack-gnome-zh-hans-base</span>
+</span></span></code></pre></div><p>GIMP的本地化语言包在这里里面，这个方案也适用于Ubuntu。</p>
 <h1 id="其他发现">
   其他发现
   <a class="heading-link" href="#%e5%85%b6%e4%bb%96%e5%8f%91%e7%8e%b0">
@@ -196,23 +196,22 @@
   </a>
 </h1>
 <p>在安装完这个语言包之后，控制台的git commit注释也变成中文了(如下)。这个语言包为其他很多程序做了翻译适配（我发现有语言变化的程序有git、nano）。</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">
-<span style="font-weight:bold"># 请为您的变更输入提交说明。以 &#39;#&#39; 开始的行将被忽略，而一个空的提交
-</span><span style="font-weight:bold"># 说明将会终止提交。
-</span><span style="font-weight:bold">#
-</span><span style="font-weight:bold"># 位于分支 main
-</span><span style="font-weight:bold"># 您的分支与上游分支 &#39;origin/main&#39; 一致。
-</span><span style="font-weight:bold">#
-</span><span style="font-weight:bold"># 要提交的变更：
-</span><span style="font-weight:bold">#       新文件：   content/posts/GIMPLocalizationOnLinuxMint.md
-</span><span style="font-weight:bold">#       修改：     docs/index.xml
-</span><span style="font-weight:bold">#       新文件：   docs/posts/gimplocalizationonlinuxmint/index.html
-</span><span style="font-weight:bold">#       修改：     docs/posts/index.html
-</span><span style="font-weight:bold">#       修改：     docs/posts/index.xml
-</span><span style="font-weight:bold">#       修改：     docs/sitemap.xml
-</span><span style="font-weight:bold"></span>#
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="font-weight:bold"># 请为您的变更输入提交说明。以 &#39;#&#39; 开始的行将被忽略，而一个空的提交
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"># 说明将会终止提交。
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"># 位于分支 main
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"># 您的分支与上游分支 &#39;origin/main&#39; 一致。
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"># 要提交的变更：
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#       新文件：   content/posts/GIMPLocalizationOnLinuxMint.md
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#       修改：     docs/index.xml
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#       新文件：   docs/posts/gimplocalizationonlinuxmint/index.html
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#       修改：     docs/posts/index.html
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#       修改：     docs/posts/index.xml
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#       修改：     docs/sitemap.xml
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>#
+</span></span></code></pre></div>
       </div>
 
 
@@ -256,7 +255,7 @@
 
   
   
-  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   

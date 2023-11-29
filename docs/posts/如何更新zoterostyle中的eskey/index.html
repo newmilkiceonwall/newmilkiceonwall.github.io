@@ -13,42 +13,57 @@
 
 <meta name="author" content="墙上的新牛奶冰">
 <meta name="description" content="我把一些琐碎问题的解决方案记录在这里。
- 如何更新zoterostyle中的eskey  链接到标题   使用zotero的时候，插件zoterostyle中影响因子拉不下来。
+如何更新zoterostyle中的eskey 链接到标题 使用zotero的时候，插件zoterostyle中影响因子拉不下来。
 打开zotero， 编辑——首选项——高级——编辑器——搜索“easys”——用easyscholar的key更新这个字符串
-修改Cinnamon鼠标拖动窗口的快捷键  链接到标题   参考这篇文章
+修改Cinnamon鼠标拖动窗口的快捷键 链接到标题 参考这篇文章
 在cinnamon的Linux下面使用如下命令修改
-gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &#39;&lt;Super&gt;&#39; Linux Mint 登陆页面启用小键盘  链接到标题   sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
-Linux Mint 分辨率调整  链接到标题   这篇博客有非常详细的描述
-Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true  小米手机第三方桌面隐藏三大键启用全面屏手势  链接到标题   来自 知乎
- 唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！  这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www.">
+gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &#39;&lt;Super&gt;&#39; Linux Mint 登陆页面启用小键盘 链接到标题 sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
+Linux Mint 分辨率调整 链接到标题 这篇博客有非常详细的描述
+Linux Mint 关机保存会话 链接到标题 安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true 小米手机第三方桌面隐藏三大键启用全面屏手势 链接到标题 来自 知乎
+唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！ 这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www.appsapk.com/fluid-navigation-gestures/)来提供全面屏手势。
+启用部分键盘在Linux Fx功能失效的问题 链接到标题 参考 https://myvnet.com/p/ixed-keychron-keyboards-fx-key-not-work-at-linux/
+我的键盘是acer okr213，这种方法依然奏效。
+这款键盘会被 hid_apple 驱动识别。 驱动参数位于 /sys/module/hid_apple/parameters，修复Fx功能需要修改的是fnmode参数
+cat /sys/module/hid_apple/parameters/fnmode 我的默认配置是3,原博客中只给出了1、2的含义。
+hid_apple 的 fnmode 为 3 表示该设备的功能键模式为 fnmode3。在苹果的键盘布局中，功能键位于键盘的左下角，通常用于控制屏幕亮度、音量和其他系统功能。fnmode3 表示在按下 fn 键的同时按下功能键将触发特定功能。具体功能取决于特定键盘和操作系统的配置。">
 <meta name="keywords" content="blog,personal">
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="如何更新zoterostyle中的eskey等小事情杂记"/>
 <meta name="twitter:description" content="我把一些琐碎问题的解决方案记录在这里。
- 如何更新zoterostyle中的eskey  链接到标题   使用zotero的时候，插件zoterostyle中影响因子拉不下来。
+如何更新zoterostyle中的eskey 链接到标题 使用zotero的时候，插件zoterostyle中影响因子拉不下来。
 打开zotero， 编辑——首选项——高级——编辑器——搜索“easys”——用easyscholar的key更新这个字符串
-修改Cinnamon鼠标拖动窗口的快捷键  链接到标题   参考这篇文章
+修改Cinnamon鼠标拖动窗口的快捷键 链接到标题 参考这篇文章
 在cinnamon的Linux下面使用如下命令修改
-gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &#39;&lt;Super&gt;&#39; Linux Mint 登陆页面启用小键盘  链接到标题   sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
-Linux Mint 分辨率调整  链接到标题   这篇博客有非常详细的描述
-Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true  小米手机第三方桌面隐藏三大键启用全面屏手势  链接到标题   来自 知乎
- 唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！  这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www."/>
+gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &#39;&lt;Super&gt;&#39; Linux Mint 登陆页面启用小键盘 链接到标题 sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
+Linux Mint 分辨率调整 链接到标题 这篇博客有非常详细的描述
+Linux Mint 关机保存会话 链接到标题 安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true 小米手机第三方桌面隐藏三大键启用全面屏手势 链接到标题 来自 知乎
+唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！ 这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www.appsapk.com/fluid-navigation-gestures/)来提供全面屏手势。
+启用部分键盘在Linux Fx功能失效的问题 链接到标题 参考 https://myvnet.com/p/ixed-keychron-keyboards-fx-key-not-work-at-linux/
+我的键盘是acer okr213，这种方法依然奏效。
+这款键盘会被 hid_apple 驱动识别。 驱动参数位于 /sys/module/hid_apple/parameters，修复Fx功能需要修改的是fnmode参数
+cat /sys/module/hid_apple/parameters/fnmode 我的默认配置是3,原博客中只给出了1、2的含义。
+hid_apple 的 fnmode 为 3 表示该设备的功能键模式为 fnmode3。在苹果的键盘布局中，功能键位于键盘的左下角，通常用于控制屏幕亮度、音量和其他系统功能。fnmode3 表示在按下 fn 键的同时按下功能键将触发特定功能。具体功能取决于特定键盘和操作系统的配置。"/>
 
 <meta property="og:title" content="如何更新zoterostyle中的eskey等小事情杂记" />
 <meta property="og:description" content="我把一些琐碎问题的解决方案记录在这里。
- 如何更新zoterostyle中的eskey  链接到标题   使用zotero的时候，插件zoterostyle中影响因子拉不下来。
+如何更新zoterostyle中的eskey 链接到标题 使用zotero的时候，插件zoterostyle中影响因子拉不下来。
 打开zotero， 编辑——首选项——高级——编辑器——搜索“easys”——用easyscholar的key更新这个字符串
-修改Cinnamon鼠标拖动窗口的快捷键  链接到标题   参考这篇文章
+修改Cinnamon鼠标拖动窗口的快捷键 链接到标题 参考这篇文章
 在cinnamon的Linux下面使用如下命令修改
-gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &#39;&lt;Super&gt;&#39; Linux Mint 登陆页面启用小键盘  链接到标题   sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
-Linux Mint 分辨率调整  链接到标题   这篇博客有非常详细的描述
-Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true  小米手机第三方桌面隐藏三大键启用全面屏手势  链接到标题   来自 知乎
- 唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！  这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www." />
+gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &#39;&lt;Super&gt;&#39; Linux Mint 登陆页面启用小键盘 链接到标题 sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
+Linux Mint 分辨率调整 链接到标题 这篇博客有非常详细的描述
+Linux Mint 关机保存会话 链接到标题 安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true 小米手机第三方桌面隐藏三大键启用全面屏手势 链接到标题 来自 知乎
+唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！ 这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www.appsapk.com/fluid-navigation-gestures/)来提供全面屏手势。
+启用部分键盘在Linux Fx功能失效的问题 链接到标题 参考 https://myvnet.com/p/ixed-keychron-keyboards-fx-key-not-work-at-linux/
+我的键盘是acer okr213，这种方法依然奏效。
+这款键盘会被 hid_apple 驱动识别。 驱动参数位于 /sys/module/hid_apple/parameters，修复Fx功能需要修改的是fnmode参数
+cat /sys/module/hid_apple/parameters/fnmode 我的默认配置是3,原博客中只给出了1、2的含义。
+hid_apple 的 fnmode 为 3 表示该设备的功能键模式为 fnmode3。在苹果的键盘布局中，功能键位于键盘的左下角，通常用于控制屏幕亮度、音量和其他系统功能。fnmode3 表示在按下 fn 键的同时按下功能键将触发特定功能。具体功能取决于特定键盘和操作系统的配置。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0zoterostyle%E4%B8%AD%E7%9A%84eskey/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-07-23T23:26:13+08:00" />
-<meta property="article:modified_time" content="2023-07-23T23:26:13+08:00" /><meta property="og:site_name" content="墙上的新牛奶冰" />
+<meta property="article:modified_time" content="2023-07-23T23:26:13+08:00" />
 
 
 
@@ -94,7 +109,7 @@ Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf
 
 
 
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.120.4">
 
 
 
@@ -222,16 +237,16 @@ Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf
 </h2>
 <p>参考<a href="https://www.ngui.cc/el/1920396.html">这篇文章</a></p>
 <p>在cinnamon的Linux下面使用如下命令修改</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier <span style="font-style:italic">&#39;&lt;Super&gt;&#39;</span>
-</code></pre></div><h2 id="linux-mint-登陆页面启用小键盘">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier <span style="font-style:italic">&#39;&lt;Super&gt;&#39;</span>
+</span></span></code></pre></div><h2 id="linux-mint-登陆页面启用小键盘">
   Linux Mint 登陆页面启用小键盘
   <a class="heading-link" href="#linux-mint-%e7%99%bb%e9%99%86%e9%a1%b5%e9%9d%a2%e5%90%af%e7%94%a8%e5%b0%8f%e9%94%ae%e7%9b%98">
     <i class="fa fa-link" aria-hidden="true" title="链接到标题"></i>
     <span class="sr-only">链接到标题</span>
   </a>
 </h2>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install numlockx
-</code></pre></div><p>系统设置——登陆窗口——设置——勾选“激活numlock”</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get install numlockx
+</span></span></code></pre></div><p>系统设置——登陆窗口——设置——勾选“激活numlock”</p>
 <h2 id="linux-mint-分辨率调整">
   Linux Mint 分辨率调整
   <a class="heading-link" href="#linux-mint-%e5%88%86%e8%be%a8%e7%8e%87%e8%b0%83%e6%95%b4">
@@ -277,14 +292,14 @@ Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf
 <p>我的键盘是acer okr213，这种方法依然奏效。</p>
 <p>这款键盘会被 <code>hid_apple</code> 驱动识别。
 驱动参数位于 <code>/sys/module/hid_apple/parameters</code>，修复Fx功能需要修改的是fnmode参数</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat /sys/module/hid_apple/parameters/fnmode
-</code></pre></div><p>我的默认配置是3,原博客中只给出了1、2的含义。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /sys/module/hid_apple/parameters/fnmode
+</span></span></code></pre></div><p>我的默认配置是3,原博客中只给出了1、2的含义。</p>
 <blockquote>
 <p>hid_apple 的 fnmode 为 3 表示该设备的功能键模式为 fnmode3。在苹果的键盘布局中，功能键位于键盘的左下角，通常用于控制屏幕亮度、音量和其他系统功能。fnmode3 表示在按下 fn 键的同时按下功能键将触发特定功能。具体功能取决于特定键盘和操作系统的配置。</p>
 </blockquote>
 <p>使用如下命令，修改会即时生效：</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
-</code></pre></div><p>现在Fx就可以使用了。原博客引用了github gist的内容，其中有更多关于配置 <code>initramfs</code> 使得以上修改开机生效、Linux从睡眠中恢复自动重连蓝牙设备的内容。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
+</span></span></code></pre></div><p>现在Fx就可以使用了。原博客引用了github gist的内容，其中有更多关于配置 <code>initramfs</code> 使得以上修改开机生效、Linux从睡眠中恢复自动重连蓝牙设备的内容。</p>
 <h3 id="设置开启默认启用fx功能">
   设置开启默认启用Fx功能
   <a class="heading-link" href="#%e8%ae%be%e7%bd%ae%e5%bc%80%e5%90%af%e9%bb%98%e8%ae%a4%e5%90%af%e7%94%a8fx%e5%8a%9f%e8%83%bd">
@@ -296,14 +311,14 @@ Linux Mint 关机保存会话  链接到标题    安装dconf-editor 通过dconf
 <blockquote>
 <p>modprobe.d 目录下的文件是用来配置和管理内核模块的。这些文件是一些配置脚本，它们使用 modprobe 命令来加载或卸载指定的内核模块。具体来说，modprobe.d 目录下的每个文件都可以定义一些规则，这些规则描述了如何处理特定内核模块的加载和卸载。例如，某些文件可能会指定在加载某个模块之前需要加载的其他模块，或者在卸载某个模块之后需要卸载的其他模块。这些文件的命名有一定的规则，通常以 .conf 结尾。例如，50-example.conf 文件会包含一些关于 example 模块的配置信息。在 modprobe.d 目录下，可以根据文件名的数字前缀来排序和执行这些文件。数字越小的文件会优先执行，因此可以用来指定一些优先级较高的配置。总之，modprobe.d 目录下的文件是用于管理和配置内核模块的工具，可以帮助用户灵活地控制和管理内核模块的加载和卸载。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="font-style:italic"># 把下面的 &lt;value&gt; 替换成上一步你测试好的值 (0, 1 or 2), 我的键盘需要配置为2</span>
-<span style="font-style:italic"># 例如: echo &#34;options hid_apple fnmode=2 | sudo tee /etc/modprobe.d/hid_apple.conf&#34;</span>
-<span style="font-style:italic"># this will erase any pre-existing contents from /etc/modprobe.d/hid_apple.conf</span>
-echo <span style="font-style:italic">&#34;options hid_apple fnmode=&lt;value&gt;&#34;</span> | sudo tee /etc/modprobe.d/hid_apple.conf
-<span style="font-style:italic"># 参数 &#34;-k all&#34; 并非必要, 但是它可以帮你一次更新所有内核的 initramfs</span>
-sudo update-initramfs -u -k all
-sudo systemctl reboot <span style="font-style:italic"># 可选</span>
-</code></pre></div><p>这样就完成了开机自动配置。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="font-style:italic"># 把下面的 &lt;value&gt; 替换成上一步你测试好的值 (0, 1 or 2), 我的键盘需要配置为2</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic"># 例如: echo &#34;options hid_apple fnmode=2 | sudo tee /etc/modprobe.d/hid_apple.conf&#34;</span>
+</span></span><span style="display:flex;"><span><span style="font-style:italic"># this will erase any pre-existing contents from /etc/modprobe.d/hid_apple.conf</span>
+</span></span><span style="display:flex;"><span>echo <span style="font-style:italic">&#34;options hid_apple fnmode=&lt;value&gt;&#34;</span> | sudo tee /etc/modprobe.d/hid_apple.conf
+</span></span><span style="display:flex;"><span><span style="font-style:italic"># 参数 &#34;-k all&#34; 并非必要, 但是它可以帮你一次更新所有内核的 initramfs</span>
+</span></span><span style="display:flex;"><span>sudo update-initramfs -u -k all
+</span></span><span style="display:flex;"><span>sudo systemctl reboot <span style="font-style:italic"># 可选</span>
+</span></span></code></pre></div><p>这样就完成了开机自动配置。</p>
 <h2 id="vscode-配置-flake8-单行长度-下文格式暂未调整">
   Vscode 配置 Flake8 单行长度 (下文格式暂未调整)
   <a class="heading-link" href="#vscode-%e9%85%8d%e7%bd%ae-flake8-%e5%8d%95%e8%a1%8c%e9%95%bf%e5%ba%a6-%e4%b8%8b%e6%96%87%e6%a0%bc%e5%bc%8f%e6%9a%82%e6%9c%aa%e8%b0%83%e6%95%b4">
@@ -367,7 +382,7 @@ run. (Default: 79)</p>
 
   
   
-  <script src="/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js" integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D&#43;Uk="></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
