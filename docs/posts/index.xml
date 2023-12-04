@@ -6,8 +6,22 @@
     <description>Recent content in Posts on 墙上的新牛奶冰</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 Oct 2023 17:14:40 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Dec 2023 21:14:18 +0800</lastBuildDate>
     <atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lyx 如何进行引用压缩</title>
+      <link>https://newmilkiceonwall.github.io/posts/lyx%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%BC%95%E7%94%A8%E5%8E%8B%E7%BC%A9/</link>
+      <pubDate>Mon, 04 Dec 2023 21:14:18 +0800</pubDate>
+      <guid>https://newmilkiceonwall.github.io/posts/lyx%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%BC%95%E7%94%A8%E5%8E%8B%E7%BC%A9/</guid>
+      <description>为什么使用引用压缩 链接到标题 对于写文章来说，要在同一个地方引用多个文献的时候，可能希望有这种样式 &amp;ldquo;[11]-[15]&amp;rdquo;.
+方法 链接到标题 在LyX中编写论文时，可以使用“Natbib”来实现参考文献引用的格式。以下是一些步骤，以确保参考文献引用呈现类似 &amp;ldquo;[11]-[15]&amp;rdquo; 的格式：
+添加宏包： 在文档的导言部分（Document &amp;gt; Settings &amp;gt; LaTeX Preamble），添加以下宏包：
+\usepackage[numbers,sort&amp;amp;compress]{natbib} 这将确保引用数字以及对多个引用进行压缩，显示为 &amp;ldquo;[11]-[15]&amp;rdquo; 的格式。如果使用了某些预制模板（比如IEEE），那么到这一步其实就有效果了。不必切换至Natbib。
+选择引用格式： 在LyX中，确保你的文档引用格式设置为“Natbib”：
+在文档中，选择“Document” &amp;gt; “Settings” &amp;gt; “Bibliography”。 在“Citation style”下拉菜单中，选择“Natbib (numerical)”。 单击“OK”。 插入引用： 在文档中，使用LyX的插入引用功能，然后将引用的键入输入框中。
+编译文档： 编译文档，确保引用呈现为所需的格式。
+请注意，确保你的BibTeX文件（.bib文件）中的参考文献条目是按照引用的顺序进行排列的。如果需要，你可以使用BibTeX工具（如JabRef）来管理和排序你的参考文献。</description>
+    </item>
     <item>
       <title>LinuxMint 21.2 如何安装 Realtek RTL8188GU USB 网卡驱动</title>
       <link>https://newmilkiceonwall.github.io/posts/linuxmint-21.2-%E5%AE%89%E8%A3%85rtl8188%E9%A9%B1%E5%8A%A8/</link>
