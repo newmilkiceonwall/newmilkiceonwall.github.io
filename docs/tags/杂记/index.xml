@@ -5,36 +5,15 @@
     <link>https://newmilkiceonwall.github.io/tags/%E6%9D%82%E8%AE%B0/</link>
     <description>Recent content in 杂记 on 墙上的新牛奶冰</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Fri, 17 Mar 2023 15:48:55 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/tags/%E6%9D%82%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 17 Mar 2023 15:48:55 +0800</lastBuildDate>
+    <atom:link href="https://newmilkiceonwall.github.io/tags/%E6%9D%82%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bash常用快捷键</title>
       <link>https://newmilkiceonwall.github.io/posts/bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Fri, 17 Mar 2023 15:48:55 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>源贴
-Bash常用快捷键链接到标题ctrl键组合链接到标题ctrl+a:光标移到行首。
-ctrl+b:光标左移一个字母
-ctrl+c:杀死当前进程。
-ctrl+d:退出当前 Shell。
-ctrl+e:光标移到行尾。
-ctrl+h:删除光标前一个字符，同 backspace 键相同。
-ctrl+k:清除光标后至行尾的内容。
-ctrl+l:清屏，相当于clear。
-ctrl+r:搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索bash的history
-ctrl+u: 清除光标前至行首间的所有内容。
-ctrl+w: 移除光标前的一个单词
-ctrl+t: 交换光标位置前的两个字符
-ctrl+y: 粘贴或者恢复上次的删除
-ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符
-ctrl+f: 光标右移
-ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复
-esc组合链接到标题esc+d: 删除光标后的一个词
-esc+f: 往右跳一个词
-esc+b: 往左跳一个词
-esc+t: 交换光标位置前的两个单词。</description>
+      <description>源贴&#xA;Bash常用快捷键&#xD;链接到标题&#xD;ctrl键组合&#xD;链接到标题&#xD;ctrl+a:光标移到行首。&#xA;ctrl+b:光标左移一个字母&#xA;ctrl+c:杀死当前进程。&#xA;ctrl+d:退出当前 Shell。&#xA;ctrl+e:光标移到行尾。&#xA;ctrl+h:删除光标前一个字符，同 backspace 键相同。&#xA;ctrl+k:清除光标后至行尾的内容。&#xA;ctrl+l:清屏，相当于clear。&#xA;ctrl+r:搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索bash的history&#xA;ctrl+u: 清除光标前至行首间的所有内容。&#xA;ctrl+w: 移除光标前的一个单词&#xA;ctrl+t: 交换光标位置前的两个字符&#xA;ctrl+y: 粘贴或者恢复上次的删除&#xA;ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符&#xA;ctrl+f: 光标右移&#xA;ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复&#xA;esc组合&#xD;链接到标题&#xD;esc+d: 删除光标后的一个词&#xA;esc+f: 往右跳一个词&#xA;esc+b: 往左跳一个词&#xA;esc+t: 交换光标位置前的两个单词。</description>
     </item>
-    
   </channel>
 </rss>

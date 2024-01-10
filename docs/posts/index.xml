@@ -5,343 +5,162 @@
     <link>https://newmilkiceonwall.github.io/posts/</link>
     <description>Recent content in Posts on 墙上的新牛奶冰</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh</language>
-    <lastBuildDate>Thu, 04 Jan 2024 21:58:16 +0800</lastBuildDate><atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 10 Jan 2024 21:21:45 +0800</lastBuildDate>
+    <atom:link href="https://newmilkiceonwall.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lyx如何修复“未找到引用引擎basic，请安装它。如果你已经安装，请重新配置lyx”问题</title>
+      <link>https://newmilkiceonwall.github.io/posts/howtofixlyxbugonwindows/</link>
+      <pubDate>Wed, 10 Jan 2024 21:21:45 +0800</pubDate>
+      <guid>https://newmilkiceonwall.github.io/posts/howtofixlyxbugonwindows/</guid>
+      <description>&#xD;问题描述&#xD;链接到标题&#xD;新安装 Lyx，启动时总是提示“未找到引用引擎 basic，请安装它。如果你已经安装，请重新配置 lyx”，多次“重配置”也无效果。根据 [2] ,还可能报错“大部分文档类不存在”。&#xA;修复方法&#xD;链接到标题&#xD;参考 [1] [2] ,在Lyx的安装目录下，找到Lyx\Python\Lib\subprocess.py,这里使用了 Python2.7，在文件前部添加如下代码，修改其使用 UTF-8 编码：&#xA;import sys reload(sys) sys.setdefaultencoding(&amp;#34;utf-8&amp;#34;) 启动 Lyx，再次运行“重配置”。&#xA;参考&#xD;链接到标题&#xD;[1] 装完了lyx一直显示“未找到引用引擎basic，请安装它。如果你已经安装，请重新配置lyx”怎么解决？ - 阿啦啦啦滔天巨兽的回答 - 知乎 [2] Lyx大部分文档类不存在？ - 破壳儿的回答 - 知乎 </description>
+    </item>
     <item>
       <title>从他人的经验与讲解中学习如何阅读学术论文</title>
       <link>https://newmilkiceonwall.github.io/posts/howtoreadpaper/</link>
       <pubDate>Thu, 04 Jan 2024 21:58:16 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/howtoreadpaper/</guid>
-      <description>序链接到标题因为自己不太明白“略读的艺术”，而平时要读的论文又越来越多。这次在 Github - paper-we-love 读到了有关“如何读论文的文章”，在此做下记录。
-1. Peter Klein - Reading Handout链接到标题原文
-译文链接到标题如何阅读学术文章链接到标题注意：没有一种风格适合所有人！
-Klein 的略读、扫读、处理的基本步骤&amp;hellip;&amp;hellip;
-阅读摘要（如果提供）。
-阅读简介。
-阅读结论。
-略过中间，查看章节标题、表格、图表等——试着感受一下文章的风格和流程。
-它是方法论的、概念的、理论的（语言描述的或数学的）、经验经验主义的，还是其他的？ 它主要是一种调查、一种新颖的理论贡献、对现有理论或技术的实证应用、批判还是其他什么？ 回去快速阅读整篇文章，跳过方程式，大多数数字和表格。
-回过头来仔细阅读整篇文章，重点关注最重要的部分或领域。
-一旦你掌握了作者试图提出的基本论点，就去批评它！
-询问这个论点是否有意义。内部是否一致？有论据或证据支持吗？（这项技能需要一些经验来培养！）
-将该文章与你阅读过的有关相同或密切相关主题的其他文章进行比较。（如果这是你在特定主题领域阅读的第一篇论文，请找到更多文章并浏览它们。他们的引言和结论是关键。）比较和对比。论点是否一致、矛盾、无关？
-使用 Google 学术搜索、Social Sciences Citation Index、出版商网页和其他资源来查找引用你正在阅读的文章的文章。看看他们怎么说。看看它是否在博客、群组等中被提及。
-查看参考书，例如《 Journal of Economic Literature 》的调查文章、手册或百科全书文章或类似来源，以了解正在读的文章如何适应其主题领域中更广泛的背景。
-2. Aaron Massey - Advice on Reading Academic Papers链接到标题原文
-译文链接到标题阅读学术论文的建议链接到标题研究生必须学会阅读学术论文，但实际上在所有情况下，这些学生都没有被正式教导如何最好地阅读学术论文。这与阅读报纸、杂志或小说的过程不同。学习如何正确阅读学术论文的过程不仅会很痛苦，还会浪费相当多的时间。以下是我阅读各种论文的快速提示：
-从引言和结论开始：这是确定问题陈述和作者解决问题的方法的最快方法。 在阅读之前扫读论文并确定目的、结构和方向，以此获得详细的理解。一旦你知道了大纲（目的）、大纲（结构）和作者对某个主题的倾向（方向），那么所有的细节（在接下来的阅读中）就更容易放在正确的前后文语境中。因此，如果你在第一次阅读论文时发现一个想法令人困惑，你就能知道此时不用担心它，因为它会在以后的部分中被详细描述。 不要阅读每一个字！当你阅读时，肯定会有一些单词或短语困扰你。如果你花时间不断地重新阅读一个单词、短语或段落，直到你完全理解它，那么你最终会浪费相当多的时间。通常，如果你只是简单地略读过你不理解的部分，含义会在下一段或下一节中变得清晰。记下你觉得困惑的部分，稍后再回过头来，看看论文的其余部分是否将它解释清楚。 阅读论文后，立即尝试确定要点、优点和缺点。作为学者，我们都很好奇。如果你在清楚地确定作者提出的要点、优势和劣势之前就开始思考论文的含义，那么你可能很难将你对论文的更深层次的看法与论文的基本要素区分开来。 除了这些提示外，请考虑咨询以下资源：
-Some Tips on Reading Research Papers A Guide to Reading and Analysing Academic Articles How to Read a Scientific Paper Quick Tutorial on Reading Scientific Papers 虽然这些资源侧重于科学论文，但我发现许多相同的技术在阅读法律评论文章和政策声明时很有用，这些文章和政策声明也是高度结构化的。这些资源中的每一个都提供了其他资源的列表，可以作为入门的好地方。此外，谷歌可以提供更多。</description>
+      <description>序&#xD;链接到标题&#xD;因为自己不太明白“略读的艺术”，而平时要读的论文又越来越多。这次在 Github - paper-we-love 读到了有关“如何读论文的文章”，在此做下记录。&#xA;1. Peter Klein - Reading Handout&#xD;链接到标题&#xD;原文&#xA;译文&#xD;链接到标题&#xD;如何阅读学术文章&#xD;链接到标题&#xD;注意：没有一种风格适合所有人！&#xA;Klein 的略读、扫读、处理的基本步骤&amp;hellip;&amp;hellip;&#xA;阅读摘要（如果提供）。&#xA;阅读简介。&#xA;阅读结论。&#xA;略过中间，查看章节标题、表格、图表等——试着感受一下文章的风格和流程。&#xA;它是方法论的、概念的、理论的（语言描述的或数学的）、经验经验主义的，还是其他的？ 它主要是一种调查、一种新颖的理论贡献、对现有理论或技术的实证应用、批判还是其他什么？ 回去快速阅读整篇文章，跳过方程式，大多数数字和表格。&#xA;回过头来仔细阅读整篇文章，重点关注最重要的部分或领域。&#xA;一旦你掌握了作者试图提出的基本论点，就去批评它！&#xA;询问这个论点是否有意义。内部是否一致？有论据或证据支持吗？（这项技能需要一些经验来培养！）&#xA;将该文章与你阅读过的有关相同或密切相关主题的其他文章进行比较。（如果这是你在特定主题领域阅读的第一篇论文，请找到更多文章并浏览它们。他们的引言和结论是关键。）比较和对比。论点是否一致、矛盾、无关？&#xA;使用 Google 学术搜索、Social Sciences Citation Index、出版商网页和其他资源来查找引用你正在阅读的文章的文章。看看他们怎么说。看看它是否在博客、群组等中被提及。&#xA;查看参考书，例如《 Journal of Economic Literature 》的调查文章、手册或百科全书文章或类似来源，以了解正在读的文章如何适应其主题领域中更广泛的背景。&#xA;2. Aaron Massey - Advice on Reading Academic Papers&#xD;链接到标题&#xD;原文&#xA;译文&#xD;链接到标题&#xD;阅读学术论文的建议&#xD;链接到标题&#xD;研究生必须学会阅读学术论文，但实际上在所有情况下，这些学生都没有被正式教导如何最好地阅读学术论文。这与阅读报纸、杂志或小说的过程不同。学习如何正确阅读学术论文的过程不仅会很痛苦，还会浪费相当多的时间。以下是我阅读各种论文的快速提示：&#xA;从引言和结论开始：这是确定问题陈述和作者解决问题的方法的最快方法。 在阅读之前扫读论文并确定目的、结构和方向，以此获得详细的理解。一旦你知道了大纲（目的）、大纲（结构）和作者对某个主题的倾向（方向），那么所有的细节（在接下来的阅读中）就更容易放在正确的前后文语境中。因此，如果你在第一次阅读论文时发现一个想法令人困惑，你就能知道此时不用担心它，因为它会在以后的部分中被详细描述。 不要阅读每一个字！当你阅读时，肯定会有一些单词或短语困扰你。如果你花时间不断地重新阅读一个单词、短语或段落，直到你完全理解它，那么你最终会浪费相当多的时间。通常，如果你只是简单地略读过你不理解的部分，含义会在下一段或下一节中变得清晰。记下你觉得困惑的部分，稍后再回过头来，看看论文的其余部分是否将它解释清楚。 阅读论文后，立即尝试确定要点、优点和缺点。作为学者，我们都很好奇。如果你在清楚地确定作者提出的要点、优势和劣势之前就开始思考论文的含义，那么你可能很难将你对论文的更深层次的看法与论文的基本要素区分开来。 除了这些提示外，请考虑咨询以下资源：&#xA;Some Tips on Reading Research Papers A Guide to Reading and Analysing Academic Articles How to Read a Scientific Paper Quick Tutorial on Reading Scientific Papers 虽然这些资源侧重于科学论文，但我发现许多相同的技术在阅读法律评论文章和政策声明时很有用，这些文章和政策声明也是高度结构化的。这些资源中的每一个都提供了其他资源的列表，可以作为入门的好地方。此外，谷歌可以提供更多。</description>
     </item>
-    
     <item>
       <title>如何在安装Conda后防止Powershell启动过慢</title>
       <link>https://newmilkiceonwall.github.io/posts/howtospeedpowershellafterinstallconda/</link>
       <pubDate>Thu, 04 Jan 2024 21:27:12 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/howtospeedpowershellafterinstallconda/</guid>
-      <description>参考链接到标题安装 Conda 后 PowerShell 启动慢 - ASC_8384 的个人博客
-处理方案链接到标题在 PowerShell 中输入：
-(&amp;amp; &amp;#34;C:\path\to\conda\Scripts\conda.exe&amp;#34; &amp;#34;shell.powershell&amp;#34; &amp;#34;hook&amp;#34;) | Out-String 把输出的文本贴到 profile.ps1 中，例如：
-$Env:CONDA_EXE = &amp;#34;C:\Users\username\miniconda3\Scripts\conda.exe&amp;#34; $Env:_CE_M = &amp;#34;&amp;#34; $Env:_CE_CONDA = &amp;#34;&amp;#34; $Env:_CONDA_ROOT = &amp;#34;C:\Users\username\miniconda3&amp;#34; $Env:_CONDA_EXE = &amp;#34;C:\Users\username\miniconda3\Scripts\conda.exe&amp;#34; $CondaModuleArgs = @{ChangePs1 = $True } Import-Module &amp;#34;$Env:_CONDA_ROOT\shell\condabin\Conda.psm1&amp;#34; -ArgumentList $CondaModuleArgs conda activate base #去掉这一行，默认不随Powershell激活Conda环境 Remove-Variable CondaModuleArgs 延展阅读链接到标题Linux下Zsh启动被Conda拖慢的解决方案</description>
+      <description>参考&#xD;链接到标题&#xD;安装 Conda 后 PowerShell 启动慢 - ASC_8384 的个人博客&#xA;处理方案&#xD;链接到标题&#xD;在 PowerShell 中输入：&#xA;(&amp;amp; &amp;#34;C:\path\to\conda\Scripts\conda.exe&amp;#34; &amp;#34;shell.powershell&amp;#34; &amp;#34;hook&amp;#34;) | Out-String 把输出的文本贴到 profile.ps1 中，例如：&#xA;$Env:CONDA_EXE = &amp;#34;C:\Users\username\miniconda3\Scripts\conda.exe&amp;#34; $Env:_CE_M = &amp;#34;&amp;#34; $Env:_CE_CONDA = &amp;#34;&amp;#34; $Env:_CONDA_ROOT = &amp;#34;C:\Users\username\miniconda3&amp;#34; $Env:_CONDA_EXE = &amp;#34;C:\Users\username\miniconda3\Scripts\conda.exe&amp;#34; $CondaModuleArgs = @{ChangePs1 = $True } Import-Module &amp;#34;$Env:_CONDA_ROOT\shell\condabin\Conda.psm1&amp;#34; -ArgumentList $CondaModuleArgs conda activate base #去掉这一行，默认不随Powershell激活Conda环境 Remove-Variable CondaModuleArgs 延展阅读&#xD;链接到标题&#xD;Linux下Zsh启动被Conda拖慢的解决方案</description>
     </item>
-    
     <item>
       <title>Lyx 如何进行引用压缩</title>
       <link>https://newmilkiceonwall.github.io/posts/lyx%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%BC%95%E7%94%A8%E5%8E%8B%E7%BC%A9/</link>
       <pubDate>Mon, 04 Dec 2023 21:14:18 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/lyx%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E5%BC%95%E7%94%A8%E5%8E%8B%E7%BC%A9/</guid>
-      <description>为什么使用引用压缩链接到标题对于写文章来说，要在同一个地方引用多个文献的时候，可能希望有这种样式 &amp;ldquo;[11]-[15]&amp;rdquo;.
-方法链接到标题在LyX中编写论文时，可以使用“Natbib”来实现参考文献引用的格式。以下是一些步骤，以确保参考文献引用呈现类似 &amp;ldquo;[11]-[15]&amp;rdquo; 的格式：
-添加宏包： 在文档的导言部分（Document &amp;gt; Settings &amp;gt; LaTeX Preamble），添加以下宏包：
-\usepackage[numbers,sort&amp;amp;compress]{natbib} 这将确保引用数字以及对多个引用进行压缩，显示为 &amp;ldquo;[11]-[15]&amp;rdquo; 的格式。如果使用了某些预制模板（比如IEEE），那么到这一步其实就有效果了。不必切换至Natbib。
-选择引用格式： 在LyX中，确保你的文档引用格式设置为“Natbib”：
-在文档中，选择“Document” &amp;gt; “Settings” &amp;gt; “Bibliography”。 在“Citation style”下拉菜单中，选择“Natbib (numerical)”。 单击“OK”。 插入引用： 在文档中，使用LyX的插入引用功能，然后将引用的键入输入框中。
-编译文档： 编译文档，确保引用呈现为所需的格式。
-请注意，确保你的BibTeX文件（.bib文件）中的参考文献条目是按照引用的顺序进行排列的。如果需要，你可以使用BibTeX工具（如JabRef）来管理和排序你的参考文献。</description>
+      <description>为什么使用引用压缩&#xD;链接到标题&#xD;对于写文章来说，要在同一个地方引用多个文献的时候，可能希望有这种样式 &amp;ldquo;[11]-[15]&amp;rdquo;.&#xA;方法&#xD;链接到标题&#xD;在LyX中编写论文时，可以使用“Natbib”来实现参考文献引用的格式。以下是一些步骤，以确保参考文献引用呈现类似 &amp;ldquo;[11]-[15]&amp;rdquo; 的格式：&#xA;添加宏包： 在文档的导言部分（Document &amp;gt; Settings &amp;gt; LaTeX Preamble），添加以下宏包：&#xA;\usepackage[numbers,sort&amp;amp;compress]{natbib} 这将确保引用数字以及对多个引用进行压缩，显示为 &amp;ldquo;[11]-[15]&amp;rdquo; 的格式。如果使用了某些预制模板（比如IEEE），那么到这一步其实就有效果了。不必切换至Natbib。&#xA;选择引用格式： 在LyX中，确保你的文档引用格式设置为“Natbib”：&#xA;在文档中，选择“Document” &amp;gt; “Settings” &amp;gt; “Bibliography”。 在“Citation style”下拉菜单中，选择“Natbib (numerical)”。 单击“OK”。 插入引用： 在文档中，使用LyX的插入引用功能，然后将引用的键入输入框中。&#xA;编译文档： 编译文档，确保引用呈现为所需的格式。&#xA;请注意，确保你的BibTeX文件（.bib文件）中的参考文献条目是按照引用的顺序进行排列的。如果需要，你可以使用BibTeX工具（如JabRef）来管理和排序你的参考文献。</description>
     </item>
-    
     <item>
       <title>LinuxMint 21.2 如何安装 Realtek RTL8188GU USB 网卡驱动</title>
       <link>https://newmilkiceonwall.github.io/posts/linuxmint-21.2-%E5%AE%89%E8%A3%85rtl8188%E9%A9%B1%E5%8A%A8/</link>
       <pubDate>Wed, 25 Oct 2023 17:14:40 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/linuxmint-21.2-%E5%AE%89%E8%A3%85rtl8188%E9%A9%B1%E5%8A%A8/</guid>
-      <description>写在前面链接到标题这篇文章适用于Realtek Semiconductor Corp. RTL8188GU 802.11n WLAN Adapter 在Linux Mint 21.2 上的安装，理论上，它也适合 Ubuntu 22.04。
-步骤链接到标题以下的内容参考 TutorialforLinux
-新增PPA sudo add-apt-repository ppa:kelebek333/kablosuz sudo apt update 安装驱动 sudo apt install rtl8188gu-dkms 加载驱动（重启亦可） sudo modprobe 8188gu 然后就开可以在托盘栏的网络图标中看到新的无线网卡了。
-题外话链接到标题配合 Github-linux-wifi-hotspot 可以架设无线热点。</description>
+      <description>写在前面&#xD;链接到标题&#xD;这篇文章适用于Realtek Semiconductor Corp. RTL8188GU 802.11n WLAN Adapter 在Linux Mint 21.2 上的安装，理论上，它也适合 Ubuntu 22.04。&#xA;步骤&#xD;链接到标题&#xD;以下的内容参考 TutorialforLinux&#xA;新增PPA sudo add-apt-repository ppa:kelebek333/kablosuz sudo apt update 安装驱动 sudo apt install rtl8188gu-dkms 加载驱动（重启亦可） sudo modprobe 8188gu 然后就开可以在托盘栏的网络图标中看到新的无线网卡了。&#xA;题外话&#xD;链接到标题&#xD;配合 Github-linux-wifi-hotspot 可以架设无线热点。</description>
     </item>
-    
     <item>
       <title>如何将Ubuntu/Linux Mint的PulseAudio换到PipeWire</title>
       <link>https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E5%B0%86ubuntu%E7%9A%84pulseaudio%E6%8D%A2%E5%88%B0pipewire/</link>
       <pubDate>Sun, 22 Oct 2023 20:47:54 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E5%B0%86ubuntu%E7%9A%84pulseaudio%E6%8D%A2%E5%88%B0pipewire/</guid>
-      <description>为什么这样做链接到标题我的配置：
-操作系统: Linux Mint 21.2 x86_64 蓝牙设备: Intel® Wireless-AC 9462 耳机: EDIFIER W860NB Pro 在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候声音会卡顿——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。
-解决方案链接到标题序言链接到标题根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
-Ubuntu/Linux Mint 解决方案链接到标题使用PipeWire替换PulseAudio链接到标题使用以下命令安装PipeWire。
-$ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream # 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。 $ sudo apt update $ sudo apt install pipewire pipewire-audio-client-libraries 根据[4]LinuxConfig,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— Bluetooth headset won’t connect after installing pipewire 。但是值得一提的是</description>
+      <description>为什么这样做&#xD;链接到标题&#xD;我的配置：&#xA;操作系统: Linux Mint 21.2 x86_64 蓝牙设备: Intel® Wireless-AC 9462 耳机: EDIFIER W860NB Pro 在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候声音会卡顿——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。&#xA;解决方案&#xD;链接到标题&#xD;序言&#xD;链接到标题&#xD;根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。&#xA;Ubuntu/Linux Mint 解决方案&#xD;链接到标题&#xD;使用PipeWire替换PulseAudio&#xD;链接到标题&#xD;使用以下命令安装PipeWire。&#xA;$ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream # 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。 $ sudo apt update $ sudo apt install pipewire pipewire-audio-client-libraries 根据[4]LinuxConfig,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— Bluetooth headset won’t connect after installing pipewire 。但是值得一提的是</description>
     </item>
-    
     <item>
       <title>Lyx 取消页面中的自动时间戳</title>
       <link>https://newmilkiceonwall.github.io/posts/lyx-%E5%8F%96%E6%B6%88%E6%A0%87%E5%87%86%E9%A1%B5%E9%9D%A2%E4%B8%AD%E7%9A%84%E8%87%AA%E5%8A%A8%E6%97%B6%E9%97%B4%E6%88%B3/</link>
       <pubDate>Tue, 05 Sep 2023 13:14:25 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/lyx-%E5%8F%96%E6%B6%88%E6%A0%87%E5%87%86%E9%A1%B5%E9%9D%A2%E4%B8%AD%E7%9A%84%E8%87%AA%E5%8A%A8%E6%97%B6%E9%97%B4%E6%88%B3/</guid>
-      <description>问题链接到标题Lyx 建立标准文档，编辑后输出的 PDF 会有一个自动英文时间戳，有时候可能并不需要这个时间戳。
-解决方案链接到标题在 Lyx 中，选择“文档”——“首选项”——“LaTex导言区”输入 \date{} 即可 [1] 。再次导出文档，就没有时间戳了。
-参考链接到标题[1] Want to eliminate the automatic time stamp of pdflatex (or lyx?)</description>
+      <description>问题&#xD;链接到标题&#xD;Lyx 建立标准文档，编辑后输出的 PDF 会有一个自动英文时间戳，有时候可能并不需要这个时间戳。&#xA;解决方案&#xD;链接到标题&#xD;在 Lyx 中，选择“文档”——“首选项”——“LaTex导言区”输入 \date{} 即可 [1] 。再次导出文档，就没有时间戳了。&#xA;参考&#xD;链接到标题&#xD;[1] Want to eliminate the automatic time stamp of pdflatex (or lyx?)</description>
     </item>
-    
     <item>
       <title>Lyx 页面边距说明</title>
       <link>https://newmilkiceonwall.github.io/posts/lyx%E9%A1%B5%E9%9D%A2%E8%BE%B9%E8%B7%9D%E8%AF%B4%E6%98%8E/</link>
       <pubDate>Tue, 05 Sep 2023 10:56:52 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/lyx%E9%A1%B5%E9%9D%A2%E8%BE%B9%E8%B7%9D%E8%AF%B4%E6%98%8E/</guid>
-      <description>问题链接到标题Lyx 在中文环境下使用，默认配置输出的 PDF 文件左右边距很宽，上下边距有时候看起来也不太符合中文环境下的习惯，所以需要调整。
-解决方案链接到标题在“文档”——“首选项”——“页边距”中可以进行调整。值得注意的是，其中“内边距”对应的是左边距，而“外边距”对应的是右边距。对于双面文档（如书籍），内页边距是最靠近书脊的，即奇数页的左页边距和偶数页的右页边距 [1] 。
-参考链接到标题[1] Change page margins in LyX - StackExchange</description>
+      <description>问题&#xD;链接到标题&#xD;Lyx 在中文环境下使用，默认配置输出的 PDF 文件左右边距很宽，上下边距有时候看起来也不太符合中文环境下的习惯，所以需要调整。&#xA;解决方案&#xD;链接到标题&#xD;在“文档”——“首选项”——“页边距”中可以进行调整。值得注意的是，其中“内边距”对应的是左边距，而“外边距”对应的是右边距。对于双面文档（如书籍），内页边距是最靠近书脊的，即奇数页的左页边距和偶数页的右页边距 [1] 。&#xA;参考&#xD;链接到标题&#xD;[1] Change page margins in LyX - StackExchange</description>
     </item>
-    
     <item>
       <title>如何更新zoterostyle中的eskey等小事情杂记</title>
       <link>https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0zoterostyle%E4%B8%AD%E7%9A%84eskey/</link>
       <pubDate>Sun, 23 Jul 2023 23:26:13 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%96%B0zoterostyle%E4%B8%AD%E7%9A%84eskey/</guid>
-      <description>我把一些琐碎问题的解决方案记录在这里。
-如何更新zoterostyle中的eskey链接到标题使用zotero的时候，插件zoterostyle中影响因子拉不下来。
-打开zotero， 编辑——首选项——高级——编辑器——搜索“easys”——用easyscholar的key更新这个字符串
-修改Cinnamon鼠标拖动窗口的快捷键链接到标题参考这篇文章
-在cinnamon的Linux下面使用如下命令修改
-gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &amp;#39;&amp;lt;Super&amp;gt;&amp;#39; Linux Mint 登陆页面启用小键盘链接到标题sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”
-Linux Mint 分辨率调整链接到标题这篇博客有非常详细的描述
-Linux Mint 关机保存会话链接到标题安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true 小米手机第三方桌面隐藏三大键启用全面屏手势链接到标题来自 知乎
-唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！ 这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www.appsapk.com/fluid-navigation-gestures/)来提供全面屏手势。
-启用部分键盘在Linux Fx功能失效的问题链接到标题参考 https://myvnet.com/p/ixed-keychron-keyboards-fx-key-not-work-at-linux/
-我的键盘是acer okr213，这种方法依然奏效。
-这款键盘会被 hid_apple 驱动识别。 驱动参数位于 /sys/module/hid_apple/parameters，修复Fx功能需要修改的是fnmode参数
-cat /sys/module/hid_apple/parameters/fnmode 我的默认配置是3,原博客中只给出了1、2的含义。
-hid_apple 的 fnmode 为 3 表示该设备的功能键模式为 fnmode3。在苹果的键盘布局中，功能键位于键盘的左下角，通常用于控制屏幕亮度、音量和其他系统功能。fnmode3 表示在按下 fn 键的同时按下功能键将触发特定功能。具体功能取决于特定键盘和操作系统的配置。</description>
+      <description>我把一些琐碎问题的解决方案记录在这里。&#xA;如何更新zoterostyle中的eskey&#xD;链接到标题&#xD;使用zotero的时候，插件zoterostyle中影响因子拉不下来。&#xA;打开zotero， 编辑——首选项——高级——编辑器——搜索“easys”——用easyscholar的key更新这个字符串&#xA;修改Cinnamon鼠标拖动窗口的快捷键&#xD;链接到标题&#xD;参考这篇文章&#xA;在cinnamon的Linux下面使用如下命令修改&#xA;gsettings set org.cinnamon.desktop.wm.preferences mouse-button-modifier &amp;#39;&amp;lt;Super&amp;gt;&amp;#39; Linux Mint 登陆页面启用小键盘&#xD;链接到标题&#xD;sudo apt-get install numlockx 系统设置——登陆窗口——设置——勾选“激活numlock”&#xA;Linux Mint 分辨率调整&#xD;链接到标题&#xD;这篇博客有非常详细的描述&#xA;Linux Mint 关机保存会话&#xD;链接到标题&#xD;安装dconf-editor 通过dconf-editor，修改org.cinnamon.cinnamon-session.auto-save-session为true 小米手机第三方桌面隐藏三大键启用全面屏手势&#xD;链接到标题&#xD;来自 知乎&#xA;唤起小爱同学 说“更改全面屏手势” 改成全面屏手势即可，这里设置没有提示弹出！ 这种方案在 MIUI 12.5 可以隐藏三大键，但是系统自带的全面屏手势不会生效。 使用Fluid Navigation Gestureshttps://www.appsapk.com/fluid-navigation-gestures/)来提供全面屏手势。&#xA;启用部分键盘在Linux Fx功能失效的问题&#xD;链接到标题&#xD;参考 https://myvnet.com/p/ixed-keychron-keyboards-fx-key-not-work-at-linux/&#xA;我的键盘是acer okr213，这种方法依然奏效。&#xA;这款键盘会被 hid_apple 驱动识别。 驱动参数位于 /sys/module/hid_apple/parameters，修复Fx功能需要修改的是fnmode参数&#xA;cat /sys/module/hid_apple/parameters/fnmode 我的默认配置是3,原博客中只给出了1、2的含义。&#xA;hid_apple 的 fnmode 为 3 表示该设备的功能键模式为 fnmode3。在苹果的键盘布局中，功能键位于键盘的左下角，通常用于控制屏幕亮度、音量和其他系统功能。fnmode3 表示在按下 fn 键的同时按下功能键将触发特定功能。具体功能取决于特定键盘和操作系统的配置。</description>
     </item>
-    
     <item>
       <title>Linux下Zip解压乱码的解决方案以及原因解析</title>
       <link>https://newmilkiceonwall.github.io/posts/linux%E4%B8%8Bzip%E8%A7%A3%E5%8E%8B%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BB%A5%E5%8F%8A%E5%8E%9F%E5%9B%A0%E8%A7%A3%E6%9E%90/</link>
       <pubDate>Sun, 21 May 2023 22:48:20 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/linux%E4%B8%8Bzip%E8%A7%A3%E5%8E%8B%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E4%BB%A5%E5%8F%8A%E5%8E%9F%E5%9B%A0%E8%A7%A3%E6%9E%90/</guid>
-      <description>解决方案链接到标题1链接到标题来自知乎
-unzip -O cp936 &amp;lt;文件名&amp;gt;.zip 2链接到标题Find Hao的回答-知乎
-unar file.zip 但是你可能需要自行安装unar，它可以自动检测(zip)文件的编码。
-为什么发生这种事链接到标题本质问题还是zip格式的缺陷，没有字段标志出文件名的编码格式。ZIP在压缩与解压缩的时候默认使用了系统的本地编码，如windows中文环境下为GBK，日文环境下是JIS，linux默认编码为UTF8等；那么在不同系统环境下，只要压缩与解压缩的编码不一致，就会出现乱码。知乎
-其他提示链接到标题convmv可以转化文件名的编码，可以unzip出来然后再convmv，但这看起来不够优雅。</description>
+      <description>解决方案&#xD;链接到标题&#xD;1&#xD;链接到标题&#xD;来自知乎&#xA;unzip -O cp936 &amp;lt;文件名&amp;gt;.zip 2&#xD;链接到标题&#xD;Find Hao的回答-知乎&#xA;unar file.zip 但是你可能需要自行安装unar，它可以自动检测(zip)文件的编码。&#xA;为什么发生这种事&#xD;链接到标题&#xD;本质问题还是zip格式的缺陷，没有字段标志出文件名的编码格式。ZIP在压缩与解压缩的时候默认使用了系统的本地编码，如windows中文环境下为GBK，日文环境下是JIS，linux默认编码为UTF8等；那么在不同系统环境下，只要压缩与解压缩的编码不一致，就会出现乱码。知乎&#xA;其他提示&#xD;链接到标题&#xD;convmv可以转化文件名的编码，可以unzip出来然后再convmv，但这看起来不够优雅。</description>
     </item>
-    
     <item>
       <title>LinuxMint下的GIMP本地化</title>
       <link>https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/</link>
       <pubDate>Thu, 11 May 2023 13:26:12 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/gimplocalizationonlinuxmint/</guid>
-      <description>转载自wade-chiang
-关键指令：链接到标题sudo apt-get install language-pack-gnome-zh-hans # 这同时也会安装language-pack-gnome-zh-hans-base GIMP的本地化语言包在这里里面，这个方案也适用于Ubuntu。
-其他发现链接到标题在安装完这个语言包之后，控制台的git commit注释也变成中文了(如下)。这个语言包为其他很多程序做了翻译适配（我发现有语言变化的程序有git、nano）。
-# 请为您的变更输入提交说明。以 &amp;#39;#&amp;#39; 开始的行将被忽略，而一个空的提交 # 说明将会终止提交。 # # 位于分支 main # 您的分支与上游分支 &amp;#39;origin/main&amp;#39; 一致。 # # 要提交的变更： # 新文件： content/posts/GIMPLocalizationOnLinuxMint.md # 修改： docs/index.xml # 新文件： docs/posts/gimplocalizationonlinuxmint/index.html # 修改： docs/posts/index.html # 修改： docs/posts/index.xml # 修改： docs/sitemap.xml # </description>
+      <description>转载自wade-chiang&#xA;关键指令：&#xD;链接到标题&#xD;sudo apt-get install language-pack-gnome-zh-hans # 这同时也会安装language-pack-gnome-zh-hans-base GIMP的本地化语言包在这里里面，这个方案也适用于Ubuntu。&#xA;其他发现&#xD;链接到标题&#xD;在安装完这个语言包之后，控制台的git commit注释也变成中文了(如下)。这个语言包为其他很多程序做了翻译适配（我发现有语言变化的程序有git、nano）。&#xA;# 请为您的变更输入提交说明。以 &amp;#39;#&amp;#39; 开始的行将被忽略，而一个空的提交 # 说明将会终止提交。 # # 位于分支 main # 您的分支与上游分支 &amp;#39;origin/main&amp;#39; 一致。 # # 要提交的变更： # 新文件： content/posts/GIMPLocalizationOnLinuxMint.md # 修改： docs/index.xml # 新文件： docs/posts/gimplocalizationonlinuxmint/index.html # 修改： docs/posts/index.html # 修改： docs/posts/index.xml # 修改： docs/sitemap.xml # </description>
     </item>
-    
     <item>
       <title>Linux下推荐的Git GUI程序</title>
       <link>https://newmilkiceonwall.github.io/posts/linux%E4%B8%8B%E6%8E%A8%E8%8D%90%E7%9A%84git-gui%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Fri, 28 Apr 2023 00:50:50 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/linux%E4%B8%8B%E6%8E%A8%E8%8D%90%E7%9A%84git-gui%E7%A8%8B%E5%BA%8F/</guid>
       <description> Smartgit 非商用/开源项目免费 最接近sourcetree的样式 支持git工作流 支持中文 Sublime Merge 收费 GitUp 功能有限 gitg 看着还行 无中文 clone过程明显 功能不全 megit aurees 界面好看 现代化 只支持到Ubuntu18.04 gitnuro 界面好看 现代化 需要特定的比较高的jre版本(jre17) 不支持中文 Flatpak安装很慢，简直是灾难。而且很占空间。 Guitar 界面一般 git cola 界面好看 功能齐全 支持中文 clone过程进度不太明显 Gitteyup 界面一般 现代化 不太容易看懂布局 Flatpak安装 </description>
     </item>
-    
     <item>
       <title>[阅读记录]Linkedin School of SRE Level 101 Fundamentals Series</title>
       <link>https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/</link>
       <pubDate>Tue, 28 Mar 2023 16:29:59 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/%E9%A2%86%E8%8B%B1school-of-sre-001/</guid>
-      <description>Linkedin School of SRE Level 101 Fundamentals Series链接到标题开始阅读时间 2023年3月28日
-完整教程（如果图片链接失效可以去这里看）
-Linux Basics链接到标题Introduction链接到标题The Linux kernel is monolithic in nature.（内核是单独的，发行版是内核和其他GNU项目的集合） System calls are used to interact with the Linux kernel space.（系统调用被用来和内核交互）
-Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.（内容代码只能在内核模式执行，非内核代码只能在用户态执行）
-Device drivers are used to communicate with the hardware devices.（设备驱动用来与硬件交互）
-Command Line Basics链接到标题File System Organization链接到标题课程简要介绍了什么是命令，并给出了Linux系统文件的树状结构图。</description>
+      <description>Linkedin School of SRE Level 101 Fundamentals Series&#xD;链接到标题&#xD;开始阅读时间 2023年3月28日&#xA;完整教程（如果图片链接失效可以去这里看）&#xA;Linux Basics&#xD;链接到标题&#xD;Introduction&#xD;链接到标题&#xD;The Linux kernel is monolithic in nature.（内核是单独的，发行版是内核和其他GNU项目的集合） System calls are used to interact with the Linux kernel space.（系统调用被用来和内核交互）&#xA;Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.（内容代码只能在内核模式执行，非内核代码只能在用户态执行）&#xA;Device drivers are used to communicate with the hardware devices.（设备驱动用来与硬件交互）&#xA;Command Line Basics&#xD;链接到标题&#xD;File System Organization&#xD;链接到标题&#xD;课程简要介绍了什么是命令，并给出了Linux系统文件的树状结构图。</description>
     </item>
-    
     <item>
       <title>重读数据结构教程（一）：线性表</title>
       <link>https://newmilkiceonwall.github.io/posts/%E9%87%8D%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E7%A8%8B%E4%B8%80%E7%BA%BF%E6%80%A7%E8%A1%A8/</link>
       <pubDate>Tue, 21 Mar 2023 23:08:54 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/%E9%87%8D%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E7%A8%8B%E4%B8%80%E7%BA%BF%E6%80%A7%E8%A1%A8/</guid>
-      <description>0 写在前面链接到标题阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&amp;quot;比较基础&amp;quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。
-1 顺序表及其应用示例链接到标题此处不赘述顺序表概念，直接摘录了书中的例子。
-1.1 P39 例2. 4链接到标题有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。
-1.1.1 解法1链接到标题在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。
-1.1.2 解法2链接到标题为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。
-2 线性表的链式存储结构链接到标题2.1 链表和顺序表的比较链接到标题顺序表是物理上相邻的，而链表不必如此。
-顺序表的插入、删除平均需要移动半个表元素，而链表不必。
-顺序表查找第i个元素耗时O（1），具有随机存取特性。而链表不具有这个特性。
-2.2 单链表tips和一些题链接到标题带头节点的好处：
-无论单链表是否空，都为其添加头节点，这帮助统一空表和非空表操作。
-首结点插入、删除操作与其他节点一致。
-在复制一个链表的时候，头插法会导致reverse()的效果，尾插法也就是正常原来排序的情况。
-2.2.1 单链表原地反转链接到标题Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;None OutPut: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;None 过程： 需要pre cur next三个指针 pre:None cur:1 next:2 actions: cur-&amp;gt;next = pre; pre=cur; cur=next; next=next-&amp;gt;next (如果是双链表转置，是不需要pre指针的，当然你也可以使用头插法来转制但是这种不是面试考点)
-2.2.2 单链表是否有环链接到标题穷举。检查尾部最新的那个节点，与前面n-1个点时候有一样的，有则存在环。 节点hash，当你发现有一个存在在hash表内的hash时，说明你遇到了重复节点，说明你现在在环里面。 快慢针。两个针一样的时候说明有环，快针null了，说明没有环。 2.</description>
+      <description>0 写在前面&#xD;链接到标题&#xD;阅读的这本书是李春葆主编的《数据结构教程》。这是我本科数据结构课程的参考书，当然，这次读的为更新的第六版。 这份笔记尽量简略概念部分的描述，因为本书讲述的都是&amp;quot;比较基础&amp;quot;的数据结构，在有必要时，我会做更加详细的描述或者笔记。&#xA;1 顺序表及其应用示例&#xD;链接到标题&#xD;此处不赘述顺序表概念，直接摘录了书中的例子。&#xA;1.1 P39 例2. 4&#xD;链接到标题&#xD;有一个顺序表L，假设元素类型ElemType为Int， 设计一个尽可能高效的算法，以第一个元素为分界线（基准，pivot），将所有小于或等于它的元素移动到基准左侧，大于它的移动到基准右侧。 这个题解揭示了一些快速排序划分的思路。&#xA;1.1.1 解法1&#xD;链接到标题&#xD;在L[1:n-1]上，在左侧查找一个比pivot大的数字，在右侧找一个比pivot小的数字，交换。重复，直到左右寻找数字的*L R指针相遇，然后交换L指针的值和L[0]的值——也就是基准值。&#xA;1.1.2 解法2&#xD;链接到标题&#xD;为基准单独开辟一个空间存储它，随后在右侧找一个小于基准的数字位于L[n]覆盖到L[0]的位置。随后从L[1]开始找一个大于基准的数字填入刚刚L[n]位置。然后再一次从右侧开始寻找小于基准的数，重复上面的过程，直到左右相遇时，将基准填入最后取值覆盖其他位置的那个值。&#xA;2 线性表的链式存储结构&#xD;链接到标题&#xD;2.1 链表和顺序表的比较&#xD;链接到标题&#xD;顺序表是物理上相邻的，而链表不必如此。&#xA;顺序表的插入、删除平均需要移动半个表元素，而链表不必。&#xA;顺序表查找第i个元素耗时O（1），具有随机存取特性。而链表不具有这个特性。&#xA;2.2 单链表tips和一些题&#xD;链接到标题&#xD;带头节点的好处：&#xA;无论单链表是否空，都为其添加头节点，这帮助统一空表和非空表操作。&#xA;首结点插入、删除操作与其他节点一致。&#xA;在复制一个链表的时候，头插法会导致reverse()的效果，尾插法也就是正常原来排序的情况。&#xA;2.2.1 单链表原地反转&#xD;链接到标题&#xD;Input: 1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5-&amp;gt;None OutPut: 5-&amp;gt;4-&amp;gt;3-&amp;gt;2-&amp;gt;1-&amp;gt;None 过程： 需要pre cur next三个指针 pre:None cur:1 next:2 actions: cur-&amp;gt;next = pre; pre=cur; cur=next; next=next-&amp;gt;next (如果是双链表转置，是不需要pre指针的，当然你也可以使用头插法来转制但是这种不是面试考点)&#xA;2.2.2 单链表是否有环&#xD;链接到标题&#xD;穷举。检查尾部最新的那个节点，与前面n-1个点时候有一样的，有则存在环。 节点hash，当你发现有一个存在在hash表内的hash时，说明你遇到了重复节点，说明你现在在环里面。 快慢针。两个针一样的时候说明有环，快针null了，说明没有环。 2.</description>
     </item>
-    
     <item>
       <title>Bash常用快捷键</title>
       <link>https://newmilkiceonwall.github.io/posts/bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
       <pubDate>Fri, 17 Mar 2023 15:48:55 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/bash%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>源贴
-Bash常用快捷键链接到标题ctrl键组合链接到标题ctrl+a:光标移到行首。
-ctrl+b:光标左移一个字母
-ctrl+c:杀死当前进程。
-ctrl+d:退出当前 Shell。
-ctrl+e:光标移到行尾。
-ctrl+h:删除光标前一个字符，同 backspace 键相同。
-ctrl+k:清除光标后至行尾的内容。
-ctrl+l:清屏，相当于clear。
-ctrl+r:搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索bash的history
-ctrl+u: 清除光标前至行首间的所有内容。
-ctrl+w: 移除光标前的一个单词
-ctrl+t: 交换光标位置前的两个字符
-ctrl+y: 粘贴或者恢复上次的删除
-ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符
-ctrl+f: 光标右移
-ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复
-esc组合链接到标题esc+d: 删除光标后的一个词
-esc+f: 往右跳一个词
-esc+b: 往左跳一个词
-esc+t: 交换光标位置前的两个单词。</description>
+      <description>源贴&#xA;Bash常用快捷键&#xD;链接到标题&#xD;ctrl键组合&#xD;链接到标题&#xD;ctrl+a:光标移到行首。&#xA;ctrl+b:光标左移一个字母&#xA;ctrl+c:杀死当前进程。&#xA;ctrl+d:退出当前 Shell。&#xA;ctrl+e:光标移到行尾。&#xA;ctrl+h:删除光标前一个字符，同 backspace 键相同。&#xA;ctrl+k:清除光标后至行尾的内容。&#xA;ctrl+l:清屏，相当于clear。&#xA;ctrl+r:搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索bash的history&#xA;ctrl+u: 清除光标前至行首间的所有内容。&#xA;ctrl+w: 移除光标前的一个单词&#xA;ctrl+t: 交换光标位置前的两个字符&#xA;ctrl+y: 粘贴或者恢复上次的删除&#xA;ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符&#xA;ctrl+f: 光标右移&#xA;ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复&#xA;esc组合&#xD;链接到标题&#xD;esc+d: 删除光标后的一个词&#xA;esc+f: 往右跳一个词&#xA;esc+b: 往左跳一个词&#xA;esc+t: 交换光标位置前的两个单词。</description>
     </item>
-    
     <item>
       <title>J1900|OpenWrt安装配置笔记</title>
       <link>https://newmilkiceonwall.github.io/posts/j1900_openwrt%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95%E4%B8%80/</link>
       <pubDate>Wed, 08 Mar 2023 13:48:00 +0800</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/j1900_openwrt%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95%E4%B8%80/</guid>
-      <description>J1900|OpenWrt安装配置笔记链接到标题这份笔记记录的信息可能不完全
-我使用的固件是openwrt-22.03.3-x86-generic-generic-ext4-combined-efi
-如何启动链接到标题需要把主板的uefi引导关闭，保证能够从U盘或者其他外部介质启动。
-使用了balenaEtcher来将openwrt的固件烧录到U盘中，Roadkil&#39;s Disk Image似乎也可以，但是效果不如BlaenaEtcher。当然，BlaenaEtcher不会使用全部的U盘空间。这篇文章可以实现扩容OpenWrt 存储空间扩容的两种方案 这个内容可以让你把根目录/挂载在U盘的其他地方。
-关于如何通过网线调试并且上网链接到标题用一根网线连接
-我的笔记本&amp;lt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;gt;1900主板
-然后在Windows控制面板——适配器——选择可以联网的适配器——右键——属性——共享——对“以太网”共享此连接。在openwrt里面把lan的网关设置为电脑有线适配器的ip地址，然后1900就可以通过电脑的网络上网了。这适用于J1900没有多余网口时候的调试。
-中文化和其他驱动链接到标题安装luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn（安装了之后看不出哪里汉化了）。我的无线USB网卡是W311U+，内置的是RT2870STA的驱动，在opkg里面搜到了这个驱动 kmod-rt2800-usb。安装驱动之后，如果有必要，使用
-ifconfig wlan&amp;lt;x&amp;gt; up 把无线网卡启动起来。wifi config命令可以自动检测无线设备（前提是安装了恰当的驱动），并在/etc/config/wireless生成配置文件，需要在这个配置文件中将无线打开（默认是关闭的）
-关于DMZ主机链接到标题在防火墙下面添加如下规则cat /etc/config/firewall
-config redirect &amp;#39;dmz&amp;#39; option name &amp;#39;dmz&amp;#39; option src &amp;#39;wan&amp;#39; option proto &amp;#39;tcp&amp;#39; option target &amp;#39;DNAT&amp;#39; option dest_ip &amp;#39;192.168.18.235&amp;#39; option enabled &amp;#39;1&amp;#39; config redirect &amp;#39;dmzudp&amp;#39; option name &amp;#39;dmzudp&amp;#39; option src_port &amp;#39;!67&amp;#39; option src &amp;#39;wan&amp;#39; option proto &amp;#39;udp&amp;#39; option target &amp;#39;DNAT&amp;#39; option dest_ip &amp;#39;192.</description>
+      <description>J1900|OpenWrt安装配置笔记&#xD;链接到标题&#xD;这份笔记记录的信息可能不完全&#xA;我使用的固件是openwrt-22.03.3-x86-generic-generic-ext4-combined-efi&#xA;如何启动&#xD;链接到标题&#xD;需要把主板的uefi引导关闭，保证能够从U盘或者其他外部介质启动。&#xA;使用了balenaEtcher来将openwrt的固件烧录到U盘中，Roadkil&#39;s Disk Image似乎也可以，但是效果不如BlaenaEtcher。当然，BlaenaEtcher不会使用全部的U盘空间。这篇文章可以实现扩容OpenWrt 存储空间扩容的两种方案 这个内容可以让你把根目录/挂载在U盘的其他地方。&#xA;关于如何通过网线调试并且上网&#xD;链接到标题&#xD;用一根网线连接&#xA;我的笔记本&amp;lt;&amp;mdash;&amp;mdash;&amp;mdash;&amp;gt;1900主板&#xA;然后在Windows控制面板——适配器——选择可以联网的适配器——右键——属性——共享——对“以太网”共享此连接。在openwrt里面把lan的网关设置为电脑有线适配器的ip地址，然后1900就可以通过电脑的网络上网了。这适用于J1900没有多余网口时候的调试。&#xA;中文化和其他驱动&#xD;链接到标题&#xD;安装luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn（安装了之后看不出哪里汉化了）。我的无线USB网卡是W311U+，内置的是RT2870STA的驱动，在opkg里面搜到了这个驱动 kmod-rt2800-usb。安装驱动之后，如果有必要，使用&#xA;ifconfig wlan&amp;lt;x&amp;gt; up 把无线网卡启动起来。wifi config命令可以自动检测无线设备（前提是安装了恰当的驱动），并在/etc/config/wireless生成配置文件，需要在这个配置文件中将无线打开（默认是关闭的）&#xA;关于DMZ主机&#xD;链接到标题&#xD;在防火墙下面添加如下规则cat /etc/config/firewall&#xA;config redirect &amp;#39;dmz&amp;#39; option name &amp;#39;dmz&amp;#39; option src &amp;#39;wan&amp;#39; option proto &amp;#39;tcp&amp;#39; option target &amp;#39;DNAT&amp;#39; option dest_ip &amp;#39;192.168.18.235&amp;#39; option enabled &amp;#39;1&amp;#39; config redirect &amp;#39;dmzudp&amp;#39; option name &amp;#39;dmzudp&amp;#39; option src_port &amp;#39;!67&amp;#39; option src &amp;#39;wan&amp;#39; option proto &amp;#39;udp&amp;#39; option target &amp;#39;DNAT&amp;#39; option dest_ip &amp;#39;192.</description>
     </item>
-    
     <item>
       <title>没从今天的相片中看见从前那个少年</title>
       <link>https://newmilkiceonwall.github.io/posts/mei-cong-jin-tian-de-xiang-pian-zhong-kan-jian-cong-qian-na-ge-shao-nian/</link>
       <pubDate>Mon, 28 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/mei-cong-jin-tian-de-xiang-pian-zhong-kan-jian-cong-qian-na-ge-shao-nian/</guid>
       <description>今天举起手机准备拍拍夕阳，结果一开相机是前置，稍有迟疑地看了看自己拍了一张，太阳就落下去了没拍到。我也看见自己有了一些岁月沧桑的征兆，不知道是不是因为最近糟糕的作息。</description>
     </item>
-    
     <item>
       <title>真的很感谢2021年的自己</title>
       <link>https://newmilkiceonwall.github.io/posts/zhen-de-hen-gan-xie-2021-nian-de-zi-ji/</link>
       <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/zhen-de-hen-gan-xie-2021-nian-de-zi-ji/</guid>
-      <description>2021年，从3月开始刷题找实习，不记得是4月还是5月人生第一次找工作的面试，是面的腾讯，面试官很友好，从思路逻辑上，一直在引导我回答他的问题，还叫我不用紧张。无奈，那个时候技术一般，又带着无法克服的紧张，最后面试官感谢我投递腾讯公司并参加面试，我也感谢他组织这次面试。
-刷题、看面经直到暑假，去了中国银行四川省分行实习，入职第二天，建行打电话来叫我去他们那边实习（接电话当时中行HR也在，大无语），拒绝掉。为了避免后续再出现这种尴尬场面，遂cancal了ICBC的后续面试。不过后来浦发银行开奖还是打电话通知了，这次有经验，出去楼梯间接电话。在中行本来是去信息科技部门，后来给我拉到人力资源部去写工具、当甲方，偶尔也干干杂活。中行人力资源部用工团队的每个老师、前辈对我都很好，小团队氛围也很不错，我入职、离职的时候主管还请大家吃了饭（主管，最后没跟你签offer实在是对不起）。更多关于在中行的故事，我想写在另一篇里。
-十月份再往后，拿到了中行省分行管培、农行成都研发部、腾讯CSIG的offer，虾皮流程很长，很后面才安排，到HR面的时候，已经有前面的三个offer了就拒绝了，当时也真的疲惫不想再面下去了。还有一个更重要的原因是拿到了重大的计科学硕offer，当时正在腾讯的offer上为“读研or工作”纠结，后面不想在陷入有更多的高薪offer的dilemma中了（我的读者，因为见闻、认知不同，可能虾皮、腾讯对你来说不算高薪）。
-写这些，是因为想到自己在那个时候抱着一种“绝对不能走错一步”的心态在做每一件事情。很感谢那个时候的自己。虽然不签字很可惜，拿到offer可以世俗地说明“这个孩子优秀、不错”，但是也要想到能保研去到一所不赖的985继续读自己喜欢的计算机，在无关家庭、事业等等因素，单从“读书、求知”来说其实也是一个不错的选择。</description>
+      <description>2021年，从3月开始刷题找实习，不记得是4月还是5月人生第一次找工作的面试，是面的腾讯，面试官很友好，从思路逻辑上，一直在引导我回答他的问题，还叫我不用紧张。无奈，那个时候技术一般，又带着无法克服的紧张，最后面试官感谢我投递腾讯公司并参加面试，我也感谢他组织这次面试。&#xA;刷题、看面经直到暑假，去了中国银行四川省分行实习，入职第二天，建行打电话来叫我去他们那边实习（接电话当时中行HR也在，大无语），拒绝掉。为了避免后续再出现这种尴尬场面，遂cancal了ICBC的后续面试。不过后来浦发银行开奖还是打电话通知了，这次有经验，出去楼梯间接电话。在中行本来是去信息科技部门，后来给我拉到人力资源部去写工具、当甲方，偶尔也干干杂活。中行人力资源部用工团队的每个老师、前辈对我都很好，小团队氛围也很不错，我入职、离职的时候主管还请大家吃了饭（主管，最后没跟你签offer实在是对不起）。更多关于在中行的故事，我想写在另一篇里。&#xA;十月份再往后，拿到了中行省分行管培、农行成都研发部、腾讯CSIG的offer，虾皮流程很长，很后面才安排，到HR面的时候，已经有前面的三个offer了就拒绝了，当时也真的疲惫不想再面下去了。还有一个更重要的原因是拿到了重大的计科学硕offer，当时正在腾讯的offer上为“读研or工作”纠结，后面不想在陷入有更多的高薪offer的dilemma中了（我的读者，因为见闻、认知不同，可能虾皮、腾讯对你来说不算高薪）。&#xA;写这些，是因为想到自己在那个时候抱着一种“绝对不能走错一步”的心态在做每一件事情。很感谢那个时候的自己。虽然不签字很可惜，拿到offer可以世俗地说明“这个孩子优秀、不错”，但是也要想到能保研去到一所不赖的985继续读自己喜欢的计算机，在无关家庭、事业等等因素，单从“读书、求知”来说其实也是一个不错的选择。</description>
     </item>
-    
     <item>
       <title>VirtualBox虚拟机 仅主机模式×NAT配网——主机客机互通，客机器正常上网</title>
       <link>https://newmilkiceonwall.github.io/posts/virtualbox-xu-ni-ji-jin-zhu-ji-mo-shi-xnat-pei-wang/</link>
       <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/virtualbox-xu-ni-ji-jin-zhu-ji-mo-shi-xnat-pei-wang/</guid>
-      <description>0 写在前面链接到标题起因是这样的——由于发现完美对战平台会影响VBox的运行，卸载完美之后，用回了阔别几个月的VBox。需要组一个Ubuntu的服务器，用于练习，但是默认的NAT模式，主机直通虚拟机上的应用需要在VBox配置端口映射，一个一个映射太繁琐了！就想能不能组一个类似局域网的模式，同时客机能够通过NAT正常上网。网上有很多客机单网卡的实现，这一篇是基于Vmware的，但是这种方案需要配置window网络共享，有没有一种不用配置共享的方案？
-1 双网卡配置链接到标题这里需要使用VBox的HostOnly网卡，如果没有这个网卡适配器，可以在VBox主页面——管理——主机网络管理器中新建，window系统可能需要管理员权限。就在主机网络管理器中将这张网卡的IPv4地址设置为192.168.56.2/24。考虑到未来可能有其他设备或虚拟机接入，打开DHCP服务器为192.168.56.X网段自动分配IP，更具不同人的实际情况，这个操作可能不是必须的。
-随后，在需要配置的虚拟机设置页——网络，启用网卡1和网卡2，分别选择NAT和仅主机网络，并为仅主机网络选择刚刚配置好的192.168.56.X网段HostOnly网卡。
-2 Ubuntu通过netplan配网固定IP链接到标题其实到此，如果你的虚拟机操作系统默认为网卡打开DHCP，虚拟机就应该能够获取到192.168.56.X的IP地址，通过这个IP地址，主机和客机可以完成互联互通。但是我的Ubuntu并未想当然地完成这的自动配置。同时，作为一个长期使用的、通过服务器的虚拟机，DHCP可能导致的IP变换，也不是一件好事。使用接下来，通过netplan把虚拟机IP固定为192.168.56.3/24。虚拟机开机，打开这个文件：
-sudo nano /etc/netplan/00-installer-config.yaml # 当然你也可以使用vim，记得提管理员权限 我的配置如下：
-# This is the network config written by &amp;#39;subiquity&amp;#39; network: ethernets: enp0s3: dhcp4: true enp0s8: dhcp4: false addresses: [192.168.56.3/24] version: 2 其中enp0s3为NAT网卡，enp0s8为HostOnly网卡。即便你也使用VBox，实际情况下，网卡的名字也可能不一样，通过ifconfig -a可以查询到网卡名，随后如上配置即可。最后，在shell中运行sudo netplan apply即可使新配置生效（这样配置，即使是重启，也是有效的）。通过主机Ping客机：
-正在 Ping 192.168.56.3 具有 32 字节的数据: 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.</description>
+      <description>0 写在前面&#xD;链接到标题&#xD;起因是这样的——由于发现完美对战平台会影响VBox的运行，卸载完美之后，用回了阔别几个月的VBox。需要组一个Ubuntu的服务器，用于练习，但是默认的NAT模式，主机直通虚拟机上的应用需要在VBox配置端口映射，一个一个映射太繁琐了！就想能不能组一个类似局域网的模式，同时客机能够通过NAT正常上网。网上有很多客机单网卡的实现，这一篇是基于Vmware的，但是这种方案需要配置window网络共享，有没有一种不用配置共享的方案？&#xA;1 双网卡配置&#xD;链接到标题&#xD;这里需要使用VBox的HostOnly网卡，如果没有这个网卡适配器，可以在VBox主页面——管理——主机网络管理器中新建，window系统可能需要管理员权限。就在主机网络管理器中将这张网卡的IPv4地址设置为192.168.56.2/24。考虑到未来可能有其他设备或虚拟机接入，打开DHCP服务器为192.168.56.X网段自动分配IP，更具不同人的实际情况，这个操作可能不是必须的。&#xA;随后，在需要配置的虚拟机设置页——网络，启用网卡1和网卡2，分别选择NAT和仅主机网络，并为仅主机网络选择刚刚配置好的192.168.56.X网段HostOnly网卡。&#xA;2 Ubuntu通过netplan配网固定IP&#xD;链接到标题&#xD;其实到此，如果你的虚拟机操作系统默认为网卡打开DHCP，虚拟机就应该能够获取到192.168.56.X的IP地址，通过这个IP地址，主机和客机可以完成互联互通。但是我的Ubuntu并未想当然地完成这的自动配置。同时，作为一个长期使用的、通过服务器的虚拟机，DHCP可能导致的IP变换，也不是一件好事。使用接下来，通过netplan把虚拟机IP固定为192.168.56.3/24。虚拟机开机，打开这个文件：&#xA;sudo nano /etc/netplan/00-installer-config.yaml # 当然你也可以使用vim，记得提管理员权限 我的配置如下：&#xA;# This is the network config written by &amp;#39;subiquity&amp;#39; network: ethernets: enp0s3: dhcp4: true enp0s8: dhcp4: false addresses: [192.168.56.3/24] version: 2 其中enp0s3为NAT网卡，enp0s8为HostOnly网卡。即便你也使用VBox，实际情况下，网卡的名字也可能不一样，通过ifconfig -a可以查询到网卡名，随后如上配置即可。最后，在shell中运行sudo netplan apply即可使新配置生效（这样配置，即使是重启，也是有效的）。通过主机Ping客机：&#xA;正在 Ping 192.168.56.3 具有 32 字节的数据: 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.168.56.3 的回复: 字节=32 时间&amp;lt;1ms TTL=64 来自 192.</description>
     </item>
-    
     <item>
       <title>《Beginning Game Development with Godot Learn to Create and Publish Your First 2D Platform Game》读后感</title>
       <link>https://newmilkiceonwall.github.io/posts/lesslessbeginning-game-development-with-godot-learn-to-create-and-publish-your-first-2d-platform-gamegreatergreater-du-hou-gan/</link>
       <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/lesslessbeginning-game-development-with-godot-learn-to-create-and-publish-your-first-2d-platform-gamegreatergreater-du-hou-gan/</guid>
-      <description>&lt;h1 id=&#34;0-写在前面&#34;&gt;
-  0 写在前面
-  &lt;a class=&#34;heading-link&#34; href=&#34;#0-%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2&#34;&gt;
-    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;链接到标题&#34;&gt;&lt;/i&gt;
-    &lt;span class=&#34;sr-only&#34;&gt;链接到标题&lt;/span&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-&lt;p&gt;这本是书是关于Godot游戏开发的，书中描述了使用Godot开发一个简单2D平台游戏demo的全流程——从素材导入、代码编码、二进制导出甚至简单地发行自己的游戏都有讲到。
-手把手教学，描述非常细腻，极大程度避免了新人出现“环境不对”、“找不到配置项”等琐碎耗时的杂问题。“细腻”，也注定了在有限篇幅内，其内容的有限，但对传统2D平台游戏开发的基础内容都有所描述——场景搭建（tilemap）、基础移动、发射“子弹”击杀敌人以及穿插其中讲解了一些编码逻辑。&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;0-写在前面&#34;&gt;&#xD;&#xA;  0 写在前面&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#0-%e5%86%99%e5%9c%a8%e5%89%8d%e9%9d%a2&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;链接到标题&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;链接到标题&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;这本是书是关于Godot游戏开发的，书中描述了使用Godot开发一个简单2D平台游戏demo的全流程——从素材导入、代码编码、二进制导出甚至简单地发行自己的游戏都有讲到。&#xA;手把手教学，描述非常细腻，极大程度避免了新人出现“环境不对”、“找不到配置项”等琐碎耗时的杂问题。“细腻”，也注定了在有限篇幅内，其内容的有限，但对传统2D平台游戏开发的基础内容都有所描述——场景搭建（tilemap）、基础移动、发射“子弹”击杀敌人以及穿插其中讲解了一些编码逻辑。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>新账户，新博客，新文章</title>
       <link>https://newmilkiceonwall.github.io/posts/xin-zhang-hu-xin-bo-ke-xin-wen-zhang/</link>
       <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/xin-zhang-hu-xin-bo-ke-xin-wen-zhang/</guid>
       <description>&lt;p&gt;我建立了一个新的Github账户，开启了蓄谋已久的博客，这是第一篇文章，万事开头难。现在，我已经开始写作啦！&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>通过telnet取得移动光猫HS8546V5超级密码</title>
       <link>https://newmilkiceonwall.github.io/posts/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma/</link>
       <pubDate>Tue, 08 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://newmilkiceonwall.github.io/posts/tong-guo-telnet-qu-de-yi-dong-guang-mao-hs8546v5-chao-ji-mi-ma/</guid>
-      <description>&lt;h1 id=&#34;需要的工具&#34;&gt;
-  需要的工具
-  &lt;a class=&#34;heading-link&#34; href=&#34;#%e9%9c%80%e8%a6%81%e7%9a%84%e5%b7%a5%e5%85%b7&#34;&gt;
-    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;链接到标题&#34;&gt;&lt;/i&gt;
-    &lt;span class=&#34;sr-only&#34;&gt;链接到标题&lt;/span&gt;
-  &lt;/a&gt;
-&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://pan.baidu.com/s/170toeJhYVTu7CDk2C92SKQ&#34;&gt;ONT维修使能工具&lt;/a&gt; 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去掉横杠）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&#34;https://pan.baidu.com/s/170toeJhYVTu7CDk2C92SKQ&#34;&gt;华为配置加解密工具&lt;/a&gt; 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN（去掉横杠）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;任意一种telnet客户端 &lt;a href=&#34;https://www.xshell.com/zh/xshell/&#34;&gt;XSHELL&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;一截普通网线（用于直接连接光猫）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;一个FTP服务器（可选） &lt;a href=&#34;https://www.tftp-server.com/&#34;&gt;TFTP服务器&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;h1 id=&#34;需要的工具&#34;&gt;&#xD;&#xA;  需要的工具&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#%e9%9c%80%e8%a6%81%e7%9a%84%e5%b7%a5%e5%85%b7&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;链接到标题&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;链接到标题&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pan.baidu.com/s/170toeJhYVTu7CDk2C92SKQ&#34;&gt;ONT维修使能工具&lt;/a&gt; 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN （去掉横杠）&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://pan.baidu.com/s/170toeJhYVTu7CDk2C92SKQ&#34;&gt;华为配置加解密工具&lt;/a&gt; 提取码：8cb2 解压密码:W06J-HUUs-hzF0-syPN（去掉横杠）&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;任意一种telnet客户端 &lt;a href=&#34;https://www.xshell.com/zh/xshell/&#34;&gt;XSHELL&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;一截普通网线（用于直接连接光猫）&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;一个FTP服务器（可选） &lt;a href=&#34;https://www.tftp-server.com/&#34;&gt;TFTP服务器&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
   </channel>
 </rss>
