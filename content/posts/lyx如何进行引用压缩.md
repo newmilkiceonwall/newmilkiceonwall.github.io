@@ -24,6 +24,10 @@ series = []
    ```latex
    \usepackage[numbers,sort&compress]{natbib}
    ```
+   对于Elsevier的Lyx模版文件，它会自动引入natbib包，需要使用如下指令来启用引用压缩：
+   ```latex
+   \biboptions{sort&compress}
+   ```
 
    这将确保引用数字以及对多个引用进行压缩，显示为 "[11]-[15]" 的格式。如果使用了某些预制模板（比如IEEE），那么到这一步其实就有效果了。不必切换至Natbib。
 
@@ -38,3 +42,6 @@ series = []
 4. **编译文档：** 编译文档，确保引用呈现为所需的格式。
 
 请注意，确保你的BibTeX文件（.bib文件）中的参考文献条目是按照引用的顺序进行排列的。如果需要，你可以使用BibTeX工具（如JabRef）来管理和排序你的参考文献。
+
+## 参考
+[Stack Exchange](https://tex.stackexchange.com/questions/434338/compress-references-elsarticle-natbib)

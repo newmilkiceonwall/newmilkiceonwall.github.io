@@ -12,25 +12,25 @@
 
 
 <meta name="author" content="墙上的新牛奶冰">
-<meta name="description" content="为什么这样做链接到标题我的配置：
+<meta name="description" content="为什么这样做 链接到标题 我的配置：
 操作系统: Linux Mint 21.2 x86_64 蓝牙设备: Intel® Wireless-AC 9462 耳机: EDIFIER W860NB Pro 在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候声音会卡顿——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。
-解决方案链接到标题序言链接到标题根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
-Ubuntu/Linux Mint 解决方案链接到标题使用PipeWire替换PulseAudio链接到标题使用以下命令安装PipeWire。
+解决方案 链接到标题 序言 链接到标题 根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
+Ubuntu/Linux Mint 解决方案 链接到标题 使用PipeWire替换PulseAudio 链接到标题 使用以下命令安装PipeWire。
 $ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream # 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。 $ sudo apt update $ sudo apt install pipewire pipewire-audio-client-libraries 根据[4]LinuxConfig,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— Bluetooth headset won’t connect after installing pipewire 。但是值得一提的是">
 <meta name="keywords" content="blog,personal">
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="如何将Ubuntu/Linux Mint的PulseAudio换到PipeWire"/>
-<meta name="twitter:description" content="为什么这样做链接到标题我的配置：
+<meta name="twitter:description" content="为什么这样做 链接到标题 我的配置：
 操作系统: Linux Mint 21.2 x86_64 蓝牙设备: Intel® Wireless-AC 9462 耳机: EDIFIER W860NB Pro 在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候声音会卡顿——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。
-解决方案链接到标题序言链接到标题根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
-Ubuntu/Linux Mint 解决方案链接到标题使用PipeWire替换PulseAudio链接到标题使用以下命令安装PipeWire。
+解决方案 链接到标题 序言 链接到标题 根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
+Ubuntu/Linux Mint 解决方案 链接到标题 使用PipeWire替换PulseAudio 链接到标题 使用以下命令安装PipeWire。
 $ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream # 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。 $ sudo apt update $ sudo apt install pipewire pipewire-audio-client-libraries 根据[4]LinuxConfig,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— Bluetooth headset won’t connect after installing pipewire 。但是值得一提的是"/>
 
 <meta property="og:title" content="如何将Ubuntu/Linux Mint的PulseAudio换到PipeWire" />
-<meta property="og:description" content="为什么这样做链接到标题我的配置：
+<meta property="og:description" content="为什么这样做 链接到标题 我的配置：
 操作系统: Linux Mint 21.2 x86_64 蓝牙设备: Intel® Wireless-AC 9462 耳机: EDIFIER W860NB Pro 在这种配置下，默认的音频管理器PulseAudio在同时连接蓝牙耳机和蓝牙键盘的时候声音会卡顿——在键入文字的时候尤其明显。但是在Windows现在却表现正常，这就可以排除是蓝牙带宽不足的情况。
-解决方案链接到标题序言链接到标题根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
-Ubuntu/Linux Mint 解决方案链接到标题使用PipeWire替换PulseAudio链接到标题使用以下命令安装PipeWire。
+解决方案 链接到标题 序言 链接到标题 根据 [1]CSDN，这可能是由不恰当的音频编码导致的，切换到 PipeWire 来启用LDAC编码或许可以解决这个问题。根据 [2]Linux Tech Tips，Fedora 34 Workstation就已经默认使用PipeWire来处理音频，然而Ubuntu 22.04还在使用PulseAudio，如果你还没有在生产中使用Linux，可以考虑一下Fedora。已经在生产中使用Linux的用户，Manjaro和Arch用户可以参考[3]Arch文档来切换到PipeWire。
+Ubuntu/Linux Mint 解决方案 链接到标题 使用PipeWire替换PulseAudio 链接到标题 使用以下命令安装PipeWire。
 $ sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream # 添加 PipeWire PPA，在LinuxMint 21.2上这不是必须的。 $ sudo apt update $ sudo apt install pipewire pipewire-audio-client-libraries 根据[4]LinuxConfig,在使用蓝牙、GStreamar 或 JACK 设备时，还需要安装如下包。否则，可能在使用蓝牙耳机的时候遭遇这样的问题—— Bluetooth headset won’t connect after installing pipewire 。但是值得一提的是" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://newmilkiceonwall.github.io/posts/%E5%A6%82%E4%BD%95%E5%B0%86ubuntu%E7%9A%84pulseaudio%E6%8D%A2%E5%88%B0pipewire/" /><meta property="article:section" content="posts" />

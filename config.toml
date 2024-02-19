@@ -87,7 +87,7 @@ defaultContentLanguage = 'zh-cn'
     weight = 2
     [languages.en.params]
       author = 'Newmilkiceonwall'
-      info = "An independent and self reliant small blog."
+      info = "Every road is fraught, yet I embrace whatever destiny presents."
       description = "Newmilkiceonwall's personal blog."
     [[languages.en.menu.main]]
       name = "Blog"

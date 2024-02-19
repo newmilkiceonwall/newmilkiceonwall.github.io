@@ -12,23 +12,23 @@
 
 
 <meta name="author" content="墙上的新牛奶冰">
-<meta name="description" content="参考链接到标题安装 Conda 后 PowerShell 启动慢 - ASC_8384 的个人博客
-处理方案链接到标题在 PowerShell 中输入：
+<meta name="description" content="参考 链接到标题 安装 Conda 后 PowerShell 启动慢 - ASC_8384 的个人博客
+处理方案 链接到标题 在 PowerShell 中输入：
 (&amp; &#34;C:\path\to\conda\Scripts\conda.exe&#34; &#34;shell.powershell&#34; &#34;hook&#34;) | Out-String 把输出的文本贴到 profile.ps1 中，例如：
-$Env:CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $Env:_CE_M = &#34;&#34; $Env:_CE_CONDA = &#34;&#34; $Env:_CONDA_ROOT = &#34;C:\Users\username\miniconda3&#34; $Env:_CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $CondaModuleArgs = @{ChangePs1 = $True } Import-Module &#34;$Env:_CONDA_ROOT\shell\condabin\Conda.psm1&#34; -ArgumentList $CondaModuleArgs conda activate base #去掉这一行，默认不随Powershell激活Conda环境 Remove-Variable CondaModuleArgs 延展阅读链接到标题Linux下Zsh启动被Conda拖慢的解决方案">
+$Env:CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $Env:_CE_M = &#34;&#34; $Env:_CE_CONDA = &#34;&#34; $Env:_CONDA_ROOT = &#34;C:\Users\username\miniconda3&#34; $Env:_CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $CondaModuleArgs = @{ChangePs1 = $True } Import-Module &#34;$Env:_CONDA_ROOT\shell\condabin\Conda.psm1&#34; -ArgumentList $CondaModuleArgs conda activate base #去掉这一行，默认不随Powershell激活Conda环境 Remove-Variable CondaModuleArgs 延展阅读 链接到标题 Linux下Zsh启动被Conda拖慢的解决方案">
 <meta name="keywords" content="blog,personal">
 
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="如何在安装Conda后防止Powershell启动过慢"/>
-<meta name="twitter:description" content="参考链接到标题安装 Conda 后 PowerShell 启动慢 - ASC_8384 的个人博客
-处理方案链接到标题在 PowerShell 中输入：
+<meta name="twitter:description" content="参考 链接到标题 安装 Conda 后 PowerShell 启动慢 - ASC_8384 的个人博客
+处理方案 链接到标题 在 PowerShell 中输入：
 (&amp; &#34;C:\path\to\conda\Scripts\conda.exe&#34; &#34;shell.powershell&#34; &#34;hook&#34;) | Out-String 把输出的文本贴到 profile.ps1 中，例如：
-$Env:CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $Env:_CE_M = &#34;&#34; $Env:_CE_CONDA = &#34;&#34; $Env:_CONDA_ROOT = &#34;C:\Users\username\miniconda3&#34; $Env:_CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $CondaModuleArgs = @{ChangePs1 = $True } Import-Module &#34;$Env:_CONDA_ROOT\shell\condabin\Conda.psm1&#34; -ArgumentList $CondaModuleArgs conda activate base #去掉这一行，默认不随Powershell激活Conda环境 Remove-Variable CondaModuleArgs 延展阅读链接到标题Linux下Zsh启动被Conda拖慢的解决方案"/>
+$Env:CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $Env:_CE_M = &#34;&#34; $Env:_CE_CONDA = &#34;&#34; $Env:_CONDA_ROOT = &#34;C:\Users\username\miniconda3&#34; $Env:_CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $CondaModuleArgs = @{ChangePs1 = $True } Import-Module &#34;$Env:_CONDA_ROOT\shell\condabin\Conda.psm1&#34; -ArgumentList $CondaModuleArgs conda activate base #去掉这一行，默认不随Powershell激活Conda环境 Remove-Variable CondaModuleArgs 延展阅读 链接到标题 Linux下Zsh启动被Conda拖慢的解决方案"/>
 
 <meta property="og:title" content="如何在安装Conda后防止Powershell启动过慢" />
-<meta property="og:description" content="参考链接到标题安装 Conda 后 PowerShell 启动慢 - ASC_8384 的个人博客
-处理方案链接到标题在 PowerShell 中输入：
+<meta property="og:description" content="参考 链接到标题 安装 Conda 后 PowerShell 启动慢 - ASC_8384 的个人博客
+处理方案 链接到标题 在 PowerShell 中输入：
 (&amp; &#34;C:\path\to\conda\Scripts\conda.exe&#34; &#34;shell.powershell&#34; &#34;hook&#34;) | Out-String 把输出的文本贴到 profile.ps1 中，例如：
-$Env:CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $Env:_CE_M = &#34;&#34; $Env:_CE_CONDA = &#34;&#34; $Env:_CONDA_ROOT = &#34;C:\Users\username\miniconda3&#34; $Env:_CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $CondaModuleArgs = @{ChangePs1 = $True } Import-Module &#34;$Env:_CONDA_ROOT\shell\condabin\Conda.psm1&#34; -ArgumentList $CondaModuleArgs conda activate base #去掉这一行，默认不随Powershell激活Conda环境 Remove-Variable CondaModuleArgs 延展阅读链接到标题Linux下Zsh启动被Conda拖慢的解决方案" />
+$Env:CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $Env:_CE_M = &#34;&#34; $Env:_CE_CONDA = &#34;&#34; $Env:_CONDA_ROOT = &#34;C:\Users\username\miniconda3&#34; $Env:_CONDA_EXE = &#34;C:\Users\username\miniconda3\Scripts\conda.exe&#34; $CondaModuleArgs = @{ChangePs1 = $True } Import-Module &#34;$Env:_CONDA_ROOT\shell\condabin\Conda.psm1&#34; -ArgumentList $CondaModuleArgs conda activate base #去掉这一行，默认不随Powershell激活Conda环境 Remove-Variable CondaModuleArgs 延展阅读 链接到标题 Linux下Zsh启动被Conda拖慢的解决方案" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://newmilkiceonwall.github.io/posts/howtospeedpowershellafterinstallconda/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-04T21:27:12+08:00" />
